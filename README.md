@@ -1,4 +1,3 @@
-# 💫 About Me:
 🔭 I’m currently working on Java Development<br>🤝 I’m looking for help with AI/ML & AppDev (Kotlin)<br>🌱 I’m currently learning Python
 
 
