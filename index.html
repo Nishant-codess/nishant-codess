@@ -470,6 +470,205 @@
         text-align: center;
       }
     }
+
+    /* Real-Time Live World Clock HUD */
+    .world-clock-hud {
+      width: 100%;
+      background: rgba(13, 17, 23, 0.75);
+      border: 1px solid rgba(0, 242, 254, 0.25);
+      border-radius: 20px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hud-top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .hud-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: #00f2fe;
+      font-family: 'Space Grotesk', monospace;
+    }
+
+    .hud-sub {
+      font-size: 0.75rem;
+      color: #818cf8;
+      font-family: 'Space Grotesk', monospace;
+      letter-spacing: 1px;
+    }
+
+    .clocks-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    @media (max-width: 680px) {
+      .clocks-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .clock-card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      padding: 16px 20px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: all 0.3s;
+    }
+
+    .ist-card {
+      border-color: rgba(0, 242, 254, 0.2);
+    }
+    .ist-card:hover {
+      border-color: rgba(0, 242, 254, 0.45);
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.15);
+    }
+
+    .lon-card {
+      border-color: rgba(192, 132, 252, 0.2);
+    }
+    .lon-card:hover {
+      border-color: rgba(192, 132, 252, 0.45);
+      box-shadow: 0 0 20px rgba(192, 132, 252, 0.15);
+    }
+
+    .clock-face-wrap {
+      width: 72px;
+      height: 72px;
+      flex-shrink: 0;
+    }
+
+    .analog-clock {
+      width: 100%;
+      height: 100%;
+    }
+
+    .clock-dial {
+      fill: #080c14;
+      stroke: #38bdf8;
+      stroke-width: 2.5;
+    }
+
+    .lon-dial {
+      stroke: #c084fc;
+    }
+
+    .hand {
+      stroke-linecap: round;
+    }
+
+    .hour-hand {
+      stroke: #ffffff;
+      stroke-width: 3.5;
+    }
+
+    .min-hand {
+      stroke: #38bdf8;
+      stroke-width: 2.5;
+    }
+
+    .lon-min {
+      stroke: #c084fc;
+    }
+
+    .sec-hand {
+      stroke-width: 1.5;
+    }
+
+    .ist-sec {
+      stroke: #f43f5e;
+    }
+
+    .lon-sec {
+      stroke: #00f2fe;
+    }
+
+    .center-pin {
+      fill: #f43f5e;
+    }
+
+    .lon-pin {
+      fill: #00f2fe;
+    }
+
+    .clock-info {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .city-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    .digital-time {
+      font-family: 'Space Grotesk', monospace;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.5px;
+    }
+
+    .date-str {
+      font-size: 0.78rem;
+      color: #64748b;
+    }
+
+    .tz-pill {
+      display: inline-block;
+      align-self: flex-start;
+      margin-top: 4px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    .ist-pill {
+      background: rgba(0, 242, 254, 0.1);
+      color: #00f2fe;
+      border: 1px solid rgba(0, 242, 254, 0.25);
+    }
+
+    .lon-pill {
+      background: rgba(192, 132, 252, 0.1);
+      color: #c084fc;
+      border: 1px solid rgba(192, 132, 252, 0.25);
+    }
+
+    .overlap-bar {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8rem;
+      color: #94a3b8;
+    }
+
+    .overlap-icon {
+      color: #fbbf24;
+    }
   </style>
 </head>
 <body>
@@ -478,6 +677,71 @@
 
   <div class="container">
     
+    <!-- Real-Time Live World Clock HUD (India & London) -->
+    <div id="live-clock" class="world-clock-hud">
+      <div class="hud-top-bar">
+        <span class="hud-tag"><span class="pulse-dot"></span> LIVE REAL-TIME TELEMETRY</span>
+        <span class="hud-sub">GLOBAL COLLABORATION CONSOLE</span>
+      </div>
+      
+      <div class="clocks-grid">
+        <!-- India Clock Card -->
+        <div class="clock-card ist-card">
+          <div class="clock-face-wrap">
+            <svg class="analog-clock" id="istAnalog" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" class="clock-dial" />
+              <g stroke="#38bdf8" opacity="0.6">
+                <line x1="50" y1="8" x2="50" y2="14" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="92" y1="50" x2="86" y2="50" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="50" y1="92" x2="50" y2="86" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="8" y1="50" x2="14" y2="50" stroke-width="2.5" stroke-linecap="round" />
+              </g>
+              <line id="istHourHand" x1="50" y1="50" x2="50" y2="28" class="hand hour-hand" />
+              <line id="istMinHand" x1="50" y1="50" x2="50" y2="16" class="hand min-hand" />
+              <line id="istSecHand" x1="50" y1="56" x2="50" y2="12" class="hand sec-hand ist-sec" />
+              <circle cx="50" cy="50" r="3.5" class="center-pin ist-pin" />
+            </svg>
+          </div>
+          <div class="clock-info">
+            <div class="city-name">NEW DELHI, INDIA</div>
+            <div class="digital-time" id="istDigital">--:--:-- --</div>
+            <div class="date-str" id="istDate">Loading...</div>
+            <div class="tz-pill ist-pill">IST • UTC +5:30 • Primary Base</div>
+          </div>
+        </div>
+
+        <!-- London Clock Card -->
+        <div class="clock-card lon-card">
+          <div class="clock-face-wrap">
+            <svg class="analog-clock" id="lonAnalog" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="46" class="clock-dial lon-dial" />
+              <g stroke="#c084fc" opacity="0.6">
+                <line x1="50" y1="8" x2="50" y2="14" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="92" y1="50" x2="86" y2="50" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="50" y1="92" x2="50" y2="86" stroke-width="2.5" stroke-linecap="round" />
+                <line x1="8" y1="50" x2="14" y2="50" stroke-width="2.5" stroke-linecap="round" />
+              </g>
+              <line id="lonHourHand" x1="50" y1="50" x2="50" y2="28" class="hand hour-hand" />
+              <line id="lonMinHand" x1="50" y1="50" x2="50" y2="16" class="hand min-hand lon-min" />
+              <line id="lonSecHand" x1="50" y1="56" x2="50" y2="12" class="hand sec-hand lon-sec" />
+              <circle cx="50" cy="50" r="3.5" class="center-pin lon-pin" />
+            </svg>
+          </div>
+          <div class="clock-info">
+            <div class="city-name">LONDON, UNITED KINGDOM</div>
+            <div class="digital-time" id="lonDigital">--:--:-- --</div>
+            <div class="date-str" id="lonDate">Loading...</div>
+            <div class="tz-pill lon-pill">BST • UTC +1:00 • Collaboration Base</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="overlap-bar">
+        <span class="overlap-icon">⚡</span>
+        <span class="overlap-text"><b>Timezone Delta:</b> India is 4h 30m ahead of London &bull; <b>Optimal Meeting Window:</b> 1:30 PM &ndash; 6:30 PM IST (09:00 AM &ndash; 2:00 PM BST)</span>
+      </div>
+    </div>
+
     <div class="header">
       <div class="badge"><span class="pulse-dot"></span> NOW SPINNING ON VINYL</div>
       <h1>Nishant's Turntable</h1>
@@ -748,6 +1012,73 @@
 
     // Start idle visualizer
     drawVisualizer();
+
+    // --- Live Real-Time World Clocks Engine (India & London) ---
+    function updateWorldClocks() {
+      const now = new Date();
+      
+      // IST: Asia/Kolkata
+      const istOptions = { timeZone: 'Asia/Kolkata', hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const istDateOptions = { timeZone: 'Asia/Kolkata', weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+      const istTimeStr = new Intl.DateTimeFormat('en-US', istOptions).format(now);
+      const istDateStr = new Intl.DateTimeFormat('en-US', istDateOptions).format(now);
+      
+      const istDigEl = document.getElementById('istDigital');
+      const istDateEl = document.getElementById('istDate');
+      if (istDigEl) istDigEl.textContent = istTimeStr;
+      if (istDateEl) istDateEl.textContent = istDateStr;
+      
+      const istParts = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Kolkata', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false }).formatToParts(now);
+      const istObj = {};
+      istParts.forEach(p => istObj[p.type] = parseInt(p.value, 10));
+      const istH = (istObj.hour || 0) % 12;
+      const istM = istObj.minute || 0;
+      const istS = istObj.second || 0;
+      const istMs = now.getMilliseconds();
+      
+      const istSecAng = (istS + istMs / 1000) * 6;
+      const istMinAng = istM * 6 + istS * 0.1;
+      const istHrAng = istH * 30 + istM * 0.5;
+      
+      const istSecHand = document.getElementById('istSecHand');
+      const istMinHand = document.getElementById('istMinHand');
+      const istHourHand = document.getElementById('istHourHand');
+      if (istSecHand) istSecHand.setAttribute('transform', `rotate(${istSecAng} 50 50)`);
+      if (istMinHand) istMinHand.setAttribute('transform', `rotate(${istMinAng} 50 50)`);
+      if (istHourHand) istHourHand.setAttribute('transform', `rotate(${istHrAng} 50 50)`);
+
+      // London: Europe/London
+      const lonOptions = { timeZone: 'Europe/London', hour12: true, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+      const lonDateOptions = { timeZone: 'Europe/London', weekday: 'short', year: 'numeric', month: 'short', day: 'numeric' };
+      const lonTimeStr = new Intl.DateTimeFormat('en-US', lonOptions).format(now);
+      const lonDateStr = new Intl.DateTimeFormat('en-US', lonDateOptions).format(now);
+      
+      const lonDigEl = document.getElementById('lonDigital');
+      const lonDateEl = document.getElementById('lonDate');
+      if (lonDigEl) lonDigEl.textContent = lonTimeStr;
+      if (lonDateEl) lonDateEl.textContent = lonDateStr;
+      
+      const lonParts = new Intl.DateTimeFormat('en-US', { timeZone: 'Europe/London', hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: false }).formatToParts(now);
+      const lonObj = {};
+      lonParts.forEach(p => lonObj[p.type] = parseInt(p.value, 10));
+      const lonH = (lonObj.hour || 0) % 12;
+      const lonM = lonObj.minute || 0;
+      const lonS = lonObj.second || 0;
+      
+      const lonSecAng = (lonS + istMs / 1000) * 6;
+      const lonMinAng = lonM * 6 + lonS * 0.1;
+      const lonHrAng = lonH * 30 + lonM * 0.5;
+      
+      const lonSecHand = document.getElementById('lonSecHand');
+      const lonMinHand = document.getElementById('lonMinHand');
+      const lonHourHand = document.getElementById('lonHourHand');
+      if (lonSecHand) lonSecHand.setAttribute('transform', `rotate(${lonSecAng} 50 50)`);
+      if (lonMinHand) lonMinHand.setAttribute('transform', `rotate(${lonMinAng} 50 50)`);
+      if (lonHourHand) lonHourHand.setAttribute('transform', `rotate(${lonHrAng} 50 50)`);
+
+      requestAnimationFrame(updateWorldClocks);
+    }
+    requestAnimationFrame(updateWorldClocks);
   </script>
 </body>
 </html>
