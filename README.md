@@ -115,13 +115,13 @@
 <h3 align="center"><img src="https://api.iconify.design/lucide:terminal.svg?color=%2300f2fe" width="22" valign="middle" /> <b>&nbsp;GITHUB COMMAND CENTER</b></h3>
 
 <p align="center">
-  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-stats.svg" alt="GitHub Stats" />
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-stats.svg?v=3" alt="GitHub Stats" />
   &nbsp;
-  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-streak.svg" alt="GitHub Streak" />
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-streak.svg?v=3" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img width="56%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-languages.svg" alt="Top Languages" />
+  <img width="56%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-languages.svg?v=3" alt="Top Languages" />
 </p>
 
 <!-- Animated Divider -->
@@ -137,31 +137,31 @@
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/ShadowLedger">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg" alt="ShadowLedger" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg?v=3" alt="ShadowLedger" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/SPARK-Engine">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg" alt="SPARK-Engine" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg?v=3" alt="SPARK-Engine" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/askDB">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg" alt="askDB" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg?v=3" alt="askDB" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/InsightU_v1">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg" alt="InsightU_v1" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg?v=3" alt="InsightU_v1" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/easy-q">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg" alt="easy-q" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg?v=3" alt="easy-q" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/Gavel">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg" alt="Gavel" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg?v=3" alt="Gavel" />
   </a>
 </p>
 
@@ -205,7 +205,7 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     VINYL RECORD PLAYER — ON REPEAT IN MY MIND
+     SPOTIFY MUSIC PLAYER — ON REPEAT IN MY MIND
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <h3 align="center"><img src="https://api.iconify.design/lucide:disc.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;ON REPEAT IN MY MIND</b></h3>
@@ -215,25 +215,20 @@
   <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=22&duration=5000&pause=20000&color=38EF7D&center=true&vCenter=true&width=560&height=36&lines=The+song+that's+been+playing+on+my+mind+recently." alt="The song that's been playing on my mind recently" />
 </p>
 
-<!-- Interactive Vinyl Turntable Display (Clicking launches the Live Turntable Web App) -->
-<p align="center">
-  <a href="https://nishant-codess.github.io/nishant-codess/" target="_blank">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/vinyl-player.gif" width="560" alt="Click here to spin the vinyl turntable live" style="border-radius: 16px;" />
-  </a>
-</p>
-
-<p align="center">
-  <i>Click the turntable above to spin the vinyl live &bull; Features tonearm needle drop, spinning disc &amp; audio wave visualizer</i>
-</p>
+https://github.com/user-attachments/assets/7b9a8337-d93f-405d-b603-e9c67201e57b
 
 <p align="center">
   <a href="https://nishant-codess.github.io/nishant-codess/" target="_blank">
-    <img src="https://img.shields.io/badge/Live_Vinyl_Turntable-Click_Here_to_Spin-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play on Vinyl Turntable" />
+    <img src="https://img.shields.io/badge/Interactive_Turntable-Spin_Vinyl_Web_App-38ef7d?style=for-the-badge&logoColor=white" alt="Open Interactive Turntable" />
   </a>
   &nbsp;
   <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3" target="_blank">
-    <img src="https://img.shields.io/badge/Direct_Audio_File-Stream_MP3-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Direct MP3 Stream" />
+    <img src="https://img.shields.io/badge/Direct_Audio-Stream_Full_MP3-00f2fe?style=for-the-badge&logoColor=white" alt="Direct MP3 Audio" />
   </a>
+</p>
+
+<p align="center">
+  <i>Click play on the video above to listen directly in profile &bull; Or click the green badge to launch the interactive 3D vinyl turntable</i>
 </p>
 
 <!-- Animated Divider -->

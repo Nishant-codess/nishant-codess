@@ -1,13 +1,64 @@
 import os
+from matplotlib.textpath import TextPath
+from matplotlib.font_manager import FontProperties
+from matplotlib.path import Path
+
+# Static TrueType Fonts
+FONT_TITLE = 'fonts/SpaceGrotesk-BoldStatic.ttf'
+FONT_REGULAR = 'fonts/SpaceGrotesk-MediumStatic.ttf'
+FONT_BODY_BOLD = 'fonts/Outfit-SemiBold.ttf'
+FONT_BODY = 'fonts/Outfit-Medium.ttf'
+
+def text_to_svg_path(text, x, y, size, font_path, anchor='start', fill='#ffffff', opacity=1.0, extra=''):
+    """Converts a text string into an SVG <path> element with vector glyphs."""
+    if not text:
+        return ''
+    fp = FontProperties(fname=font_path)
+    tp = TextPath((0, 0), text, size=size, prop=fp)
+    bbox = tp.get_extents()
+    
+    if anchor == 'middle':
+        dx = x - (bbox.xmin + bbox.xmax) / 2.0
+    elif anchor == 'end':
+        dx = x - bbox.xmax
+    else: # start
+        dx = x - bbox.xmin
+        
+    dy = y
+    d = []
+    i = 0
+    v = tp.vertices
+    c = tp.codes
+    while i < len(c):
+        code = c[i]
+        if code == Path.MOVETO:
+            d.append(f"M {dx + v[i][0]:.2f} {dy - v[i][1]:.2f}")
+            i += 1
+        elif code == Path.LINETO:
+            d.append(f"L {dx + v[i][0]:.2f} {dy - v[i][1]:.2f}")
+            i += 1
+        elif code == Path.CURVE3:
+            d.append(f"Q {dx + v[i][0]:.2f} {dy - v[i][1]:.2f} {dx + v[i+1][0]:.2f} {dy - v[i+1][1]:.2f}")
+            i += 2
+        elif code == Path.CURVE4:
+            d.append(f"C {dx + v[i][0]:.2f} {dy - v[i][1]:.2f} {dx + v[i+1][0]:.2f} {dy - v[i+1][1]:.2f} {dx + v[i+2][0]:.2f} {dy - v[i+2][1]:.2f}")
+            i += 3
+        elif code == Path.CLOSEPOLY:
+            d.append("Z")
+            i += 1
+        else:
+            i += 1
+            
+    op_attr = f' opacity="{opacity}"' if opacity < 1.0 else ''
+    return f'<path d="{" ".join(d)}" fill="{fill}"{op_attr} {extra}/>'
 
 def create_card_defs():
     return '''
     <defs>
-      <!-- Gradient Palettes: Cyber Aurora (Cyan -> Emerald -> Purple) -->
+      <!-- Gradient Palettes: Cyber Aurora (Crisp Vibrant Cyan -> Emerald) -->
       <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="60%" stop-color="#38ef7d" />
-        <stop offset="100%" stop-color="#a855f7" />
+        <stop offset="100%" stop-color="#38ef7d" />
       </linearGradient>
       <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
@@ -23,9 +74,9 @@ def create_card_defs():
         <stop offset="100%" stop-color="#070a10" />
       </linearGradient>
       <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
-        <stop offset="50%" stop-color="rgba(56, 239, 125, 0.25)" />
-        <stop offset="100%" stop-color="rgba(168, 85, 247, 0.35)" />
+        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.45)" />
+        <stop offset="50%" stop-color="rgba(56, 239, 125, 0.3)" />
+        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
       </linearGradient>
       <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#00f2fe" />
@@ -44,17 +95,7 @@ def create_card_defs():
       </filter>
 
       <style>
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&amp;family=Outfit:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
         .card-frame { fill: url(#cardBg); stroke: url(#cardBorder); stroke-width: 1.5px; rx: 18px; ry: 18px; }
-        .card-title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; fill: url(#titleGrad); letter-spacing: -0.2px; }
-        .stat-label { font-family: 'Outfit', -apple-system, sans-serif; font-size: 13.5px; fill: #94a3b8; font-weight: 500; }
-        .stat-val { font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 15px; fill: #ffffff; font-weight: 700; }
-        .big-stat { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 800; fill: #ffffff; letter-spacing: -0.5px; }
-        .caption { font-family: 'Outfit', -apple-system, sans-serif; font-size: 12px; fill: #64748b; font-weight: 500; }
-        .badge-txt { font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #00f2fe; letter-spacing: 0.8px; }
-        .grade-score { font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 27px; font-weight: 800; fill: url(#titleGrad); }
-        .repo-desc { font-family: 'Outfit', -apple-system, sans-serif; font-size: 13px; fill: #94a3b8; line-height: 1.45; }
-        .repo-lang { font-family: 'Outfit', -apple-system, sans-serif; font-size: 12.5px; fill: #cbd5e1; font-weight: 600; }
       </style>
     </defs>
     '''
@@ -69,31 +110,31 @@ def generate_stats_card():
     # Top Accent ambient glow
     svg.append(f'<ellipse cx="{w/2}" cy="0" rx="160" ry="12" fill="#00f2fe" opacity="0.08" filter="url(#neonGlow)" />')
     
-    # Header
-    svg.append('<text x="24" y="37" class="card-title" font-size="18">Nishant Ranjan\'s GitHub Stats</text>')
+    # Header: Space Grotesk Bold
+    svg.append(text_to_svg_path("Nishant Ranjan's GitHub Stats", 24, 38, 18, FONT_TITLE, fill="url(#titleGrad)"))
     
     # Metrics
     items = [
-        ("Total Stars Earned:", "1", "#f1c40f", "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"),
-        ("Total Commits:", "262", "#00f2fe", "M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"),
-        ("Total Pull Requests:", "22", "#c084fc", "M18 16a3 3 0 0 0-2.24 1H8.24A3 3 0 0 0 6 16v-2.18A3 3 0 0 0 8.24 11h7.52A3 3 0 0 0 18 10V4.82A3 3 0 0 0 16 2a3 3 0 0 0-3 3v5H8V5a3 3 0 0 0-6 0v11a3 3 0 0 0 3 3h13a3 3 0 0 0 3-3z"),
-        ("Total Issues Closed:", "0", "#38ef7d", "M12 22A10 10 0 1 0 2 12a10 10 0 0 0 10 10zm-1-15h2v6h-2zm0 8h2v2h-2z"),
-        ("Contributed to:", "3 Repos", "#38ef7d", "M4 6h16M4 12h16M4 18h16")
+        ("Total Stars Earned:", "1", "#f1c40f"),
+        ("Total Commits:", "262", "#00f2fe"),
+        ("Total Pull Requests:", "22", "#c084fc"),
+        ("Total Issues Closed:", "0", "#38ef7d"),
+        ("Contributed to:", "3 Repos", "#38ef7d")
     ]
     
-    start_y = 67
-    for idx, (label, val, icon_col, _) in enumerate(items):
-        y = start_y + (idx * 27)
+    start_y = 68
+    for idx, (label, val, icon_col) in enumerate(items):
+        y = start_y + (idx * 26)
         svg.append(f'<circle cx="32" cy="{y - 4}" r="4" fill="{icon_col}" filter="url(#softGlow)" />')
-        svg.append(f'<text x="44" y="{y}" class="stat-label">{label}</text>')
-        svg.append(f'<text x="215" y="{y}" class="stat-val">{val}</text>')
+        svg.append(text_to_svg_path(label, 44, y, 13.5, FONT_BODY, fill="#94a3b8"))
+        svg.append(text_to_svg_path(val, 215, y, 15, FONT_TITLE, fill="#ffffff"))
         
-    # Grade Circle (Right Side) - S+ Rank
-    cx, cy, r = 378, 114, 46
-    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" stroke="rgba(255,255,255,0.06)" stroke-width="7" fill="none" />')
-    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" stroke="url(#ringGrad)" stroke-width="7" stroke-linecap="round" stroke-dasharray="289" stroke-dashoffset="30" fill="none" filter="url(#neonGlow)" />')
-    svg.append(f'<text x="{cx}" y="{cy + 10}" text-anchor="middle" class="grade-score">A+</text>')
-    svg.append(f'<text x="{cx}" y="{cy + 36}" text-anchor="middle" class="badge-txt">SUPER ARCHITECT</text>')
+    # Grade Circle (Right Side)
+    cx, cy, r = 378, 100, 44
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" stroke="rgba(255,255,255,0.06)" stroke-width="6.5" fill="none" />')
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="{r}" stroke="url(#ringGrad)" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="276" stroke-dashoffset="30" fill="none" filter="url(#neonGlow)" />')
+    svg.append(text_to_svg_path("A+", cx, cy + 10, 29, FONT_TITLE, anchor="middle", fill="url(#titleGrad)"))
+    svg.append(text_to_svg_path("SUPER ARCHITECT", cx, cy + 62, 10, FONT_TITLE, anchor="middle", fill="#00f2fe"))
 
     svg.append('</svg>')
     return '\n'.join(svg)
@@ -108,28 +149,30 @@ def generate_streak_card():
     col_w = w / 3
     
     # Col 1: Total Contributions
-    svg.append(f'<text x="{col_w * 0.5}" y="85" text-anchor="middle" class="big-stat" font-size="34">319</text>')
-    svg.append(f'<text x="{col_w * 0.5}" y="112" text-anchor="middle" class="card-title" font-size="13.5">Total Contributions</text>')
-    svg.append(f'<text x="{col_w * 0.5}" y="132" text-anchor="middle" class="caption">Sep 14, 2024 - Present</text>')
+    c1_x = col_w * 0.5
+    svg.append(text_to_svg_path("319", c1_x, 85, 34, FONT_TITLE, anchor="middle", fill="#ffffff"))
+    svg.append(text_to_svg_path("Total Contributions", c1_x, 114, 13.5, FONT_TITLE, anchor="middle", fill="#00f2fe"))
+    svg.append(text_to_svg_path("Sep 14, 2024 - Present", c1_x, 134, 12, FONT_BODY, anchor="middle", fill="#64748b"))
     
     # Divider 1
     svg.append(f'<line x1="{col_w}" y1="45" x2="{col_w}" y2="160" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />')
     
-    # Col 2: Current Streak (Centerpiece with glowing ring)
+    # Col 2: Current Streak
     cx, cy = col_w * 1.5, 78
-    svg.append(f'<circle cx="{cx}" cy="{cy}" r="36" stroke="rgba(255,255,255,0.06)" stroke-width="5.5" fill="none" />')
-    svg.append(f'<circle cx="{cx}" cy="{cy}" r="36" stroke="url(#ringGrad)" stroke-width="5.5" stroke-dasharray="226" stroke-dashoffset="50" stroke-linecap="round" fill="none" filter="url(#neonGlow)" />')
-    svg.append(f'<text x="{cx}" y="{cy + 8}" text-anchor="middle" class="big-stat" font-size="25">1</text>')
-    svg.append(f'<text x="{cx}" y="136" text-anchor="middle" class="card-title" font-size="14">Current Streak</text>')
-    svg.append(f'<text x="{cx}" y="154" text-anchor="middle" class="badge-txt" fill="#38ef7d">DAILY ACTIVE</text>')
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="35" stroke="rgba(255,255,255,0.06)" stroke-width="5.5" fill="none" />')
+    svg.append(f'<circle cx="{cx}" cy="{cy}" r="35" stroke="url(#ringGrad)" stroke-width="5.5" stroke-dasharray="220" stroke-dashoffset="45" stroke-linecap="round" fill="none" filter="url(#neonGlow)" />')
+    svg.append(text_to_svg_path("1", cx, cy + 9, 27, FONT_TITLE, anchor="middle", fill="#ffffff"))
+    svg.append(text_to_svg_path("Current Streak", cx, 136, 14, FONT_TITLE, anchor="middle", fill="#00f2fe"))
+    svg.append(text_to_svg_path("DAILY ACTIVE", cx, 154, 10.5, FONT_TITLE, anchor="middle", fill="#38ef7d"))
     
     # Divider 2
     svg.append(f'<line x1="{col_w * 2}" y1="45" x2="{col_w * 2}" y2="160" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" />')
     
     # Col 3: Longest Streak
-    svg.append(f'<text x="{col_w * 2.5}" y="85" text-anchor="middle" class="big-stat" font-size="34">3</text>')
-    svg.append(f'<text x="{col_w * 2.5}" y="112" text-anchor="middle" class="card-title" font-size="13.5">Longest Streak</text>')
-    svg.append(f'<text x="{col_w * 2.5}" y="132" text-anchor="middle" class="caption">Peak Consistency</text>')
+    c3_x = col_w * 2.5
+    svg.append(text_to_svg_path("3", c3_x, 85, 34, FONT_TITLE, anchor="middle", fill="#ffffff"))
+    svg.append(text_to_svg_path("Longest Streak", c3_x, 114, 13.5, FONT_TITLE, anchor="middle", fill="#00f2fe"))
+    svg.append(text_to_svg_path("Peak Consistency", c3_x, 134, 12, FONT_BODY, anchor="middle", fill="#64748b"))
     
     svg.append('</svg>')
     return '\n'.join(svg)
@@ -142,7 +185,7 @@ def generate_languages_card():
     svg.append(f'<rect width="{w}" height="{h}" class="card-frame" />')
     
     # Header
-    svg.append('<text x="24" y="38" class="card-title" font-size="19">Most Used Languages</text>')
+    svg.append(text_to_svg_path("Most Used Languages", 24, 38, 19, FONT_TITLE, fill="url(#titleGrad)"))
     
     langs = [
         ("TypeScript", 62.28, "#3178c6"),
@@ -184,8 +227,8 @@ def generate_languages_card():
         ly = start_y + ((i % 4) * row_h)
         
         svg.append(f'<circle cx="{lx}" cy="{ly - 4}" r="5" fill="{col}" filter="url(#softGlow)" />')
-        svg.append(f'<text x="{lx + 15}" y="{ly}" class="stat-val" font-size="14">{name}</text>')
-        svg.append(f'<text x="{lx + 150}" y="{ly}" class="caption" font-size="13" font-weight="600">{pct:.2f}%</text>')
+        svg.append(text_to_svg_path(name, lx + 16, ly, 14, FONT_TITLE, fill="#ffffff"))
+        svg.append(text_to_svg_path(f"{pct:.2f}%", lx + 155, ly, 13, FONT_BODY, fill="#94a3b8"))
         
     svg.append('</svg>')
     return '\n'.join(svg)
@@ -205,22 +248,22 @@ def generate_repo_card(name, desc, lang, lang_col, forks=0, stars=0):
       </g>
     ''')
     
-    # Title
-    svg.append(f'<text x="56" y="38" class="card-title" font-size="17.5">{name}</text>')
+    # Title in Space Grotesk Bold
+    svg.append(text_to_svg_path(name, 56, 38, 17.5, FONT_TITLE, fill="url(#titleGrad)"))
     
-    # Description
+    # Description lines in Outfit Medium
     d = desc if desc else "High-performance software engine & architectural component."
     if len(d) > 65:
         d1 = d[:65]
         d2 = d[65:128] + ('...' if len(d) > 128 else '')
-        svg.append(f'<text x="24" y="65" class="repo-desc">{d1}</text>')
-        svg.append(f'<text x="24" y="83" class="repo-desc">{d2}</text>')
+        svg.append(text_to_svg_path(d1, 24, 66, 13, FONT_BODY, fill="#94a3b8"))
+        svg.append(text_to_svg_path(d2, 24, 84, 13, FONT_BODY, fill="#94a3b8"))
     else:
-        svg.append(f'<text x="24" y="69" class="repo-desc">{d}</text>')
+        svg.append(text_to_svg_path(d, 24, 70, 13, FONT_BODY, fill="#94a3b8"))
         
-    # Language tag
+    # Language dot + tag
     svg.append(f'<circle cx="28" cy="104" r="4.5" fill="{lang_col}" filter="url(#softGlow)" />')
-    svg.append(f'<text x="38" y="108" class="repo-lang">{lang}</text>')
+    svg.append(text_to_svg_path(lang, 38, 108, 12.5, FONT_BODY_BOLD, fill="#cbd5e1"))
     
     # Forks count if any
     stat_x = 135
@@ -232,8 +275,8 @@ def generate_repo_card(name, desc, lang, lang_col, forks=0, stars=0):
           <circle cx="6" cy="10" r="1.8" fill="none" stroke="#94a3b8" stroke-width="1.2" />
           <path d="M2 4v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4M6 8v2" fill="none" stroke="#94a3b8" stroke-width="1.2" />
         </g>
-        <text x="{stat_x + 16}" y="108" class="caption" font-weight="600">{forks}</text>
         ''')
+        svg.append(text_to_svg_path(str(forks), stat_x + 16, 108, 12, FONT_BODY, fill="#94a3b8"))
         stat_x += 40
         
     svg.append('</svg>')
@@ -272,4 +315,4 @@ if __name__ == '__main__':
             with open(os.path.join(folder, fname), 'w') as f:
                 f.write(svg_code)
                 
-    print("Generated all cards with Cyber Aurora palette and Space Grotesk typography!")
+    print("Regenerated all cards with SpaceGrotesk Bold and Outfit typography!")
