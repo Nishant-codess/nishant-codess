@@ -6,7 +6,7 @@ from matplotlib.path import Path
 # Static TrueType Fonts
 FONT_TITLE = 'fonts/SpaceGrotesk-BoldStatic.ttf'
 FONT_REGULAR = 'fonts/SpaceGrotesk-MediumStatic.ttf'
-FONT_HEADER = 'fonts/Outfit-Bold.ttf'
+FONT_HEADER = 'fonts/DINAlternate-Bold.ttf'
 FONT_BODY_BOLD = 'fonts/Outfit-SemiBold.ttf'
 FONT_BODY = 'fonts/Outfit-Medium.ttf'
 FONT_CURSIVE = 'fonts/DancingScript.ttf'
@@ -356,7 +356,7 @@ def generate_header_svg(title, icon_type='code'):
         icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
 
     svg.append(f'<g transform="translate({start_x}, 5) scale(0.9)">{icon_svg}</g>')
-    svg.append(text_to_svg_path(title, start_x + 28, 22, font_size, FONT_HEADER, fill="url(#headerGrad)", extra='stroke="url(#headerGrad)" stroke-width="0.8" stroke-linejoin="round"'))
+    svg.append(text_to_svg_path(title, start_x + 28, 22, font_size, FONT_HEADER, fill="url(#headerGrad)", extra='stroke="url(#headerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
     svg.append('</svg>')
     return '\n'.join(svg)
 
