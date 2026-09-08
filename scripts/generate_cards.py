@@ -8,10 +8,11 @@ from matplotlib.path import Path
 # Static TrueType Fonts
 FONT_TITLE = 'fonts/SpaceGrotesk-BoldStatic.ttf'
 FONT_REGULAR = 'fonts/SpaceGrotesk-MediumStatic.ttf'
-FONT_HEADER = 'fonts/DINAlternate-Bold.ttf'
+FONT_CLEAN_HEADER = 'fonts/DINAlternate-Bold.ttf'
+FONT_HEADER = 'fonts/HigherJump.ttf'
 FONT_BODY_BOLD = 'fonts/Outfit-SemiBold.ttf'
 FONT_BODY = 'fonts/Outfit-Medium.ttf'
-FONT_CURSIVE = 'fonts/DancingScript.ttf'
+FONT_CURSIVE = 'fonts/Runethia.otf'
 
 def text_to_svg_path(text, x, y, size, font_path, anchor='start', fill='#ffffff', opacity=1.0, extra=''):
     """Converts a text string into an SVG <path> element with vector glyphs."""
@@ -310,7 +311,7 @@ def generate_repo_card(name, desc_lines, category, tags, forks=0, stars=0):
     return '\n'.join(svg)
 
 def generate_header_svg(title, icon_type='code'):
-    w, h = 600, 32
+    w, h = 900, 52
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">')
     svg.append('''
@@ -324,9 +325,9 @@ def generate_header_svg(title, icon_type='code'):
     </defs>
     ''')
     
-    font_size = 14.5
+    font_size = 21
     tw = get_text_width(title, font_size, FONT_HEADER)
-    total_w = tw + 28
+    total_w = tw + 34
     start_x = (w - total_w) / 2
     
     # Vector Icons
@@ -352,19 +353,19 @@ def generate_header_svg(title, icon_type='code'):
     else:
         icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
 
-    svg.append(f'<g transform="translate({start_x}, 5) scale(0.9)">{icon_svg}</g>')
-    svg.append(text_to_svg_path(title, start_x + 28, 22, font_size, FONT_HEADER, fill="url(#headerGrad)", extra='stroke="url(#headerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
+    svg.append(f'<g transform="translate({start_x}, 12) scale(1.1)">{icon_svg}</g>')
+    svg.append(text_to_svg_path(title, start_x + 36, 35, font_size, FONT_HEADER, fill="url(#headerGrad)", extra='stroke="url(#headerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
     svg.append('</svg>')
     return '\n'.join(svg)
 
-def make_cycling_headline_svg(lines, w=680, h=50, font_size=26, dur_per_line=3.5):
+def make_cycling_headline_svg(lines, w=720, h=55, font_size=28, dur_per_line=3.5):
     n = len(lines)
     total_dur = n * dur_per_line
     fade_frac = 0.05
     
     svg_groups = []
     for idx, line in enumerate(lines):
-        path = text_to_svg_path(line, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.85" stroke-linejoin="round"')
+        path = text_to_svg_path(line, w/2, 38, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.7" stroke-linejoin="round"')
         start_f = idx / n
         fade_in_f = start_f + fade_frac
         hold_f = (idx + 1) / n - fade_frac
@@ -411,7 +412,7 @@ def make_cycling_headline_svg(lines, w=680, h=50, font_size=26, dur_per_line=3.5
 </svg>'''
 
 def make_gradient_cursive_svg(text, w, h, font_size):
-    path = text_to_svg_path(text, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.85" stroke-linejoin="round"')
+    path = text_to_svg_path(text, w/2, h*0.72, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.7" stroke-linejoin="round"')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -491,7 +492,7 @@ def generate_hero_banner_svg():
     ''')
     
     # Main Title
-    svg.append(text_to_svg_path("NISHANT RANJAN", 26, 76, 36, FONT_HEADER, fill="url(#bannerGrad)", extra='stroke="url(#bannerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
+    svg.append(text_to_svg_path("NISHANT RANJAN", 26, 76, 36, FONT_CLEAN_HEADER, fill="url(#bannerGrad)", extra='stroke="url(#bannerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
     # Subtitle
     svg.append(text_to_svg_path("High-Throughput Distributed Engines • Concurrency • Real-Time Speech AI", 26, 106, 13.5, FONT_TITLE, fill="#e2e8f0"))
     # Description
@@ -592,7 +593,7 @@ def generate_world_clocks_svg():
     svg.append(f'<rect x="0" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#istBg)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.2" />')
     svg.append(render_clock_face(48, 51, 30, ist_hr_ang, ist_min_ang, ist_sec_ang, "#00f2fe", "#f43f5e"))
     
-    svg.append(text_to_svg_path("NEW DELHI, INDIA", 92, 26, 11, FONT_HEADER, fill="#94a3b8"))
+    svg.append(text_to_svg_path("NEW DELHI, INDIA", 92, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
     ist_time_str = ist.strftime('%I:%M %p')
     svg.append(text_to_svg_path(ist_time_str, 92, 52, 21, FONT_TITLE, fill="#ffffff"))
     badge_x = 92 + get_text_width(ist_time_str, 21, FONT_TITLE) + 12
@@ -605,7 +606,7 @@ def generate_world_clocks_svg():
     svg.append(f'<rect x="{c2_x}" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#lonBg)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1.2" />')
     svg.append(render_clock_face(c2_x + 48, 51, 30, lon_hr_ang, lon_min_ang, lon_sec_ang, "#c084fc", "#00f2fe"))
     
-    svg.append(text_to_svg_path("LONDON, UNITED KINGDOM", c2_x + 92, 26, 11, FONT_HEADER, fill="#94a3b8"))
+    svg.append(text_to_svg_path("LONDON, UNITED KINGDOM", c2_x + 92, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
     lon_time_str = london.strftime('%I:%M %p')
     svg.append(text_to_svg_path(lon_time_str, c2_x + 92, 52, 21, FONT_TITLE, fill="#ffffff"))
     badge2_x = c2_x + 92 + get_text_width(lon_time_str, 21, FONT_TITLE) + 12
@@ -718,9 +719,9 @@ if __name__ == '__main__':
         'Open-Source Builder • Crafting Things That Matter',
         'Turning Complex Problems into Clean Code'
     ]
-    typing_headline = make_cycling_headline_svg(headline_lines, 680, 50, 26)
-    typing_spotify = make_gradient_cursive_svg("The song that's been playing on my mind recently.", 620, 38, 22)
-    typing_footer = make_gradient_cursive_svg("Craft code that thinks, builds that scale, and apps that feel alive.", 680, 44, 24)
+    typing_headline = make_cycling_headline_svg(headline_lines, 720, 55, 28)
+    typing_spotify = make_gradient_cursive_svg("The song that's been playing on my mind recently.", 620, 44, 24)
+    typing_footer = make_gradient_cursive_svg("Craft code that thinks, builds that scale, and apps that feel alive.", 720, 48, 26)
     
     # 3. Section Header SVGs
     headers = [
