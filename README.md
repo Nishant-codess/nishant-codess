@@ -215,7 +215,7 @@
   <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=22&duration=5000&pause=20000&color=38EF7D&center=true&vCenter=true&width=640&height=36&lines=The+song+that's+been+playing+on+my+mind+recently." alt="The song that's been playing on my mind recently" />
 </p>
 
-https://github.com/user-attachments/assets/7b9a8337-d93f-405d-b603-e9c67201e57b
+https://github.com/user-attachments/assets/6ab47dd9-c2d2-4c0c-9711-884cba8f87ea
 
 <p align="center">
   <a href="https://nishant-codess.github.io/nishant-codess/" target="_blank">
