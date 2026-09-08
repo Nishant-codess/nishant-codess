@@ -6,8 +6,10 @@ from matplotlib.path import Path
 # Static TrueType Fonts
 FONT_TITLE = 'fonts/SpaceGrotesk-BoldStatic.ttf'
 FONT_REGULAR = 'fonts/SpaceGrotesk-MediumStatic.ttf'
+FONT_HEADER = 'fonts/Outfit-Bold.ttf'
 FONT_BODY_BOLD = 'fonts/Outfit-SemiBold.ttf'
 FONT_BODY = 'fonts/Outfit-Medium.ttf'
+FONT_CURSIVE = 'fonts/DancingScript.ttf'
 
 def text_to_svg_path(text, x, y, size, font_path, anchor='start', fill='#ffffff', opacity=1.0, extra=''):
     """Converts a text string into an SVG <path> element with vector glyphs."""
@@ -60,12 +62,20 @@ def get_text_width(text, size, font_path):
 def create_card_defs():
     return '''
     <defs>
-      <!-- Multi-Color Gradient Palette: Cyber Aurora (Cyan -> Emerald -> Purple -> Coral) -->
+      <!-- Multi-Color Gradient Palette: Google 4 Colors + Cyber Aurora -->
+      <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#4285F4" />
+        <stop offset="25%" stop-color="#00f2fe" />
+        <stop offset="50%" stop-color="#c084fc" />
+        <stop offset="75%" stop-color="#f43f5e" />
+        <stop offset="100%" stop-color="#FBBC05" />
+      </linearGradient>
       <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="32%" stop-color="#38ef7d" />
-        <stop offset="68%" stop-color="#c084fc" />
-        <stop offset="100%" stop-color="#f43f5e" />
+        <stop offset="0%" stop-color="#4285F4" />
+        <stop offset="25%" stop-color="#00f2fe" />
+        <stop offset="50%" stop-color="#c084fc" />
+        <stop offset="75%" stop-color="#f43f5e" />
+        <stop offset="100%" stop-color="#FBBC05" />
       </linearGradient>
       <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
@@ -301,172 +311,116 @@ def generate_repo_card(name, desc_lines, category, tags, forks=0, stars=0):
     svg.append('</svg>')
     return '\n'.join(svg)
 
-def make_trophy_icon(cx, cy, scale=1.0):
-    return f'''
-    <g transform="translate({cx},{cy}) scale({scale})">
-      <ellipse cx="0" cy="42" rx="28" ry="5" fill="#f59e0b" opacity="0.25" filter="url(#goldGlow)" />
-      
-      <!-- Laurel Leaves -->
-      <path d="M-28,12 C-34,-4 -28,-22 -14,-30 C-20,-18 -22,-2 -18,14 Z" fill="url(#goldShine)" opacity="0.75" />
-      <path d="M28,12 C34,-4 28,-22 14,-30 C20,-18 22,-2 18,14 Z" fill="url(#goldShine)" opacity="0.75" />
-      
-      <!-- Handles -->
-      <path d="M-18,-18 C-36,-18 -36,8 -16,12 L-14,8 C-28,5 -28,-14 -16,-14 Z" fill="url(#goldDark)" />
-      <path d="M18,-18 C36,-18 36,8 16,12 L14,8 C28,5 28,-14 16,-14 Z" fill="url(#goldDark)" />
-      
-      <!-- Cup Body -->
-      <path d="M-18,-26 L18,-26 C16,-6 14,16 0,22 C-14,16 -16,-6 -18,-26 Z" fill="url(#goldCup)" filter="url(#specular3D)" />
-      <!-- Rim -->
-      <ellipse cx="0" cy="-26" rx="19" ry="4.5" fill="url(#goldHighlight)" />
-      <ellipse cx="0" cy="-26" rx="16" ry="3" fill="url(#goldDark)" />
-      
-      <!-- Stem -->
-      <path d="M-4,21 L4,21 L3,32 L-3,32 Z" fill="url(#goldDark)" />
-      <ellipse cx="0" cy="32" rx="7" ry="2.5" fill="url(#goldHighlight)" />
-      
-      <!-- Pedestal -->
-      <path d="M-16,33 L16,33 L20,40 L-20,40 Z" fill="url(#goldBase)" />
-      <rect x="-22" y="40" width="44" height="4" rx="1.5" fill="url(#goldHighlight)" />
-      
-      <!-- Star on Cup -->
-      <polygon points="0,-8 2.5,-1 9,-1 3.5,3 5.5,10 0,6 -5.5,10 -3.5,3 -9,-1 -2.5,-1" fill="#ffffff" opacity="0.9" filter="url(#softGlow)" />
-    </g>
-    '''
-
-def generate_golden_trophies_card():
-    w, h = 980, 220
-    svg = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">']
-    svg.append('''
-    <defs>
-      <linearGradient id="trophyCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#0f172a" />
-        <stop offset="50%" stop-color="#0b0f19" />
-        <stop offset="100%" stop-color="#070a10" />
-      </linearGradient>
-      <linearGradient id="goldBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="rgba(253, 224, 71, 0.45)" />
-        <stop offset="50%" stop-color="rgba(234, 179, 8, 0.25)" />
-        <stop offset="100%" stop-color="rgba(161, 98, 7, 0.4)" />
-      </linearGradient>
-      
-      <linearGradient id="goldCup" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#fef08a" />
-        <stop offset="20%" stop-color="#fde047" />
-        <stop offset="50%" stop-color="#ffffff" />
-        <stop offset="70%" stop-color="#eab308" />
-        <stop offset="100%" stop-color="#a16207" />
-      </linearGradient>
-      <linearGradient id="goldHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#ffffff" />
-        <stop offset="40%" stop-color="#fde047" />
-        <stop offset="100%" stop-color="#ca8a04" />
-      </linearGradient>
-      <linearGradient id="goldDark" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="0%" stop-color="#eab308" />
-        <stop offset="100%" stop-color="#713f12" />
-      </linearGradient>
-      <linearGradient id="goldShine" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#fef9c3" />
-        <stop offset="50%" stop-color="#eab308" />
-        <stop offset="100%" stop-color="#854d0e" />
-      </linearGradient>
-      <linearGradient id="goldBase" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#854d0e" />
-        <stop offset="30%" stop-color="#eab308" />
-        <stop offset="60%" stop-color="#fde047" />
-        <stop offset="100%" stop-color="#713f12" />
-      </linearGradient>
-
-      <filter id="goldGlow" x="-30%" y="-30%" width="160%" height="160%">
-        <feGaussianBlur stdDeviation="5" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-      </filter>
-      <filter id="specular3D">
-        <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#000000" flood-opacity="0.6" />
-      </filter>
-      <filter id="softGlow">
-        <feGaussianBlur stdDeviation="2" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-      </filter>
-
-      <style>
-        .gold-card { fill: url(#trophyCardBg); stroke: url(#goldBorder); stroke-width: 1.5px; rx: 18px; }
-      </style>
-    </defs>
-    ''')
-    svg.append(f'<rect width="{w}" height="{h}" class="gold-card" />')
-
-    col_w = w / 4
-    trophies = [
-        ("1ST PLACE", "TechKnow 2025", "National Project Expo", "Top Honors Nationwide"),
-        ("TOP 2% NATIONALLY", "NPTEL Java Elite", "Ministry of Education, GoI", "Elite + Silver Honor"),
-        ("3RD PLACE", "DAYZERO Hackathon", "National 36-Hr Build", "Intelligent AI Terminal"),
-        ("2ND PLACE", "Reuse & Remodel", "National Engineering Expo", "Sustainable Tech Award")
-    ]
-
-    for idx, (rank, title, subtitle, extra) in enumerate(trophies):
-        cx = (idx + 0.5) * col_w
-        svg.append(make_trophy_icon(cx, 68, scale=1.15))
-        
-        rw = 132
-        svg.append(f'<rect x="{cx - rw/2}" y="128" width="{rw}" height="20" rx="10" fill="rgba(234, 179, 8, 0.12)" stroke="rgba(253, 224, 71, 0.35)" stroke-width="1" />')
-        svg.append(text_to_svg_path(rank, cx, 142, 10, FONT_TITLE, anchor='middle', fill='#fde047'))
-        svg.append(text_to_svg_path(title, cx, 168, 14, FONT_TITLE, anchor='middle', fill='#ffffff'))
-        svg.append(text_to_svg_path(subtitle, cx, 186, 11, FONT_BODY, anchor='middle', fill='#94a3b8'))
-        svg.append(text_to_svg_path(extra, cx, 202, 10, FONT_BODY, anchor='middle', fill='#eab308'))
-        
-        if idx < 3:
-            div_x = (idx + 1) * col_w
-            svg.append(f'<line x1="{div_x}" y1="30" x2="{div_x}" y2="{h - 30}" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />')
-
-    svg.append('</svg>')
-    return '\n'.join(svg)
-
 def generate_header_svg(title, icon_type='code'):
-    w, h = 600, 36
+    w, h = 600, 32
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">')
     svg.append('''
     <defs>
       <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="33%" stop-color="#38ef7d" />
-        <stop offset="66%" stop-color="#c084fc" />
-        <stop offset="100%" stop-color="#f43f5e" />
+        <stop offset="0%" stop-color="#4285F4" />
+        <stop offset="25%" stop-color="#00f2fe" />
+        <stop offset="50%" stop-color="#c084fc" />
+        <stop offset="75%" stop-color="#f43f5e" />
+        <stop offset="100%" stop-color="#FBBC05" />
       </linearGradient>
-      <filter id="glow">
-        <feGaussianBlur stdDeviation="2.5" result="blur" />
-        <feComposite in="SourceGraphic" in2="blur" operator="over" />
-      </filter>
     </defs>
     ''')
     
-    # Calculate title width for centering with icon
-    tw = get_text_width(title, 18, FONT_TITLE)
-    total_w = tw + 32 # 32px for icon + gap
+    font_size = 14.5
+    tw = get_text_width(title, font_size, FONT_HEADER)
+    total_w = tw + 28
     start_x = (w - total_w) / 2
     
     # Vector Icons
     icon_svg = ''
-    if icon_type == 'terminal': # Command Center
-        icon_svg = f'<path d="M4 17l6-6-6-6M12 19h8" stroke="#00f2fe" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
-    elif icon_type == 'folder': # Creations
-        icon_svg = f'<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" stroke="#f43f5e" stroke-width="2" fill="none" />'
-    elif icon_type == 'trophy': # Trophies
-        icon_svg = f'<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H7M14 14.66V17c0 .55.45 1 1 1h2M18 2H6v7a6 6 0 0 0 12 0V2Z" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
-    elif icon_type == 'award': # Certifications
-        icon_svg = f'<circle cx="12" cy="8" r="6" stroke="#c084fc" stroke-width="2" fill="none" /><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.724.524l-4.268-2.243-4.27 2.243a.5.5 0 0 1-.723-.524l1.515-8.526" stroke="#c084fc" stroke-width="2" fill="none" />'
-    elif icon_type == 'cpu': # Highlights / Architecture
-        icon_svg = f'<rect x="4" y="4" width="16" height="16" rx="2" stroke="#38ef7d" stroke-width="2" fill="none" /><rect x="9" y="9" width="6" height="6" stroke="#38ef7d" stroke-width="2" fill="none" /><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" stroke="#38ef7d" stroke-width="2" fill="none" />'
-    elif icon_type == 'stack': # Arsenal
-        icon_svg = f'<path d="m12 2 10 5-10 5L2 7l10-5ZM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
-    else: # Default sparkles
-        icon_svg = f'<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
+    if icon_type == 'user':
+        icon_svg = '<circle cx="12" cy="7" r="4" stroke="#4285F4" stroke-width="2" fill="none" /><path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="#4285F4" stroke-width="2" stroke-linecap="round" fill="none" />'
+    elif icon_type == 'terminal':
+        icon_svg = '<path d="M4 17l6-6-6-6M12 19h8" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+    elif icon_type == 'folder':
+        icon_svg = '<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" stroke="#f43f5e" stroke-width="2" fill="none" />'
+    elif icon_type == 'trophy':
+        icon_svg = '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H7M14 14.66V17c0 .55.45 1 1 1h2M18 2H6v7a6 6 0 0 0 12 0V2Z" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+    elif icon_type == 'award':
+        icon_svg = '<circle cx="12" cy="8" r="6" stroke="#c084fc" stroke-width="2" fill="none" /><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.724.524l-4.268-2.243-4.27 2.243a.5.5 0 0 1-.723-.524l1.515-8.526" stroke="#c084fc" stroke-width="2" fill="none" />'
+    elif icon_type == 'cpu':
+        icon_svg = '<rect x="4" y="4" width="16" height="16" rx="2" stroke="#34A853" stroke-width="2" fill="none" /><rect x="9" y="9" width="6" height="6" stroke="#34A853" stroke-width="2" fill="none" /><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" stroke="#34A853" stroke-width="2" fill="none" />'
+    elif icon_type == 'stack':
+        icon_svg = '<path d="m12 2 10 5-10 5L2 7l10-5ZM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+    elif icon_type == 'music':
+        icon_svg = '<path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="#FBBC05" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+    elif icon_type == 'send':
+        icon_svg = '<path d="m22 2-7 20-4-9-9-4Z" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><path d="M22 2 11 13" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+    else:
+        icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
 
-    svg.append(f'<g transform="translate({start_x}, 6)">{icon_svg}</g>')
-    svg.append(text_to_svg_path(title, start_x + 32, 24, 18, FONT_TITLE, fill="url(#headerGrad)"))
+    svg.append(f'<g transform="translate({start_x}, 5) scale(0.9)">{icon_svg}</g>')
+    svg.append(text_to_svg_path(title, start_x + 28, 22, font_size, FONT_HEADER, fill="url(#headerGrad)"))
     svg.append('</svg>')
     return '\n'.join(svg)
+
+def make_cycling_headline_svg(lines, w=680, h=50, font_size=26, dur_per_line=3.5):
+    n = len(lines)
+    total_dur = n * dur_per_line
+    fade_frac = 0.05
+    
+    svg_groups = []
+    for idx, line in enumerate(lines):
+        path = text_to_svg_path(line, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)')
+        start_f = idx / n
+        fade_in_f = start_f + fade_frac
+        hold_f = (idx + 1) / n - fade_frac
+        end_f = (idx + 1) / n
+        
+        pts = []
+        if start_f > 0:
+            pts.append((0.0, 0))
+            pts.append((start_f, 0))
+        pts.append((fade_in_f, 1))
+        pts.append((hold_f, 1))
+        pts.append((end_f, 0))
+        if end_f < 1.0:
+            pts.append((1.0, 0))
+            
+        pts = sorted(list(set(pts)), key=lambda x: x[0])
+        kt_str = '; '.join(f'{p[0]:.4f}' for p in pts)
+        val_str = '; '.join(str(p[1]) for p in pts)
+        
+        svg_groups.append(f'''
+        <g opacity="0">
+          <animate attributeName="opacity" dur="{total_dur}s" repeatCount="indefinite"
+            values="{val_str}" keyTimes="{kt_str}" />
+          {path}
+        </g>''')
+        
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
+  <defs>
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="25%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="75%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#FBBC05" />
+    </linearGradient>
+  </defs>
+  {''.join(svg_groups)}
+</svg>'''
+
+def make_gradient_cursive_svg(text, w, h, font_size):
+    path = text_to_svg_path(text, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)')
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
+  <defs>
+    <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285F4" />
+      <stop offset="25%" stop-color="#00f2fe" />
+      <stop offset="50%" stop-color="#c084fc" />
+      <stop offset="75%" stop-color="#f43f5e" />
+      <stop offset="100%" stop-color="#FBBC05" />
+    </linearGradient>
+  </defs>
+  {path}
+</svg>'''
 
 if __name__ == '__main__':
     os.makedirs('assets', exist_ok=True)
@@ -476,16 +430,29 @@ if __name__ == '__main__':
     stats_svg = generate_stats_card()
     streak_svg = generate_streak_card()
     langs_svg = generate_languages_card()
-    trophies_svg = generate_golden_trophies_card()
     
-    # 2. Section Header SVGs
+    # 2. Cycling and Static Cursive Typing SVGs
+    headline_lines = [
+        'Full-Stack Architect • Building Scalable Systems',
+        'AI/ML Explorer • Teaching Machines to Think',
+        'Open-Source Builder • Crafting Things That Matter',
+        'Turning Complex Problems into Clean Code'
+    ]
+    typing_headline = make_cycling_headline_svg(headline_lines, 680, 50, 26)
+    typing_spotify = make_gradient_cursive_svg("The song that's been playing on my mind recently.", 620, 38, 22)
+    typing_footer = make_gradient_cursive_svg("Craft code that thinks, builds that scale, and apps that feel alive.", 680, 44, 24)
+    
+    # 3. Section Header SVGs
     headers = [
+        ('header-about.svg', 'ABOUT ME', 'user'),
+        ('header-arsenal.svg', 'CORE TECHNICAL ARSENAL', 'stack'),
         ('header-command-center.svg', 'DEVELOPER COMMAND CENTER', 'terminal'),
         ('header-creations.svg', 'FEATURED ARCHITECTURAL CREATIONS', 'folder'),
+        ('header-highlights.svg', 'SYSTEM ARCHITECTURE & DEEP-DIVES', 'cpu'),
         ('header-trophies.svg', 'HALL OF HONORS & TROPHIES', 'trophy'),
         ('header-certifications.svg', 'HONORS & PROFESSIONAL CERTIFICATIONS', 'award'),
-        ('header-arsenal.svg', 'CORE TECHNICAL ARSENAL', 'stack'),
-        ('header-highlights.svg', 'SYSTEM ARCHITECTURE & DEEP-DIVES', 'cpu'),
+        ('header-spotify.svg', 'ON REPEAT IN MY MIND', 'music'),
+        ('header-connect.svg', 'CONNECT & COLLABORATE', 'send'),
     ]
     
     for folder in ['assets', 'dist']:
@@ -495,8 +462,12 @@ if __name__ == '__main__':
             f.write(streak_svg)
         with open(os.path.join(folder, 'card-languages.svg'), 'w') as f:
             f.write(langs_svg)
-        with open(os.path.join(folder, 'card-golden-trophies.svg'), 'w') as f:
-            f.write(trophies_svg)
+        with open(os.path.join(folder, 'typing-headline.svg'), 'w') as f:
+            f.write(typing_headline)
+        with open(os.path.join(folder, 'typing-spotify.svg'), 'w') as f:
+            f.write(typing_spotify)
+        with open(os.path.join(folder, 'typing-footer.svg'), 'w') as f:
+            f.write(typing_footer)
             
         for fname, title, itype in headers:
             with open(os.path.join(folder, fname), 'w') as f:

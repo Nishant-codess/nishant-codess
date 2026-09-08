@@ -1,12 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 148" width="100%" height="auto">
 
     <defs>
-      <!-- Multi-Color Gradient Palette: Cyber Aurora (Cyan -> Emerald -> Purple -> Coral) -->
+      <!-- Multi-Color Gradient Palette: Google 4 Colors + Cyber Aurora -->
+      <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#4285F4" />
+        <stop offset="25%" stop-color="#00f2fe" />
+        <stop offset="50%" stop-color="#c084fc" />
+        <stop offset="75%" stop-color="#f43f5e" />
+        <stop offset="100%" stop-color="#FBBC05" />
+      </linearGradient>
       <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="32%" stop-color="#38ef7d" />
-        <stop offset="68%" stop-color="#c084fc" />
-        <stop offset="100%" stop-color="#f43f5e" />
+        <stop offset="0%" stop-color="#4285F4" />
+        <stop offset="25%" stop-color="#00f2fe" />
+        <stop offset="50%" stop-color="#c084fc" />
+        <stop offset="75%" stop-color="#f43f5e" />
+        <stop offset="100%" stop-color="#FBBC05" />
       </linearGradient>
       <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
