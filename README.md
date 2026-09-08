@@ -223,13 +223,13 @@
 
 <!-- Vinyl Player Turntable Display -->
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/music.mp3">
+  <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3">
     <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/vinyl-player.gif" width="560" alt="Vinyl Record Player — music.mp3" style="border-radius: 16px;" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/music.mp3">
+  <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3">
     <img src="https://img.shields.io/badge/▶_Play_Music_Now-Click_to_Listen-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play Music" />
   </a>
   &nbsp;
