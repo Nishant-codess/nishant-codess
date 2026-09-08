@@ -2,32 +2,30 @@
      🔥 NISHANT RANJAN — GITHUB PROFILE
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
-<div align="center">
-
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      HERO SECTION: ANIMATED BANNER
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:11998e,50:38ef7d,75:11998e,100:0d1117&height=260&section=header&text=NISHANT%20RANJAN&fontSize=54&fontColor=ffffff&fontAlignY=38&desc=Crafting%20Code%20That%20Thinks%20%E2%80%A2%20Scalable%20Systems%20%E2%80%A2%20AI%20%26%20Cloud&descAlignY=58&descSize=18&descColor=38ef7d" alt="Nishant Ranjan Banner" />
-
-<br>
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:11998e,50:38ef7d,75:11998e,100:0d1117&height=260&section=header&text=NISHANT%20RANJAN&fontSize=54&fontColor=ffffff&fontAlignY=38&desc=Crafting%20Code%20That%20Thinks%20%E2%80%A2%20Scalable%20Systems%20%E2%80%A2%20AI%20%26%20Cloud&descAlignY=58&descSize=18&descColor=38ef7d" alt="Nishant Ranjan Banner" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      HERO AVATAR & MODERN TYPING INTRO
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<a href="https://github.com/Nishant-codess">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/pixel-art-avatar.png" width="190" alt="Nishant Ranjan Pixel Art Avatar" style="border-radius: 18px;" />
-</a>
-
-<br><br>
+<p align="center">
+  <a href="https://github.com/Nishant-codess">
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/pixel-art-avatar.png" width="190" alt="Nishant Ranjan Pixel Art Avatar" style="border-radius: 18px;" />
+  </a>
+</p>
 
 <!-- Dynamic Typing SVG using clean modern 'Outfit' font -->
-<a href="https://github.com/Nishant-codess">
-  <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=600&size=22&duration=3000&pause=1200&color=38EF7D&center=true&vCenter=true&width=620&height=48&lines=Full-Stack+Architect+%E2%80%A2+Building+Scalable+Backends;AI%2FML+Explorer+%E2%80%A2+Teaching+Machines+to+Think;Open-Source+Builder+%E2%80%A2+Crafting+Things+That+Matter;Turning+Complex+Problems+into+Clean+Code" alt="Typing Headline" />
-</a>
-
-<br>
+<p align="center">
+  <a href="https://github.com/Nishant-codess">
+    <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=600&size=22&duration=3000&pause=1200&color=38EF7D&center=true&vCenter=true&width=620&height=48&lines=Full-Stack+Architect+%E2%80%A2+Building+Scalable+Backends;AI%2FML+Explorer+%E2%80%A2+Teaching+Machines+to+Think;Open-Source+Builder+%E2%80%A2+Crafting+Things+That+Matter;Turning+Complex+Problems+into+Clean+Code" alt="Typing Headline" />
+  </a>
+</p>
 
 <!-- Quick Stats Badges -->
 <p align="center">
@@ -41,15 +39,15 @@
 </p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      ABOUT ME: CLEAN EXECUTIVE SUMMARY
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="28" /> About Me</h3>
-
-</div>
+<h3 align="center">👨‍💻 About Me</h3>
 
 <table>
   <tr>
@@ -73,53 +71,55 @@
   </tr>
 </table>
 
-<div align="center">
-
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      TECH STACK & ARSENAL
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Hammer%20and%20Wrench.png" width="28" /> Arsenal of Mass Creation</h3>
+<h3 align="center">🛠️ Arsenal of Mass Creation</h3>
 
-<p><b>Languages</b></p>
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=java,python,cpp,kotlin,typescript,javascript,go&theme=dark" alt="Languages" />
-</a>
+<p align="center"><b>Languages</b></p>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=java,python,cpp,kotlin,typescript,javascript,go&theme=dark" alt="Languages" />
+  </a>
+</p>
 
-<br><br>
+<p align="center"><b>Frameworks & Libraries</b></p>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=spring,flask,react,nextjs,nestjs,tailwind&theme=dark" alt="Frameworks" />
+  </a>
+</p>
 
-<p><b>Frameworks & Libraries</b></p>
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=spring,flask,react,nextjs,nestjs,tailwind&theme=dark" alt="Frameworks" />
-</a>
+<p align="center"><b>Cloud, DevOps & Databases</b></p>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=docker,postgres,mongodb,firebase,linux,git,github,vercel&theme=dark" alt="Tools" />
+  </a>
+</p>
 
-<br><br>
-
-<p><b>Cloud, DevOps & Databases</b></p>
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=docker,postgres,mongodb,firebase,linux,git,github,vercel&theme=dark" alt="Tools" />
-</a>
-
-<br><br>
-
-<p><b>AI / ML & Data Science</b></p>
-<a href="https://skillicons.dev">
-  <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,anaconda&theme=dark" alt="AI/ML" />
-</a>
-
-<br><br>
+<p align="center"><b>AI / ML & Data Science</b></p>
+<p align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,anaconda&theme=dark" alt="AI/ML" />
+  </a>
+</p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      GITHUB COMMAND CENTER: STATS & STREAK (HIGH-RELIABILITY ENDPOINTS)
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Bar%20Chart.png" width="28" /> GitHub Command Center</h3>
+<h3 align="center">📊 GitHub Command Center</h3>
 
 <p align="center">
   <img width="49%" src="https://github-readme-stats-fast.vercel.app/api?username=Nishant-codess&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&ring_color=38ef7d&count_private=true&include_all_commits=true" alt="GitHub Stats" />
@@ -132,13 +132,15 @@
 </p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      FEATURED CREATIONS: TOP REPOSITORIES (VERIFIED WORKING)
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/Rocket.png" width="28" /> Featured Creations</h3>
+<h3 align="center">🚀 Featured Creations</h3>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/ShadowLedger">
@@ -171,26 +173,30 @@
 </p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      HALL OF TROPHIES (HIGH-RELIABILITY CLOUDFLARE BACKED ENDPOINT)
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Activities/Trophy.png" width="28" /> Hall of Trophies</h3>
+<h3 align="center">🏆 Hall of Trophies</h3>
 
 <p align="center">
   <img src="https://trophy.ryglcloud.net/?username=Nishant-codess&theme=radical&no-frame=true&no-bg=true&column=-1&margin-w=12&margin-h=12" alt="GitHub Trophies" />
 </p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      CONTRIBUTION SNAKE ANIMATION (LIVE GENERATED IN REPO)
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Snake.png" width="28" /> Contribution Snake</h3>
+<h3 align="center">🐍 Contribution Snake</h3>
 
 <p align="center">
   <picture>
@@ -201,13 +207,15 @@
 </p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      SPOTIFY NOW PLAYING + NATIVE AUDIO PLAYER
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Headphone.png" width="28" /> Vibes While I Code</h3>
+<h3 align="center">🎵 Vibes While I Code</h3>
 
 <p align="center">
   <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31v62l7jdfalkmeyyyzkcsnu2rh4&redirect=true">
@@ -225,13 +233,15 @@
 </p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      CONNECT & REACH OUT
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Hand%20gestures/Handshake.png" width="28" /> Connect & Collaborate</h3>
+<h3 align="center">🤝 Connect & Collaborate</h3>
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1q88WKaczp6Y1HsnKPr7vkNQRBRIi7wnO/view?usp=sharing">
@@ -262,7 +272,9 @@
 </p>
 
 <!-- Animated Divider -->
-<img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%">
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      FOOTER
@@ -272,6 +284,6 @@
   <i>"Craft code that thinks, builds that scale, and apps that feel alive."</i>
 </p>
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:11998e,50:38ef7d,75:11998e,100:0d1117&height=120&section=footer" alt="Footer Banner" />
-
-</div>
+<p align="center">
+  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:11998e,50:38ef7d,75:11998e,100:0d1117&height=120&section=footer" alt="Footer Banner" />
+</p>
