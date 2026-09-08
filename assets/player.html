@@ -538,10 +538,12 @@
     const canvas = document.getElementById('visualizer');
     const ctx = canvas.getContext('2d');
 
-    // Handle relative audio source fallback
+    // Handle multi-tier audio fallback (local -> assets -> raw CDN)
     audio.addEventListener('error', () => {
-      if (!audio.src.endsWith('music.mp3')) {
-        audio.src = 'music.mp3';
+      if (!audio.src.includes('raw.githubusercontent.com')) {
+        console.log('Falling back to GitHub raw audio CDN');
+        audio.src = 'https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/music.mp3';
+        audio.load();
       }
     });
 
