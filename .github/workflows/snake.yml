@@ -26,6 +26,9 @@ jobs:
       contents: write
     
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       # Generate the snake SVG animations
       - name: Generate Snake Animation
         uses: Platane/snk/svg-only@v3
