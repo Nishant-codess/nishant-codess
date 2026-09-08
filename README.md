@@ -26,14 +26,8 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/u/181591389?v=4" width="180" style="border-radius: 50%; border: 4px solid #38ef7d; box-shadow: 0 0 30px #11998e;" alt="Nishant Ranjan" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/pixel-art-avatar.png" width="220" alt="Nishant Ranjan — Pixel Art Avatar" />
 </p>
-
-<!-- 
-  🎨 PIXEL ART PLACEHOLDER — Replace the image above with your custom pixel art!
-  Upload your pixel art image to this repo and update the src path.
-  Example: <img src="./assets/pixel-nishant.png" width="180" ... />
--->
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Nishant-codess&label=Profile%20Views&color=11998e&style=for-the-badge" alt="Profile Views" />
@@ -381,40 +375,20 @@
 
 <h2 align="center">🎵 Vibes While I Code</h2>
 
-<!-- 
-  🎧 SPOTIFY NOW PLAYING WIDGET
-  To activate this, visit: https://github.com/kittinan/spotify-github-profile
-  Connect your Spotify account, then replace the image URL below with your generated URL.
-  
-  Example:
-  <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=YOUR_SPOTIFY_ID&cover_image=true&theme=novatorem&show_offline=true&background_color=0d1117&interchange=true&bar_color=38ef7d" />
--->
-
 <p align="center">
-  <a href="https://open.spotify.com/">
-    <img src="https://img.shields.io/badge/Spotify-Connect_Your_Account-1DB954?style=for-the-badge&logo=spotify&logoColor=white&labelColor=0d1117" alt="Spotify" />
+  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31v62l7jdfalkmeyyyzkcsnu2rh4&redirect=true">
+    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31v62l7jdfalkmeyyyzkcsnu2rh4&cover_image=true&theme=spotify-embed&show_offline=false&background_color=121212&interchange=false&profanity=false&hide_remaster=false&bar_color=53b14f&bar_color_cover=false&mode=light" alt="Spotify Now Playing" />
   </a>
 </p>
 
-<p align="center">
-  <sub>👆 Set up your <a href="https://github.com/kittinan/spotify-github-profile">Spotify widget</a> to show what you're currently jamming to!</sub>
-</p>
-
-<!-- 🎵 HTML5 NATIVE AUDIO PLAYER — GitHub allows the <audio> tag!
-     Upload an .mp3 file to this repo and update the src below.
-     Visitors can click play to hear your vibe track. -->
-
+<!-- 🎵 HTML5 NATIVE AUDIO PLAYER -->
 <p align="center"><b>🎧 Hit play — this is what I code to:</b></p>
 
 <p align="center">
   <audio controls>
-    <source src="https://github.com/Nishant-codess/nishant-codess/raw/main/assets/coding-vibe.mp3" type="audio/mpeg">
+    <source src="https://github.com/Nishant-codess/nishant-codess/raw/main/assets/music.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
   </audio>
-</p>
-
-<p align="center">
-  <sub>📁 <i>Upload your favorite track as <code>assets/coding-vibe.mp3</code> to this repo to activate the player!</i></sub>
 </p>
 
 <!-- Animated line divider -->
