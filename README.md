@@ -215,20 +215,24 @@
   <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=22&duration=5000&pause=20000&color=38EF7D&center=true&vCenter=true&width=560&height=36&lines=The+song+that's+been+playing+on+my+mind+recently." alt="The song that's been playing on my mind recently" />
 </p>
 
-<!-- Vinyl Player Turntable Display -->
+<!-- Interactive Vinyl Turntable Display (Clicking launches the Live Turntable Web App) -->
 <p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/vinyl-player.gif" width="560" alt="Vinyl Record Player — music.mp3" style="border-radius: 16px;" />
+  <a href="https://nishant-codess.github.io/nishant-codess/" target="_blank">
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/vinyl-player.gif" width="560" alt="Click here to spin the vinyl turntable live" style="border-radius: 16px;" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3">
-    <img src="https://img.shields.io/badge/Listen_Audio-Click_to_Play-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play Music" />
+  <i>Click the turntable above to spin the vinyl live &bull; Features tonearm needle drop, spinning disc &amp; audio wave visualizer</i>
+</p>
+
+<p align="center">
+  <a href="https://nishant-codess.github.io/nishant-codess/" target="_blank">
+    <img src="https://img.shields.io/badge/Live_Vinyl_Turntable-Click_Here_to_Spin-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play on Vinyl Turntable" />
   </a>
   &nbsp;
-  <a href="https://nishant-codess.github.io/nishant-codess/">
-    <img src="https://img.shields.io/badge/Web_Turntable-Interactive_App-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Web Turntable" />
+  <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3" target="_blank">
+    <img src="https://img.shields.io/badge/Direct_Audio_File-Stream_MP3-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Direct MP3 Stream" />
   </a>
 </p>
 
