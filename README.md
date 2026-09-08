@@ -221,9 +221,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake.svg" />
-    <img alt="Nishant Contribution Snake Animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=4" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake.svg?v=4" />
+    <img alt="Nishant Contribution Snake Animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=4" width="100%" />
   </picture>
 </p>
 

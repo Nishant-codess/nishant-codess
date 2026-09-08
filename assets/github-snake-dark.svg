@@ -3,7 +3,7 @@
 
         .bg { fill: #0d1117; rx: 12px; }
         .cell { rx: 2px; ry: 2px; }
-        .snake-head { fill: #f0abfc; filter: drop-shadow(0 0 8px #e879f9); rx: 3px; ry: 3px; }
+        .snake-head { fill: #00f2fe; filter: drop-shadow(0 0 8px #00f2fe); rx: 3px; ry: 3px; }
         .snake-eye { fill: #ffffff; }
         @keyframes pulse-dot {
             0%, 100% { opacity: 1; filter: drop-shadow(0 0 1px #38ef7d); }
@@ -11,12 +11,15 @@
         }
         .active-dot { animation: pulse-dot 3.5s ease-in-out infinite; }
     
-.seg-0 { fill: #e879f9; rx: 2.5px; ry: 2.5px; }
-.seg-1 { fill: #d946ef; rx: 2.5px; ry: 2.5px; }
-.seg-2 { fill: #c026d3; rx: 2.5px; ry: 2.5px; }
-.seg-3 { fill: #a21caf; rx: 2.5px; ry: 2.5px; }
-.seg-4 { fill: #86198f; rx: 2.5px; ry: 2.5px; }
-.seg-5 { fill: #701a75; rx: 2.5px; ry: 2.5px; }
+.seg-0 { fill: #00e5ff; filter: drop-shadow(0 0 4px #00e5ff); rx: 2.5px; ry: 2.5px; }
+.seg-1 { fill: #05d5b3; filter: drop-shadow(0 0 4px #05d5b3); rx: 2.5px; ry: 2.5px; }
+.seg-2 { fill: #38ef7d; filter: drop-shadow(0 0 4px #38ef7d); rx: 2.5px; ry: 2.5px; }
+.seg-3 { fill: #86efac; filter: drop-shadow(0 0 4px #86efac); rx: 2.5px; ry: 2.5px; }
+.seg-4 { fill: #818cf8; filter: drop-shadow(0 0 4px #818cf8); rx: 2.5px; ry: 2.5px; }
+.seg-5 { fill: #a855f7; filter: drop-shadow(0 0 4px #a855f7); rx: 2.5px; ry: 2.5px; }
+.seg-6 { fill: #c084fc; filter: drop-shadow(0 0 4px #c084fc); rx: 2.5px; ry: 2.5px; }
+.seg-7 { fill: #e879f9; filter: drop-shadow(0 0 4px #e879f9); rx: 2.5px; ry: 2.5px; }
+.seg-8 { fill: #f43f5e; filter: drop-shadow(0 0 4px #f43f5e); rx: 2.5px; ry: 2.5px; }
 </style>
 <rect width="726" height="132" class="bg" />
 <rect x="20" y="18" width="10" height="10" fill="#161b22" class="cell" />
@@ -394,11 +397,35 @@
 <rect x="431" y="118" width="150" height="5" fill="#006d32" />
 <rect x="582" y="118" width="68" height="5" fill="#26a641" />
 <rect x="651" y="118" width="54" height="5" rx="2.5" fill="#39d353" />
-<path id="snakePath" d="M 25.0 23.0 L 116.0 23.0 L 142.0 101.0 L 142.0 23.0 L 181.0 101.0 L 181.0 23.0 L 207.0 23.0 L 220.0 101.0 L 233.0 23.0 L 259.0 23.0 L 259.0 62.0 L 298.0 62.0 L 298.0 101.0 L 259.0 101.0 L 324.0 101.0 L 324.0 23.0 L 337.0 62.0 L 363.0 62.0 L 363.0 101.0 L 363.0 23.0 L 389.0 101.0 L 402.0 23.0 L 428.0 23.0 L 441.0 101.0 L 415.0 62.0 L 467.0 101.0 L 467.0 23.0 L 506.0 101.0 L 506.0 23.0 L 532.0 23.0 L 584.0 23.0 L 558.0 36.0 L 558.0 101.0 L 649.0 101.0 L 701.0 101.0 L 701.0 23.0 L 610.0 23.0 L 454.0 23.0 L 311.0 23.0 L 155.0 23.0 L 25.0 23.0 Z" fill="none" stroke="none" />
+<path id="snakePath" d="M 25.0 101.0 L 142.0 101.0 L 142.0 23.0 L 155.0 49.0 L 168.0 75.0 L 181.0 101.0 L 181.0 23.0 L 207.0 23.0 L 220.0 23.0 L 220.0 101.0 L 233.0 101.0 L 233.0 23.0 L 272.0 23.0 L 298.0 23.0 L 259.0 36.0 L 259.0 49.0 L 285.0 49.0 L 298.0 62.0 L 298.0 88.0 L 285.0 101.0 L 272.0 101.0 L 324.0 101.0 L 324.0 23.0 L 324.0 62.0 L 363.0 62.0 L 363.0 23.0 L 363.0 101.0 L 389.0 101.0 L 389.0 36.0 L 402.0 23.0 L 415.0 23.0 L 428.0 36.0 L 428.0 101.0 L 454.0 101.0 L 454.0 23.0 L 467.0 49.0 L 480.0 75.0 L 493.0 101.0 L 493.0 23.0 L 519.0 23.0 L 571.0 23.0 L 545.0 23.0 L 545.0 101.0 L 701.0 101.0 L 701.0 23.0 L 25.0 23.0 Z" fill="none" stroke="none" />
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-8">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.322s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-7">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.397s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-6">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.472s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
 
         <g>
             <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-5">
-                <animateMotion dur="16s" repeatCount="indefinite" begin="-0.84s">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.548s" calcMode="paced">
                     <mpath href="#snakePath" />
                 </animateMotion>
             </rect>
@@ -406,7 +433,7 @@
 
         <g>
             <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-4">
-                <animateMotion dur="16s" repeatCount="indefinite" begin="-0.70s">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.623s" calcMode="paced">
                     <mpath href="#snakePath" />
                 </animateMotion>
             </rect>
@@ -414,7 +441,7 @@
 
         <g>
             <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-3">
-                <animateMotion dur="16s" repeatCount="indefinite" begin="-0.56s">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.698s" calcMode="paced">
                     <mpath href="#snakePath" />
                 </animateMotion>
             </rect>
@@ -422,7 +449,7 @@
 
         <g>
             <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-2">
-                <animateMotion dur="16s" repeatCount="indefinite" begin="-0.42s">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.774s" calcMode="paced">
                     <mpath href="#snakePath" />
                 </animateMotion>
             </rect>
@@ -430,7 +457,7 @@
 
         <g>
             <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-1">
-                <animateMotion dur="16s" repeatCount="indefinite" begin="-0.28s">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.849s" calcMode="paced">
                     <mpath href="#snakePath" />
                 </animateMotion>
             </rect>
@@ -438,7 +465,7 @@
 
         <g>
             <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-0">
-                <animateMotion dur="16s" repeatCount="indefinite" begin="-0.14s">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.925s" calcMode="paced">
                     <mpath href="#snakePath" />
                 </animateMotion>
             </rect>
@@ -446,7 +473,7 @@
 
     <g>
         <rect x="-5.5" y="-5.5" width="11" height="11" class="snake-head">
-            <animateMotion dur="16s" repeatCount="indefinite" begin="0s">
+            <animateMotion dur="16s" repeatCount="indefinite" begin="-16.000s" calcMode="paced">
                 <mpath href="#snakePath" />
             </animateMotion>
         </rect>
