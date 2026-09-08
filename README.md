@@ -1,10 +1,10 @@
 <!-- ═══════════════════════════════════════════════════════════════════════════════
-     🔥 NISHANT RANJAN — GITHUB PROFILE
+     NISHANT RANJAN — GITHUB PROFILE
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     HERO AVATAR & MODERN TYPING INTRO
+     HERO AVATAR & BOLD CURSIVE TYPING INTRO
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
@@ -13,10 +13,10 @@
   </a>
 </p>
 
-<!-- Dynamic Typing SVG using clean modern 'Outfit' font -->
+<!-- Dynamic Typing SVG using bold, cursive 'Dancing Script' font -->
 <p align="center">
   <a href="https://github.com/Nishant-codess">
-    <img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=600&size=22&duration=3000&pause=1200&color=38EF7D&center=true&vCenter=true&width=620&height=48&lines=Full-Stack+Architect+%E2%80%A2+Building+Scalable+Backends;AI%2FML+Explorer+%E2%80%A2+Teaching+Machines+to+Think;Open-Source+Builder+%E2%80%A2+Crafting+Things+That+Matter;Turning+Complex+Problems+into+Clean+Code" alt="Typing Headline" />
+    <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=28&duration=3000&pause=1200&color=38EF7D&center=true&vCenter=true&width=660&height=52&lines=Full-Stack+Architect+%E2%80%A2+Building+Scalable+Systems;AI%2FML+Explorer+%E2%80%A2+Teaching+Machines+to+Think;Open-Source+Builder+%E2%80%A2+Crafting+Things+That+Matter;Turning+Complex+Problems+into+Clean+Code" alt="Typing Headline" />
   </a>
 </p>
 
@@ -40,12 +40,12 @@
      ABOUT ME: CLEAN EXECUTIVE SUMMARY
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">👨‍💻 About Me</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:user.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;ABOUT ME</b></h3>
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4>🚀 What I Do</h4>
+      <h4><img src="https://api.iconify.design/lucide:sparkles.svg?color=%2338ef7d" width="18" valign="middle" /> <b>&nbsp;What I Do</b></h4>
       <ul>
         <li><b>Engineering:</b> Crafting high-throughput distributed systems, scalable microservices, and modern web apps.</li>
         <li><b>AI & ML:</b> Building intelligent pipelines, model integrations, and computer vision systems.</li>
@@ -53,12 +53,12 @@
       </ul>
     </td>
     <td width="50%" valign="top">
-      <h4>⚡ Quick Facts</h4>
+      <h4><img src="https://api.iconify.design/lucide:zap.svg?color=%2338ef7d" width="18" valign="middle" /> <b>&nbsp;Quick Facts</b></h4>
       <ul>
-        <li>🎓 <b>Education:</b> SRM Institute of Science and Technology</li>
-        <li>💼 <b>Core Stack:</b> Java • Python • TypeScript • C++ • Go</li>
-        <li>💬 <b>Ask Me About:</b> Distributed Systems, Concurrency & Cloud Scale</li>
-        <li>🌱 <b>Philosophy:</b> <i>"The best code is the one that makes someone's life easier."</i></li>
+        <li><img src="https://api.iconify.design/lucide:graduation-cap.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Education:</b> SRM Institute of Science and Technology</li>
+        <li><img src="https://api.iconify.design/lucide:layers.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Core Stack:</b> Java &bull; Python &bull; TypeScript &bull; C++ &bull; Go</li>
+        <li><img src="https://api.iconify.design/lucide:message-square.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Ask Me About:</b> Distributed Systems, Concurrency &amp; Cloud Scale</li>
+        <li><img src="https://api.iconify.design/lucide:compass.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Philosophy:</b> <i>"The best code is the one that makes someone's life easier."</i></li>
       </ul>
     </td>
   </tr>
@@ -73,7 +73,7 @@
      TECH STACK & ARSENAL
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">🛠️ Arsenal of Mass Creation</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:cpu.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;ARSENAL OF MASS CREATION</b></h3>
 
 <p align="center"><b>Languages</b></p>
 <p align="center">
@@ -109,10 +109,10 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     GITHUB COMMAND CENTER: STATS & STREAK (HIGH-RELIABILITY ENDPOINTS)
+     GITHUB COMMAND CENTER: STATS & STREAK
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">📊 GitHub Command Center</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:terminal.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;GITHUB COMMAND CENTER</b></h3>
 
 <p align="center">
   <img width="49%" src="https://github-readme-stats-fast.vercel.app/api?username=Nishant-codess&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&ring_color=38ef7d&count_private=true&include_all_commits=true" alt="GitHub Stats" />
@@ -130,10 +130,10 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     FEATURED CREATIONS: TOP REPOSITORIES (VERIFIED WORKING)
+     FEATURED CREATIONS: TOP REPOSITORIES
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">🚀 Featured Creations</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:folder-git-2.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;FEATURED CREATIONS</b></h3>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/ShadowLedger">
@@ -171,10 +171,10 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     HALL OF TROPHIES (HIGH-RELIABILITY CLOUDFLARE BACKED ENDPOINT)
+     HALL OF TROPHIES
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">🏆 Hall of Trophies</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:award.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;HALL OF TROPHIES</b></h3>
 
 <p align="center">
   <img src="https://trophy.ryglcloud.net/?username=Nishant-codess&theme=radical&no-frame=true&no-bg=true&column=-1&margin-w=12&margin-h=12" alt="GitHub Trophies" />
@@ -186,16 +186,16 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     CONTRIBUTION SNAKE ANIMATION (LIVE GENERATED IN REPO)
+     CONTRIBUTION GRAPH • NISHANT
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">🐍 Contribution Snake</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:activity.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;CONTRIBUTION GRAPH &bull; NISHANT</b></h3>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/output/github-snake.svg" />
-    <img alt="Snake animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/output/github-snake.svg" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake.svg" />
+    <img alt="Nishant Contribution Snake Animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg" width="100%" />
   </picture>
 </p>
 
@@ -208,10 +208,11 @@
      VINYL RECORD PLAYER — ON REPEAT IN MY MIND
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">🎵 On Repeat in My Mind</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:disc.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;ON REPEAT IN MY MIND</b></h3>
 
+<!-- Bold Cursive Subtitle using Dancing Script -->
 <p align="center">
-  <i>"The song that's been playing on my mind recently."</i>
+  <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=22&duration=5000&pause=20000&color=38EF7D&center=true&vCenter=true&width=560&height=36&lines=The+song+that's+been+playing+on+my+mind+recently." alt="The song that's been playing on my mind recently" />
 </p>
 
 <!-- Vinyl Player Turntable Display -->
@@ -223,11 +224,11 @@
 
 <p align="center">
   <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3">
-    <img src="https://img.shields.io/badge/▶_Play_Music_Now-Click_to_Listen-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play Music" />
+    <img src="https://img.shields.io/badge/Listen_Audio-Click_to_Play-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play Music" />
   </a>
   &nbsp;
   <a href="https://nishant-codess.github.io/nishant-codess/">
-    <img src="https://img.shields.io/badge/💽_Open_Web_Turntable-Live_App-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Web Turntable" />
+    <img src="https://img.shields.io/badge/Web_Turntable-Interactive_App-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Web Turntable" />
   </a>
 </p>
 
@@ -240,11 +241,11 @@
      CONNECT & REACH OUT
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">🤝 Connect & Collaborate</h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:send.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;CONNECT &amp; COLLABORATE</b></h3>
 
 <p align="center">
   <a href="https://drive.google.com/file/d/1q88WKaczp6Y1HsnKPr7vkNQRBRIi7wnO/view?usp=sharing">
-    <img src="https://img.shields.io/badge/📄_Resume-Download-38ef7d?style=for-the-badge&labelColor=0d1117" alt="Resume" />
+    <img src="https://img.shields.io/badge/Resume-View_PDF-38ef7d?style=for-the-badge&labelColor=0d1117" alt="Resume" />
   </a>
   &nbsp;
   <a href="https://www.linkedin.com/in/nishant-ranjan-dev/">
@@ -266,7 +267,7 @@
 
 <p align="center">
   <a href="mailto:nishant.ranjan.air1@gmail.com?subject=Hey%20Nishant!%20Found%20you%20on%20GitHub&body=Hi%20Nishant,%0A%0AI%20came%20across%20your%20GitHub%20profile%20and%20wanted%20to%20reach%20out!%0A%0A">
-    <img src="https://img.shields.io/badge/💌_Send_Me_A_Direct_Note-Click_Here-38ef7d?style=for-the-badge&labelColor=0d1117" alt="Send Note" />
+    <img src="https://img.shields.io/badge/Direct_Message-Send_Email-38ef7d?style=for-the-badge&labelColor=0d1117" alt="Send Note" />
   </a>
 </p>
 
@@ -276,9 +277,9 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     FOOTER
+     FOOTER — BOLD CURSIVE CLOSING
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <i>"Craft code that thinks, builds that scale, and apps that feel alive."</i>
+  <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=24&duration=5000&pause=20000&color=38EF7D&center=true&vCenter=true&width=650&height=40&lines=Craft+code+that+thinks,+builds+that+scale,+and+apps+that+feel+alive." alt="Craft code that thinks, builds that scale, and apps that feel alive." />
 </p>

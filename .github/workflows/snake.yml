@@ -29,14 +29,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Generate the snake SVG animations
-      - name: Generate Snake Animation
-        uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+      # Generate the custom NISHANT contribution snake SVG animations
+      - name: Generate NISHANT Snake Animation
+        run: |
+          python3 scripts/generate_snake.py
 
       # Deploy interactive vinyl web player to GitHub Pages
       - name: Prepare Vinyl Player Web App

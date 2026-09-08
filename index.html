@@ -6,7 +6,7 @@
   <title>Nishant's Vinyl Record Player — On Repeat</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@400;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0d1117;
@@ -75,7 +75,7 @@
     .badge {
       display: inline-flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       background: rgba(56, 239, 125, 0.12);
       border: 1px solid rgba(56, 239, 125, 0.35);
       color: var(--accent-green);
@@ -88,20 +88,38 @@
       margin-bottom: 12px;
     }
 
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      display: inline-block;
+      box-shadow: 0 0 8px var(--accent-green);
+      animation: livePulse 1.8s infinite ease-in-out;
+    }
+
+    @keyframes livePulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.4); opacity: 0.5; }
+    }
+
     h1 {
-      font-size: 2.2rem;
-      font-weight: 800;
+      font-family: 'Space Grotesk', 'Outfit', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 700;
       letter-spacing: -0.5px;
       background: linear-gradient(135deg, #ffffff 30%, var(--accent-green) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
     }
 
     .subtitle {
-      color: var(--text-muted);
-      font-size: 1.05rem;
-      font-style: italic;
+      font-family: 'Dancing Script', cursive;
+      color: var(--accent-green);
+      font-size: 1.55rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
 
     /* Turntable Section */
@@ -456,7 +474,7 @@
   <div class="container">
     
     <div class="header">
-      <div class="badge">● NOW SPINNING ON VINYL</div>
+      <div class="badge"><span class="pulse-dot"></span> NOW SPINNING ON VINYL</div>
       <h1>Nishant's Turntable</h1>
       <p class="subtitle">"The song that's been playing on my mind recently."</p>
     </div>
@@ -502,22 +520,26 @@
       <div class="buttons-bar">
         <div class="track-meta">
           <div class="track-name">music.mp3</div>
-          <div class="track-artist">Nishant's Favorite Vibe • 33 ⅓ RPM</div>
+          <div class="track-artist">Nishant's Favorite Vibe | 33 RPM</div>
         </div>
 
         <div class="main-controls">
-          <button class="play-btn" id="playBtn" aria-label="Play">▶</button>
+          <button class="play-btn" id="playBtn" aria-label="Play">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          </button>
         </div>
 
         <div class="volume-container">
-          <span class="vol-icon" id="volIcon">🔊</span>
+          <span class="vol-icon" id="volIcon" title="Toggle Mute">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>
+          </span>
           <input type="range" id="volumeRange" min="0" max="1" step="0.05" value="0.85">
         </div>
       </div>
     </div>
 
     <a href="https://github.com/Nishant-codess" class="back-btn">
-      ← Back to Nishant's GitHub Profile
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 6px;"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>Back to Nishant's GitHub Profile
     </a>
 
   </div>
@@ -537,6 +559,12 @@
     const volIcon = document.getElementById('volIcon');
     const canvas = document.getElementById('visualizer');
     const ctx = canvas.getContext('2d');
+
+    const SVG_PLAY = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>';
+    const SVG_PAUSE = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16" rx="1"></rect><rect x="14" y="4" width="4" height="16" rx="1"></rect></svg>';
+    const SVG_VOL_HIGH = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path></svg>';
+    const SVG_VOL_LOW = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor"></polygon><path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
+    const SVG_VOL_MUTE = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>';
 
     // Handle multi-tier audio fallback (local -> assets -> raw CDN)
     audio.addEventListener('error', () => {
@@ -575,13 +603,13 @@
 
       if (audio.paused) {
         audio.play().then(() => {
-          playBtn.innerHTML = '❚❚';
+          playBtn.innerHTML = SVG_PAUSE;
           vinyl.classList.add('spinning');
           tonearm.classList.add('playing');
         }).catch(err => console.error('Audio play error:', err));
       } else {
         audio.pause();
-        playBtn.innerHTML = '▶';
+        playBtn.innerHTML = SVG_PLAY;
         vinyl.classList.remove('spinning');
         tonearm.classList.remove('playing');
       }
@@ -620,16 +648,27 @@
 
     // Track ended
     audio.addEventListener('ended', () => {
-      playBtn.innerHTML = '▶';
+      playBtn.innerHTML = SVG_PLAY;
       vinyl.classList.remove('spinning');
       tonearm.classList.remove('playing');
       progressFill.style.width = '0%';
     });
 
+    function updateVolumeIcon(vol) {
+      if (vol === 0) {
+        volIcon.innerHTML = SVG_VOL_MUTE;
+      } else if (vol < 0.5) {
+        volIcon.innerHTML = SVG_VOL_LOW;
+      } else {
+        volIcon.innerHTML = SVG_VOL_HIGH;
+      }
+    }
+
     // Volume
     volumeRange.addEventListener('input', (e) => {
-      audio.volume = e.target.value;
-      volIcon.textContent = audio.volume == 0 ? '🔇' : (audio.volume < 0.5 ? '🔉' : '🔊');
+      const vol = parseFloat(e.target.value);
+      audio.volume = vol;
+      updateVolumeIcon(vol);
     });
 
     volIcon.addEventListener('click', () => {
@@ -637,11 +676,12 @@
         audio.dataset.prevVol = audio.volume;
         audio.volume = 0;
         volumeRange.value = 0;
-        volIcon.textContent = '🔇';
+        updateVolumeIcon(0);
       } else {
-        audio.volume = audio.dataset.prevVol || 0.85;
-        volumeRange.value = audio.volume;
-        volIcon.textContent = '🔊';
+        const restored = parseFloat(audio.dataset.prevVol || 0.85);
+        audio.volume = restored;
+        volumeRange.value = restored;
+        updateVolumeIcon(restored);
       }
     });
 
