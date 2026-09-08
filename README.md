@@ -255,7 +255,7 @@ https://github.com/user-attachments/assets/6ab47dd9-c2d2-4c0c-9711-884cba8f87ea
     <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram" />
   </a>
   &nbsp;
-  <a href="mailto:nishant.ranjan.air1@gmail.com">
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nishant.ranjan.air1@gmail.com" target="_blank">
     <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
   </a>
   &nbsp;
@@ -265,8 +265,8 @@ https://github.com/user-attachments/assets/6ab47dd9-c2d2-4c0c-9711-884cba8f87ea
 </p>
 
 <p align="center">
-  <a href="mailto:nishant.ranjan.air1@gmail.com?subject=Hey%20Nishant!%20Found%20you%20on%20GitHub&body=Hi%20Nishant,%0A%0AI%20came%20across%20your%20GitHub%20profile%20and%20wanted%20to%20reach%20out!%0A%0A">
-    <img src="https://img.shields.io/badge/Direct_Message-Send_Email-38ef7d?style=for-the-badge&labelColor=0d1117" alt="Send Note" />
+  <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nishant.ranjan.air1@gmail.com&su=Hey%20Nishant!%20Found%20you%20on%20GitHub&body=Hi%20Nishant,%0A%0AI%20came%20across%20your%20GitHub%20profile%20and%20wanted%20to%20reach%20out!%0A%0A" target="_blank">
+    <img src="https://img.shields.io/badge/Direct_Message-Compose_in_Gmail-38ef7d?style=for-the-badge&labelColor=0d1117&logo=gmail&logoColor=white" alt="Compose in Gmail" />
   </a>
 </p>
 
