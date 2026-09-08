@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://github.com/Nishant-codess">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/pixel-art-avatar.png" width="190" alt="Nishant Ranjan Pixel Art Avatar" style="border-radius: 18px;" />
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/avatar.jpg" width="195" alt="Nishant Ranjan" style="border-radius: 20px; border: 2px solid rgba(56, 239, 125, 0.4);" />
   </a>
 </p>
 
