@@ -2,11 +2,10 @@
 
     <defs>
       <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4285F4" />
-        <stop offset="25%" stop-color="#00f2fe" />
-        <stop offset="50%" stop-color="#c084fc" />
-        <stop offset="75%" stop-color="#f43f5e" />
-        <stop offset="100%" stop-color="#FBBC05" />
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="35%" stop-color="#38bdf8" />
+        <stop offset="70%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
     </defs>
     

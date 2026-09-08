@@ -1,28 +1,26 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 225" width="100%" height="auto">
 
     <defs>
-      <!-- Multi-Color Gradient Palette: Google 4 Colors + Cyber Aurora -->
+      <!-- Cohesive Cyber Starlight Palette: Electric Cyan -> Sky Blue -> Lavender -> Neon Violet -->
       <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4285F4" />
-        <stop offset="25%" stop-color="#00f2fe" />
-        <stop offset="50%" stop-color="#c084fc" />
-        <stop offset="75%" stop-color="#f43f5e" />
-        <stop offset="100%" stop-color="#FBBC05" />
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="35%" stop-color="#38bdf8" />
+        <stop offset="70%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4285F4" />
-        <stop offset="25%" stop-color="#00f2fe" />
-        <stop offset="50%" stop-color="#c084fc" />
-        <stop offset="75%" stop-color="#f43f5e" />
-        <stop offset="100%" stop-color="#FBBC05" />
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="35%" stop-color="#38bdf8" />
+        <stop offset="70%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
         <stop offset="100%" stop-color="#4facfe" />
       </linearGradient>
       <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#c084fc" />
-        <stop offset="100%" stop-color="#a855f7" />
+        <stop offset="0%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#0f172a" />
@@ -30,16 +28,14 @@
         <stop offset="100%" stop-color="#070a10" />
       </linearGradient>
       <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.45)" />
-        <stop offset="33%" stop-color="rgba(56, 239, 125, 0.35)" />
-        <stop offset="66%" stop-color="rgba(192, 132, 252, 0.35)" />
-        <stop offset="100%" stop-color="rgba(244, 63, 94, 0.45)" />
+        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
+        <stop offset="50%" stop-color="rgba(129, 140, 248, 0.25)" />
+        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
       </linearGradient>
       <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="33%" stop-color="#38ef7d" />
-        <stop offset="66%" stop-color="#c084fc" />
-        <stop offset="100%" stop-color="#f43f5e" />
+        <stop offset="50%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       
       <!-- Subtle Glow Filter -->

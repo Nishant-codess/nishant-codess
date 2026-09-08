@@ -1,4 +1,6 @@
 import os
+import math
+from datetime import datetime, timezone, timedelta
 from matplotlib.textpath import TextPath
 from matplotlib.font_manager import FontProperties
 from matplotlib.path import Path
@@ -62,28 +64,26 @@ def get_text_width(text, size, font_path):
 def create_card_defs():
     return '''
     <defs>
-      <!-- Multi-Color Gradient Palette: Google 4 Colors + Cyber Aurora -->
+      <!-- Cohesive Cyber Starlight Palette: Electric Cyan -> Sky Blue -> Lavender -> Neon Violet -->
       <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4285F4" />
-        <stop offset="25%" stop-color="#00f2fe" />
-        <stop offset="50%" stop-color="#c084fc" />
-        <stop offset="75%" stop-color="#f43f5e" />
-        <stop offset="100%" stop-color="#FBBC05" />
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="35%" stop-color="#38bdf8" />
+        <stop offset="70%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4285F4" />
-        <stop offset="25%" stop-color="#00f2fe" />
-        <stop offset="50%" stop-color="#c084fc" />
-        <stop offset="75%" stop-color="#f43f5e" />
-        <stop offset="100%" stop-color="#FBBC05" />
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="35%" stop-color="#38bdf8" />
+        <stop offset="70%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
         <stop offset="100%" stop-color="#4facfe" />
       </linearGradient>
       <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#c084fc" />
-        <stop offset="100%" stop-color="#a855f7" />
+        <stop offset="0%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#0f172a" />
@@ -91,16 +91,14 @@ def create_card_defs():
         <stop offset="100%" stop-color="#070a10" />
       </linearGradient>
       <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.45)" />
-        <stop offset="33%" stop-color="rgba(56, 239, 125, 0.35)" />
-        <stop offset="66%" stop-color="rgba(192, 132, 252, 0.35)" />
-        <stop offset="100%" stop-color="rgba(244, 63, 94, 0.45)" />
+        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
+        <stop offset="50%" stop-color="rgba(129, 140, 248, 0.25)" />
+        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
       </linearGradient>
       <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="33%" stop-color="#38ef7d" />
-        <stop offset="66%" stop-color="#c084fc" />
-        <stop offset="100%" stop-color="#f43f5e" />
+        <stop offset="50%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
       
       <!-- Subtle Glow Filter -->
@@ -318,11 +316,10 @@ def generate_header_svg(title, icon_type='code'):
     svg.append('''
     <defs>
       <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#4285F4" />
-        <stop offset="25%" stop-color="#00f2fe" />
-        <stop offset="50%" stop-color="#c084fc" />
-        <stop offset="75%" stop-color="#f43f5e" />
-        <stop offset="100%" stop-color="#FBBC05" />
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="35%" stop-color="#38bdf8" />
+        <stop offset="70%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
       </linearGradient>
     </defs>
     ''')
@@ -335,23 +332,23 @@ def generate_header_svg(title, icon_type='code'):
     # Vector Icons
     icon_svg = ''
     if icon_type == 'user':
-        icon_svg = '<circle cx="12" cy="7" r="4" stroke="#4285F4" stroke-width="2" fill="none" /><path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="#4285F4" stroke-width="2" stroke-linecap="round" fill="none" />'
+        icon_svg = '<circle cx="12" cy="7" r="4" stroke="#00f2fe" stroke-width="2" fill="none" /><path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" fill="none" />'
     elif icon_type == 'terminal':
         icon_svg = '<path d="M4 17l6-6-6-6M12 19h8" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'folder':
-        icon_svg = '<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" stroke="#f43f5e" stroke-width="2" fill="none" />'
+        icon_svg = '<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" stroke="#818cf8" stroke-width="2" fill="none" />'
     elif icon_type == 'trophy':
-        icon_svg = '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H7M14 14.66V17c0 .55.45 1 1 1h2M18 2H6v7a6 6 0 0 0 12 0V2Z" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H7M14 14.66V17c0 .55.45 1 1 1h2M18 2H6v7a6 6 0 0 0 12 0V2Z" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'award':
         icon_svg = '<circle cx="12" cy="8" r="6" stroke="#c084fc" stroke-width="2" fill="none" /><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.724.524l-4.268-2.243-4.27 2.243a.5.5 0 0 1-.723-.524l1.515-8.526" stroke="#c084fc" stroke-width="2" fill="none" />'
     elif icon_type == 'cpu':
-        icon_svg = '<rect x="4" y="4" width="16" height="16" rx="2" stroke="#34A853" stroke-width="2" fill="none" /><rect x="9" y="9" width="6" height="6" stroke="#34A853" stroke-width="2" fill="none" /><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" stroke="#34A853" stroke-width="2" fill="none" />'
+        icon_svg = '<rect x="4" y="4" width="16" height="16" rx="2" stroke="#38bdf8" stroke-width="2" fill="none" /><rect x="9" y="9" width="6" height="6" stroke="#38bdf8" stroke-width="2" fill="none" /><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" stroke="#38bdf8" stroke-width="2" fill="none" />'
     elif icon_type == 'stack':
         icon_svg = '<path d="m12 2 10 5-10 5L2 7l10-5ZM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'music':
-        icon_svg = '<path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="#FBBC05" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'send':
-        icon_svg = '<path d="m22 2-7 20-4-9-9-4Z" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><path d="M22 2 11 13" stroke="#4285F4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="m22 2-7 20-4-9-9-4Z" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><path d="M22 2 11 13" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     else:
         icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
 
@@ -374,21 +371,28 @@ def make_cycling_headline_svg(lines, w=680, h=50, font_size=26, dur_per_line=3.5
         end_f = (idx + 1) / n
         
         pts = []
-        if start_f > 0:
+        if idx == 0:
+            pts.append((0.0, 1))
+            pts.append((hold_f, 1))
+            pts.append((end_f, 0))
+            pts.append((1.0 - fade_frac, 0))
+            pts.append((1.0, 1))
+        else:
             pts.append((0.0, 0))
             pts.append((start_f, 0))
-        pts.append((fade_in_f, 1))
-        pts.append((hold_f, 1))
-        pts.append((end_f, 0))
-        if end_f < 1.0:
-            pts.append((1.0, 0))
+            pts.append((fade_in_f, 1))
+            pts.append((hold_f, 1))
+            pts.append((end_f, 0))
+            if end_f < 1.0:
+                pts.append((1.0, 0))
             
         pts = sorted(list(set(pts)), key=lambda x: x[0])
         kt_str = '; '.join(f'{p[0]:.4f}' for p in pts)
         val_str = '; '.join(str(p[1]) for p in pts)
+        init_op = "1" if idx == 0 else "0"
         
         svg_groups.append(f'''
-        <g opacity="0">
+        <g opacity="{init_op}">
           <animate attributeName="opacity" dur="{total_dur}s" repeatCount="indefinite"
             values="{val_str}" keyTimes="{kt_str}" />
           {path}
@@ -397,11 +401,10 @@ def make_cycling_headline_svg(lines, w=680, h=50, font_size=26, dur_per_line=3.5
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4285F4" />
-      <stop offset="25%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#c084fc" />
-      <stop offset="75%" stop-color="#f43f5e" />
-      <stop offset="100%" stop-color="#FBBC05" />
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="35%" stop-color="#38bdf8" />
+      <stop offset="70%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
   </defs>
   {''.join(svg_groups)}
@@ -412,19 +415,294 @@ def make_gradient_cursive_svg(text, w, h, font_size):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4285F4" />
-      <stop offset="25%" stop-color="#00f2fe" />
-      <stop offset="50%" stop-color="#c084fc" />
-      <stop offset="75%" stop-color="#f43f5e" />
-      <stop offset="100%" stop-color="#FBBC05" />
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="35%" stop-color="#38bdf8" />
+      <stop offset="70%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
   </defs>
   {path}
 </svg>'''
 
+def generate_hero_banner_svg():
+    w, h = 900, 190
+    svg = []
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">')
+    svg.append('''
+    <defs>
+      <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="35%" stop-color="#38bdf8" />
+        <stop offset="70%" stop-color="#818cf8" />
+        <stop offset="100%" stop-color="#c084fc" />
+      </linearGradient>
+      <linearGradient id="bannerBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
+        <stop offset="50%" stop-color="rgba(129, 140, 248, 0.2)" />
+        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
+      </linearGradient>
+      <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0a0e1a" />
+        <stop offset="50%" stop-color="#0d1117" />
+        <stop offset="100%" stop-color="#120e22" />
+      </linearGradient>
+      <radialGradient id="cyanOrb" cx="10%" cy="20%" r="50%">
+        <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.15" />
+        <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+      </radialGradient>
+      <radialGradient id="purpleOrb" cx="90%" cy="80%" r="50%">
+        <stop offset="0%" stop-color="#c084fc" stop-opacity="0.14" />
+        <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+      </radialGradient>
+      <linearGradient id="gridGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+        <stop offset="0%" stop-color="#818cf8" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+      </linearGradient>
+    </defs>
+    ''')
+    svg.append(f'<rect width="{w}" height="{h}" rx="16" fill="url(#bannerBg)" stroke="url(#bannerBorder)" stroke-width="1.5" />')
+    svg.append(f'<rect width="{w}" height="{h}" rx="16" fill="url(#cyanOrb)" />')
+    svg.append(f'<rect width="{w}" height="{h}" rx="16" fill="url(#purpleOrb)" />')
+    
+    # Perspective grid lines
+    for gy in [130, 146, 163, 178]:
+        svg.append(f'<line x1="20" y1="{gy}" x2="{w - 20}" y2="{gy}" stroke="url(#gridGrad)" stroke-width="1" />')
+    for gx in [120, 240, 360, 480, 600, 720]:
+        svg.append(f'<line x1="{gx}" y1="115" x2="{gx}" y2="{h - 10}" stroke="url(#gridGrad)" stroke-width="0.8" />')
+        
+    # Top-left window controls
+    svg.append('''
+    <g transform="translate(26, 22)">
+      <circle cx="0" cy="0" r="4.5" fill="#ff5f56" />
+      <circle cx="15" cy="0" r="4.5" fill="#ffbd2e" />
+      <circle cx="30" cy="0" r="4.5" fill="#27c93f" />
+    </g>
+    ''')
+    
+    # Top-right live badge
+    svg.append(f'''
+    <g transform="translate({w - 300}, 12)">
+      <rect width="276" height="24" rx="12" fill="rgba(0, 242, 254, 0.06)" stroke="rgba(0, 242, 254, 0.2)" stroke-width="1" />
+      <circle cx="14" cy="12" r="3.5" fill="#38ef7d">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="26" y="16" fill="#cbd5e1" font-size="9.5" font-family="monospace" letter-spacing="1">SYSTEM ARCHITECT • CLOUD &amp; AI</text>
+    </g>
+    ''')
+    
+    # Main Title
+    svg.append(text_to_svg_path("NISHANT RANJAN", 26, 76, 36, FONT_HEADER, fill="url(#bannerGrad)", extra='stroke="url(#bannerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
+    # Subtitle
+    svg.append(text_to_svg_path("High-Throughput Distributed Engines • Concurrency • Real-Time Speech AI", 26, 106, 13.5, FONT_TITLE, fill="#e2e8f0"))
+    # Description
+    svg.append(text_to_svg_path("Turning complex distributed protocols and query engines into resilient, zero-friction architectures.", 26, 128, 12, FONT_BODY, fill="#94a3b8"))
+    
+    # Pills
+    pills = [("JAVA", "#b07219"), ("TYPESCRIPT", "#3178c6"), ("PYTHON", "#3776ab"), ("FASTAPI", "#009688"), ("DUCKDB", "#f1c40f"), ("SPRING BOOT", "#6db33f"), ("NEXT.JS", "#00f2fe")]
+    px = 26
+    for pname, pcol in pills:
+        pw = get_text_width(pname, 9.5, FONT_TITLE) + 18
+        svg.append(f'<rect x="{px}" y="148" width="{pw}" height="20" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1" />')
+        svg.append(f'<circle cx="{px + 7}" cy="158" r="2.5" fill="{pcol}" />')
+        svg.append(text_to_svg_path(pname, px + 14, 162, 9.5, FONT_TITLE, fill="#e2e8f0"))
+        px += pw + 8
+        
+    # Decorative architecture node graph on right
+    svg.append(f'''
+    <g transform="translate({w - 200}, 62)">
+      <rect x="0" y="0" width="80" height="26" rx="6" fill="rgba(0,242,254,0.08)" stroke="#00f2fe" stroke-width="1.2" />
+      <text x="40" y="17" fill="#00f2fe" font-size="9.5" font-family="monospace" text-anchor="middle" font-weight="bold">TELEMETRY</text>
+      <line x1="80" y1="13" x2="108" y2="13" stroke="#818cf8" stroke-width="1.2" stroke-dasharray="2 2" />
+      <rect x="108" y="0" width="68" height="26" rx="6" fill="rgba(129,140,248,0.08)" stroke="#818cf8" stroke-width="1.2" />
+      <text x="142" y="17" fill="#818cf8" font-size="9.5" font-family="monospace" text-anchor="middle" font-weight="bold">DAG ENGINE</text>
+      <path d="M 142 26 L 142 46 L 90 46" stroke="#c084fc" stroke-width="1.2" fill="none" stroke-dasharray="2 2" />
+      <rect x="16" y="34" width="74" height="26" rx="6" fill="rgba(192,132,252,0.08)" stroke="#c084fc" stroke-width="1.2" />
+      <text x="53" y="51" fill="#c084fc" font-size="9.5" font-family="monospace" text-anchor="middle" font-weight="bold">DUCKDB OLAP</text>
+    </g>
+    ''')
+    
+    svg.append('</svg>')
+    return '\n'.join(svg)
+
+def generate_world_clocks_svg():
+    w, h = 900, 88
+    now_utc = datetime.now(timezone.utc)
+    ist = now_utc + timedelta(hours=5, minutes=30)
+    london = now_utc + timedelta(hours=1)
+    
+    ist_sec_ang = ist.second * 6
+    ist_min_ang = ist.minute * 6 + ist.second * 0.1
+    ist_hr_ang = (ist.hour % 12) * 30 + ist.minute * 0.5
+    
+    lon_sec_ang = london.second * 6
+    lon_min_ang = london.minute * 6 + london.second * 0.1
+    lon_hr_ang = (london.hour % 12) * 30 + london.minute * 0.5
+    
+    card_w = (w - 20) / 2
+    c2_x = card_w + 20
+    
+    def render_clock_face(cx, cy, r, hr_ang, min_ang, sec_ang, theme_col, sec_col):
+        ticks = []
+        for i in range(12):
+            ang = math.radians(i * 30)
+            x1 = cx + (r - 4) * math.sin(ang)
+            y1 = cy - (r - 4) * math.cos(ang)
+            x2 = cx + (r - 1.5) * math.sin(ang)
+            y2 = cy - (r - 1.5) * math.cos(ang)
+            width = 1.6 if i % 3 == 0 else 0.8
+            ticks.append(f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="{theme_col}" stroke-width="{width}" stroke-linecap="round" opacity="0.6" />')
+            
+        return f'''
+        <circle cx="{cx}" cy="{cy}" r="{r}" fill="#080c14" stroke="{theme_col}" stroke-width="1.8" opacity="0.9" />
+        {''.join(ticks)}
+        <!-- Hour Hand -->
+        <g transform="rotate({hr_ang:.1f} {cx} {cy})">
+          <line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - r*0.5:.1f}" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" />
+          <animateTransform attributeName="transform" type="rotate" from="{hr_ang:.1f} {cx} {cy}" to="{hr_ang + 360:.1f} {cx} {cy}" dur="43200s" repeatCount="indefinite" />
+        </g>
+        <!-- Minute Hand -->
+        <g transform="rotate({min_ang:.1f} {cx} {cy})">
+          <line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - r*0.75:.1f}" stroke="{theme_col}" stroke-width="1.8" stroke-linecap="round" />
+          <animateTransform attributeName="transform" type="rotate" from="{min_ang:.1f} {cx} {cy}" to="{min_ang + 360:.1f} {cx} {cy}" dur="3600s" repeatCount="indefinite" />
+        </g>
+        <!-- Second Hand -->
+        <g transform="rotate({sec_ang:.1f} {cx} {cy})">
+          <line x1="{cx}" y1="{cy + 5}" x2="{cx}" y2="{cy - r*0.82:.1f}" stroke="{sec_col}" stroke-width="1" stroke-linecap="round" />
+          <circle cx="{cx}" cy="{cy}" r="2.2" fill="{sec_col}" />
+          <animateTransform attributeName="transform" type="rotate" from="{sec_ang:.1f} {cx} {cy}" to="{sec_ang + 360:.1f} {cx} {cy}" dur="60s" repeatCount="indefinite" />
+        </g>
+        '''
+        
+    svg = []
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">')
+    svg.append('''
+    <defs>
+      <linearGradient id="istBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0c1220" />
+        <stop offset="100%" stop-color="#080c14" />
+      </linearGradient>
+      <linearGradient id="lonBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#141024" />
+        <stop offset="100%" stop-color="#0c0818" />
+      </linearGradient>
+    </defs>
+    ''')
+    
+    # --- Card 1: India (IST) ---
+    svg.append(f'<rect x="0" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#istBg)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.2" />')
+    svg.append(render_clock_face(48, 44, 28, ist_hr_ang, ist_min_ang, ist_sec_ang, "#00f2fe", "#f43f5e"))
+    
+    svg.append(text_to_svg_path("NEW DELHI, INDIA", 92, 28, 11, FONT_HEADER, fill="#94a3b8"))
+    ist_time_str = ist.strftime('%I:%M %p')
+    svg.append(text_to_svg_path(ist_time_str, 92, 54, 21, FONT_TITLE, fill="#ffffff"))
+    badge_x = 92 + get_text_width(ist_time_str, 21, FONT_TITLE) + 12
+    svg.append(f'<rect x="{badge_x}" y="36" width="38" height="20" rx="4" fill="rgba(0, 242, 254, 0.12)" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1" />')
+    svg.append(text_to_svg_path("IST", badge_x + 9, 50, 10, FONT_TITLE, fill="#00f2fe"))
+    svg.append(text_to_svg_path("UTC +5:30  •  Primary Base", 92, 72, 10.5, FONT_BODY, fill="#00f2fe"))
+    
+    # --- Card 2: London (BST/GMT) ---
+    svg.append(f'<rect x="{c2_x}" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#lonBg)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1.2" />')
+    svg.append(render_clock_face(c2_x + 48, 44, 28, lon_hr_ang, lon_min_ang, lon_sec_ang, "#c084fc", "#00f2fe"))
+    
+    svg.append(text_to_svg_path("LONDON, UNITED KINGDOM", c2_x + 92, 28, 11, FONT_HEADER, fill="#94a3b8"))
+    lon_time_str = london.strftime('%I:%M %p')
+    svg.append(text_to_svg_path(lon_time_str, c2_x + 92, 54, 21, FONT_TITLE, fill="#ffffff"))
+    badge2_x = c2_x + 92 + get_text_width(lon_time_str, 21, FONT_TITLE) + 12
+    svg.append(f'<rect x="{badge2_x}" y="36" width="38" height="20" rx="4" fill="rgba(192, 132, 252, 0.12)" stroke="rgba(192, 132, 252, 0.3)" stroke-width="1" />')
+    svg.append(text_to_svg_path("BST", badge2_x + 8, 50, 10, FONT_TITLE, fill="#c084fc"))
+    svg.append(text_to_svg_path("UTC +1:00  •  Global Collaboration", c2_x + 92, 72, 10.5, FONT_BODY, fill="#c084fc"))
+    
+    svg.append('</svg>')
+    return '\n'.join(svg)
+
+def generate_divider_svg():
+    w, h = 900, 6
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
+  <defs>
+    <linearGradient id="glowDivider" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
+      <stop offset="20%" stop-color="#00f2fe" stop-opacity="0.85" />
+      <stop offset="50%" stop-color="#818cf8" stop-opacity="1" />
+      <stop offset="80%" stop-color="#c084fc" stop-opacity="0.85" />
+      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+    </linearGradient>
+    <filter id="divGlow" x="-10%" y="-100%" width="120%" height="300%">
+      <feGaussianBlur stdDeviation="1.2" result="glow" />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  <rect x="30" y="2" width="{w - 60}" height="2" rx="1" fill="url(#glowDivider)" filter="url(#divGlow)" />
+</svg>'''
+
+def generate_divider_gif(folders=['assets', 'dist']):
+    from PIL import Image, ImageDraw
+    w, h = 900, 8
+    line_y = 4
+    cols = [
+        (0, 242, 254),
+        (56, 189, 248),
+        (129, 140, 248),
+        (192, 132, 252)
+    ]
+    def get_color_at(t):
+        t = max(0.0, min(1.0, t))
+        idx = t * 3.0
+        i = int(idx)
+        if i >= 3:
+            return cols[3]
+        f = idx - i
+        c1, c2 = cols[i], cols[i+1]
+        return (
+            int(c1[0] + (c2[0] - c1[0]) * f),
+            int(c1[1] + (c2[1] - c1[1]) * f),
+            int(c1[2] + (c2[2] - c1[2]) * f)
+        )
+    frames = []
+    num_frames = 36
+    for frame_idx in range(num_frames):
+        im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(im)
+        pulse_x = (frame_idx / num_frames) * w
+        pulse_radius = 120
+        for x in range(w):
+            base_c = get_color_at(x / w)
+            dist = abs(x - pulse_x)
+            if dist < pulse_radius:
+                boost = (1.0 - (dist / pulse_radius)) ** 2
+                alpha = int(70 + boost * 185)
+                r = min(255, int(base_c[0] + boost * (255 - base_c[0]) * 0.8))
+                g = min(255, int(base_c[1] + boost * (255 - base_c[1]) * 0.8))
+                b = min(255, int(base_c[2] + boost * (255 - base_c[2]) * 0.8))
+            else:
+                alpha = 70
+                r, g, b = base_c
+            for dy in range(-1, 2):
+                draw.point((x, line_y + dy), fill=(r, g, b, alpha))
+        frames.append(im)
+    for folder in folders:
+        os.makedirs(folder, exist_ok=True)
+        frames[0].save(
+            os.path.join(folder, 'divider.gif'),
+            save_all=True,
+            append_images=frames[1:],
+            duration=45,
+            loop=0,
+            transparency=0,
+            disposal=2
+        )
+
 if __name__ == '__main__':
     os.makedirs('assets', exist_ok=True)
     os.makedirs('dist', exist_ok=True)
+    
+    # 0. Hero Banner, World Clocks, and Glowing Dividers
+    banner_svg = generate_hero_banner_svg()
+    clocks_svg = generate_world_clocks_svg()
+    divider_svg = generate_divider_svg()
+    generate_divider_gif(['assets', 'dist'])
     
     # 1. Main Stats, Streak & Languages Cards
     stats_svg = generate_stats_card()
@@ -456,6 +734,12 @@ if __name__ == '__main__':
     ]
     
     for folder in ['assets', 'dist']:
+        with open(os.path.join(folder, 'hero-banner.svg'), 'w') as f:
+            f.write(banner_svg)
+        with open(os.path.join(folder, 'world-clocks.svg'), 'w') as f:
+            f.write(clocks_svg)
+        with open(os.path.join(folder, 'divider.svg'), 'w') as f:
+            f.write(divider_svg)
         with open(os.path.join(folder, 'card-stats.svg'), 'w') as f:
             f.write(stats_svg)
         with open(os.path.join(folder, 'card-streak.svg'), 'w') as f:
