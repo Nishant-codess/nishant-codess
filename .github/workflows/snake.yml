@@ -29,10 +29,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Generate the custom NISHANT contribution snake SVG animations
-      - name: Generate NISHANT Snake Animation
+      # Generate the custom NISHANT contribution snake SVG animations & custom aesthetic cards
+      - name: Generate NISHANT Snake & Stats Cards
         run: |
           python3 scripts/generate_snake.py
+          python3 scripts/generate_cards.py
 
       # Deploy interactive vinyl web player to GitHub Pages
       - name: Prepare Vinyl Player Web App

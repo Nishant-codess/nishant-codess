@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 225" width="100%" height="auto">
+
+    <defs>
+      <!-- Gradient Palettes: Cyber Aurora (Cyan -> Emerald -> Purple) -->
+      <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="60%" stop-color="#38ef7d" />
+        <stop offset="100%" stop-color="#a855f7" />
+      </linearGradient>
+      <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="100%" stop-color="#4facfe" />
+      </linearGradient>
+      <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#c084fc" />
+        <stop offset="100%" stop-color="#a855f7" />
+      </linearGradient>
+      <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0f172a" />
+        <stop offset="50%" stop-color="#090d16" />
+        <stop offset="100%" stop-color="#070a10" />
+      </linearGradient>
+      <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
+        <stop offset="50%" stop-color="rgba(56, 239, 125, 0.25)" />
+        <stop offset="100%" stop-color="rgba(168, 85, 247, 0.35)" />
+      </linearGradient>
+      <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="60%" stop-color="#38ef7d" />
+        <stop offset="100%" stop-color="#c084fc" />
+      </linearGradient>
+      
+      <!-- Subtle Glow Filter -->
+      <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="3.5" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+      <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+        <feGaussianBlur stdDeviation="2" result="blur" />
+        <feComposite in="SourceGraphic" in2="blur" operator="over" />
+      </filter>
+
+      <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700;800&amp;family=Outfit:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;display=swap');
+        .card-frame { fill: url(#cardBg); stroke: url(#cardBorder); stroke-width: 1.5px; rx: 18px; ry: 18px; }
+        .card-title { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 700; fill: url(#titleGrad); letter-spacing: -0.2px; }
+        .stat-label { font-family: 'Outfit', -apple-system, sans-serif; font-size: 13.5px; fill: #94a3b8; font-weight: 500; }
+        .stat-val { font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 15px; fill: #ffffff; font-weight: 700; }
+        .big-stat { font-family: 'Space Grotesk', -apple-system, sans-serif; font-weight: 800; fill: #ffffff; letter-spacing: -0.5px; }
+        .caption { font-family: 'Outfit', -apple-system, sans-serif; font-size: 12px; fill: #64748b; font-weight: 500; }
+        .badge-txt { font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 11px; font-weight: 700; fill: #00f2fe; letter-spacing: 0.8px; }
+        .grade-score { font-family: 'Space Grotesk', -apple-system, sans-serif; font-size: 27px; font-weight: 800; fill: url(#titleGrad); }
+        .repo-desc { font-family: 'Outfit', -apple-system, sans-serif; font-size: 13px; fill: #94a3b8; line-height: 1.45; }
+        .repo-lang { font-family: 'Outfit', -apple-system, sans-serif; font-size: 12.5px; fill: #cbd5e1; font-weight: 600; }
+      </style>
+    </defs>
+    
+<rect width="540" height="225" class="card-frame" />
+<text x="24" y="38" class="card-title" font-size="19">Most Used Languages</text>
+<rect x="24" y="56" width="492" height="10" rx="5" fill="rgba(255,255,255,0.06)" />
+<rect x="24.0" y="56" width="306.4" height="10" fill="#3178c6" rx="1" />
+<rect x="330.4" y="56" width="56.6" height="10" fill="#3776ab" rx="1" />
+<rect x="387.0" y="56" width="44.3" height="10" fill="#e34c26" rx="1" />
+<rect x="431.4" y="56" width="37.8" height="10" fill="#b07219" rx="1" />
+<rect x="469.2" y="56" width="27.7" height="10" fill="#f1e05a" rx="1" />
+<rect x="496.9" y="56" width="17.8" height="10" fill="#563d7c" rx="1" />
+<rect x="514.7" y="56" width="2.0" height="10" fill="#89e051" rx="1" />
+<rect x="516.7" y="56" width="2.0" height="10" fill="#427819" rx="1" />
+<rect x="24" y="56" width="492" height="10" rx="5" fill="none" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+<circle cx="34" cy="92" r="5" fill="#3178c6" filter="url(#softGlow)" />
+<text x="49" y="96" class="stat-val" font-size="14">TypeScript</text>
+<text x="184" y="96" class="caption" font-size="13" font-weight="600">62.28%</text>
+<circle cx="34" cy="120" r="5" fill="#3776ab" filter="url(#softGlow)" />
+<text x="49" y="124" class="stat-val" font-size="14">Python</text>
+<text x="184" y="124" class="caption" font-size="13" font-weight="600">11.51%</text>
+<circle cx="34" cy="148" r="5" fill="#e34c26" filter="url(#softGlow)" />
+<text x="49" y="152" class="stat-val" font-size="14">HTML</text>
+<text x="184" y="152" class="caption" font-size="13" font-weight="600">9.01%</text>
+<circle cx="34" cy="176" r="5" fill="#b07219" filter="url(#softGlow)" />
+<text x="49" y="180" class="stat-val" font-size="14">Java</text>
+<text x="184" y="180" class="caption" font-size="13" font-weight="600">7.68%</text>
+<circle cx="290" cy="92" r="5" fill="#f1e05a" filter="url(#softGlow)" />
+<text x="305" y="96" class="stat-val" font-size="14">JavaScript</text>
+<text x="440" y="96" class="caption" font-size="13" font-weight="600">5.64%</text>
+<circle cx="290" cy="120" r="5" fill="#563d7c" filter="url(#softGlow)" />
+<text x="305" y="124" class="stat-val" font-size="14">CSS</text>
+<text x="440" y="124" class="caption" font-size="13" font-weight="600">3.62%</text>
+<circle cx="290" cy="148" r="5" fill="#89e051" filter="url(#softGlow)" />
+<text x="305" y="152" class="stat-val" font-size="14">Shell</text>
+<text x="440" y="152" class="caption" font-size="13" font-weight="600">0.22%</text>
+<circle cx="290" cy="176" r="5" fill="#427819" filter="url(#softGlow)" />
+<text x="305" y="180" class="stat-val" font-size="14">Makefile</text>
+<text x="440" y="180" class="caption" font-size="13" font-weight="600">0.04%</text>
+</svg>

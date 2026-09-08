@@ -112,16 +112,16 @@
      GITHUB COMMAND CENTER: STATS & STREAK
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:terminal.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;GITHUB COMMAND CENTER</b></h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:terminal.svg?color=%2300f2fe" width="22" valign="middle" /> <b>&nbsp;GITHUB COMMAND CENTER</b></h3>
 
 <p align="center">
-  <img width="49%" src="https://github-readme-stats-fast.vercel.app/api?username=Nishant-codess&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&ring_color=38ef7d&count_private=true&include_all_commits=true" alt="GitHub Stats" />
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-stats.svg" alt="GitHub Stats" />
   &nbsp;
-  <img width="49%" src="https://github-readme-streak-stats.herokuapp.com?user=Nishant-codess&theme=radical&hide_border=true&background=0D1117&ring=38EF7D&fire=38EF7D&currStreakLabel=38EF7D&sideLabels=38EF7D&currStreakNum=FFFFFF&sideNums=FFFFFF&dates=555555" alt="GitHub Streak" />
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-streak.svg" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img width="55%" src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=Nishant-codess&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&text_color=c9d1d9&langs_count=8" alt="Top Languages" />
+  <img width="56%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-languages.svg" alt="Top Languages" />
 </p>
 
 <!-- Animated Divider -->
@@ -133,35 +133,35 @@
      FEATURED CREATIONS: TOP REPOSITORIES
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:folder-git-2.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;FEATURED CREATIONS</b></h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:folder-git-2.svg?color=%2300f2fe" width="22" valign="middle" /> <b>&nbsp;FEATURED CREATIONS</b></h3>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/ShadowLedger">
-    <img width="49%" src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Nishant-codess&repo=ShadowLedger&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&description_lines_count=2" alt="ShadowLedger" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg" alt="ShadowLedger" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/SPARK-Engine">
-    <img width="49%" src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Nishant-codess&repo=SPARK-Engine&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&description_lines_count=2" alt="SPARK-Engine" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg" alt="SPARK-Engine" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/askDB">
-    <img width="49%" src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Nishant-codess&repo=askDB&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&description_lines_count=2" alt="askDB" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg" alt="askDB" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/InsightU_v1">
-    <img width="49%" src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Nishant-codess&repo=InsightU_v1&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&description_lines_count=2" alt="InsightU_v1" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg" alt="InsightU_v1" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/easy-q">
-    <img width="49%" src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Nishant-codess&repo=easy-q&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&description_lines_count=2" alt="easy-q" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg" alt="easy-q" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/Gavel">
-    <img width="49%" src="https://github-readme-stats-fast.vercel.app/api/pin/?username=Nishant-codess&repo=Gavel&theme=radical&hide_border=true&bg_color=0d1117&title_color=38ef7d&icon_color=11998e&text_color=c9d1d9&description_lines_count=2" alt="Gavel" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg" alt="Gavel" />
   </a>
 </p>
 
