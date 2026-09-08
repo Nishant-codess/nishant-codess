@@ -223,18 +223,18 @@
 
 <!-- Vinyl Player Turntable Display -->
 <p align="center">
-  <a href="https://nishant-codess.github.io/nishant-codess/">
+  <a href="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/music.mp3">
     <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/vinyl-player.gif" width="560" alt="Vinyl Record Player — music.mp3" style="border-radius: 16px;" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://nishant-codess.github.io/nishant-codess/">
-    <img src="https://img.shields.io/badge/▶_Launch_Vinyl_Turntable-Click_to_Play-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play on Vinyl Player" />
+  <a href="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/music.mp3">
+    <img src="https://img.shields.io/badge/▶_Play_Music_Now-Click_to_Listen-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play Music" />
   </a>
   &nbsp;
-  <a href="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/music.mp3">
-    <img src="https://img.shields.io/badge/🎧_Direct_Audio_Stream-music.mp3-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Direct Audio Stream" />
+  <a href="https://nishant-codess.github.io/nishant-codess/">
+    <img src="https://img.shields.io/badge/💽_Open_Web_Turntable-Live_App-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Web Turntable" />
   </a>
 </p>
 
