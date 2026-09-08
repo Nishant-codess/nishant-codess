@@ -2,13 +2,6 @@
      🔥 NISHANT RANJAN — GITHUB PROFILE
      ═══════════════════════════════════════════════════════════════════════════════ -->
 
-<!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     HERO SECTION: ANIMATED BANNER
-     ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
-
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:11998e,50:38ef7d,75:11998e,100:0d1117&height=260&section=header&text=NISHANT%20RANJAN&fontSize=54&fontColor=ffffff&fontAlignY=38&desc=Crafting%20Code%20That%20Thinks%20%E2%80%A2%20Scalable%20Systems%20%E2%80%A2%20AI%20%26%20Cloud&descAlignY=58&descSize=18&descColor=38ef7d" alt="Nishant Ranjan Banner" />
-</p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
      HERO AVATAR & MODERN TYPING INTRO
@@ -288,8 +281,4 @@
 
 <p align="center">
   <i>"Craft code that thinks, builds that scale, and apps that feel alive."</i>
-</p>
-
-<p align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,25:11998e,50:38ef7d,75:11998e,100:0d1117&height=120&section=footer" alt="Footer Banner" />
 </p>
