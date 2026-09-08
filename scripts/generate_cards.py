@@ -356,7 +356,7 @@ def generate_header_svg(title, icon_type='code'):
         icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
 
     svg.append(f'<g transform="translate({start_x}, 5) scale(0.9)">{icon_svg}</g>')
-    svg.append(text_to_svg_path(title, start_x + 28, 22, font_size, FONT_HEADER, fill="url(#headerGrad)"))
+    svg.append(text_to_svg_path(title, start_x + 28, 22, font_size, FONT_HEADER, fill="url(#headerGrad)", extra='stroke="url(#headerGrad)" stroke-width="0.8" stroke-linejoin="round"'))
     svg.append('</svg>')
     return '\n'.join(svg)
 
@@ -367,7 +367,7 @@ def make_cycling_headline_svg(lines, w=680, h=50, font_size=26, dur_per_line=3.5
     
     svg_groups = []
     for idx, line in enumerate(lines):
-        path = text_to_svg_path(line, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)')
+        path = text_to_svg_path(line, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.85" stroke-linejoin="round"')
         start_f = idx / n
         fade_in_f = start_f + fade_frac
         hold_f = (idx + 1) / n - fade_frac
@@ -408,7 +408,7 @@ def make_cycling_headline_svg(lines, w=680, h=50, font_size=26, dur_per_line=3.5
 </svg>'''
 
 def make_gradient_cursive_svg(text, w, h, font_size):
-    path = text_to_svg_path(text, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)')
+    path = text_to_svg_path(text, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.85" stroke-linejoin="round"')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">

@@ -16,7 +16,7 @@
 <!-- Dynamic Typing SVG using bold, cursive 'Dancing Script' font with Multi-Color Rainbow Gradient -->
 <p align="center">
   <a href="https://github.com/Nishant-codess">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/typing-headline.svg?v=6" width="680" alt="Full-Stack Architect • Turning Complex Problems into Clean Code" />
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/typing-headline.svg?v=7" width="680" alt="Full-Stack Architect • Turning Complex Problems into Clean Code" />
   </a>
 </p>
 
@@ -33,7 +33,7 @@
 
 <!-- Animated Divider: Google 4 Colors in Sequence (Thicker, Luminous Pulse) -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -41,7 +41,7 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-about.svg?v=6" alt="About Me" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-about.svg?v=7" alt="About Me" />
 </p>
 
 <table>
@@ -55,6 +55,7 @@
         <li><b>AI & ML:</b> Building intelligent pipelines, model integrations, and NLP-to-SQL query engines.</li>
         <li><b>Open Source:</b> Actively creating developer utilities, database tools, and architectural templates.</li>
       </ul>
+      <br/>
     </td>
     <td width="50%" valign="top">
       <p style="margin: 4px 0 8px 0;">
@@ -66,13 +67,14 @@
         <li><b>Ask Me About:</b> Distributed Systems, Concurrency &amp; Database Architecture</li>
         <li><b>Philosophy:</b> <i>"The best code is the one that makes someone's life easier."</i></li>
       </ul>
+      <br/>
     </td>
   </tr>
 </table>
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -80,7 +82,7 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-arsenal.svg?v=6" alt="Core Technical Arsenal" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-arsenal.svg?v=7" alt="Core Technical Arsenal" />
 </p>
 
 <p align="center"><b>Core Languages</b></p>
@@ -117,7 +119,7 @@
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -125,22 +127,22 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-command-center.svg?v=6" alt="Developer Command Center" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-command-center.svg?v=7" alt="Developer Command Center" />
 </p>
 
 <p align="center">
-  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-stats.svg?v=6" alt="GitHub Stats" />
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-stats.svg?v=7" alt="GitHub Stats" />
   &nbsp;
-  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-streak.svg?v=6" alt="GitHub Streak" />
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-streak.svg?v=7" alt="GitHub Streak" />
 </p>
 
 <p align="center">
-  <img width="56%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-languages.svg?v=6" alt="Top Languages" />
+  <img width="56%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-languages.svg?v=7" alt="Top Languages" />
 </p>
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -148,36 +150,36 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-creations.svg?v=6" alt="Featured Architectural Creations" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-creations.svg?v=7" alt="Featured Architectural Creations" />
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/ShadowLedger">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg?v=6" alt="ShadowLedger" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg?v=7" alt="ShadowLedger" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/SPARK-Engine">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg?v=6" alt="SPARK-Engine" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg?v=7" alt="SPARK-Engine" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/askDB">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg?v=6" alt="askDB" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg?v=7" alt="askDB" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/InsightU_v1">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg?v=6" alt="InsightU_v1" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg?v=7" alt="InsightU_v1" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/easy-q">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg?v=6" alt="easy-q" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg?v=7" alt="easy-q" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/Gavel">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg?v=6" alt="Gavel" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg?v=7" alt="Gavel" />
   </a>
 </p>
 
@@ -282,7 +284,7 @@
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -290,7 +292,7 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-trophies.svg?v=6" alt="Hall of Honors & Trophies" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-trophies.svg?v=7" alt="Hall of Honors & Trophies" />
 </p>
 
 <!-- Dynamic GitHub Activity Trophy Telemetry in Alduin Gold Theme -->
@@ -300,7 +302,7 @@
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -308,14 +310,14 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-certifications.svg?v=6" alt="Honors & Professional Certifications" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-certifications.svg?v=7" alt="Honors & Professional Certifications" />
 </p>
 
 <table>
   <tr>
     <td width="50%" valign="top">
       <p style="margin: 4px 0 8px 0;">
-        <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/nptel-logo.png?v=6" height="24" valign="middle" />
+        <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/nptel-logo.png?v=7" height="24" valign="middle" />
         <b>&nbsp;NPTEL &bull; Ministry of Education, Govt. of India</b>
       </p>
       <ul>
@@ -324,11 +326,11 @@
         <li><b>Design &amp; Analysis of Algorithms:</b> Elite Certification</li>
         <li><b>Object-Oriented Programming (OOP):</b> Elite Certification</li>
       </ul>
-      <details>
+      <details open>
         <summary><small><b>View Verified NPTEL Certificate Snapshot</b></small></summary>
         <br/>
         <p align="center">
-          <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/cert-nptel-snapshot.jpg?v=6" width="95%" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" alt="NPTEL DBMS Elite Certificate" />
+          <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/cert-nptel-snapshot.jpg?v=7" width="95%" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" alt="NPTEL DBMS Elite Certificate" />
         </p>
       </details>
     </td>
@@ -344,13 +346,13 @@
         <li><b>1st Place Winner:</b> TechKnow 2025 National Project Expo</li>
         <li><b>3rd Place Winner:</b> DAYZERO 36-Hr Hackathon</li>
       </ul>
-      <details>
+      <details open>
         <summary><small><b>View AWS Core Team Badge &amp; DayZero Certificate</b></small></summary>
         <br/>
         <p align="center">
-          <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/cert-aws-badge.png?v=6" width="38%" style="border-radius: 8px;" alt="AWS Cloud Club Core Team Badge" />
+          <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/cert-aws-badge.png?v=7" width="38%" style="border-radius: 8px;" alt="AWS Cloud Club Core Team Badge" />
           &nbsp;
-          <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/cert-dayzero-snapshot.jpg?v=6" width="55%" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" alt="DayZero Hackathon Certificate" />
+          <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/cert-dayzero-snapshot.jpg?v=7" width="55%" style="border-radius: 8px; border: 1px solid rgba(255,255,255,0.15);" alt="DayZero Hackathon Certificate" />
         </p>
       </details>
     </td>
@@ -359,7 +361,7 @@
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -370,15 +372,15 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=6" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake.svg?v=6" />
-    <img alt="Nishant Contribution Snake Animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=6" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=7" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake.svg?v=7" />
+    <img alt="Nishant Contribution Snake Animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=7" width="100%" />
   </picture>
 </p>
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -386,21 +388,21 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-spotify.svg?v=6" alt="On Repeat In My Mind" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-spotify.svg?v=7" alt="On Repeat In My Mind" />
 </p>
 
 <!-- Bold Cursive Subtitle using Dancing Script with Multi-Color Rainbow Gradient -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/typing-spotify.svg?v=6" width="620" alt="The song that's been playing on my mind recently." />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/typing-spotify.svg?v=7" width="620" alt="The song that's been playing on my mind recently." />
 </p>
 
-<!-- Centered Compact Spotify Player (540x640: Full Disc Visible, No Lateral Overflow) -->
+<!-- Centered Compact Square Spotify Player (420x420: True 1:1 Square, Full Disc Visible, No Lateral Overflow) -->
 <div align="center">
-<table>
+<table width="380">
 <tr>
-<td align="center">
+<td width="380" align="center">
 
-https://github.com/user-attachments/assets/29dff54a-9b30-4305-9984-0c11dc57043a
+https://github.com/user-attachments/assets/d184911a-644a-4a8d-baf1-b13484c85d6b
 
 </td>
 </tr>
@@ -423,7 +425,7 @@ https://github.com/user-attachments/assets/29dff54a-9b30-4305-9984-0c11dc57043a
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -431,7 +433,7 @@ https://github.com/user-attachments/assets/29dff54a-9b30-4305-9984-0c11dc57043a
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-connect.svg?v=6" alt="Connect & Collaborate" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-connect.svg?v=7" alt="Connect & Collaborate" />
 </p>
 
 <p align="center">
@@ -462,7 +464,7 @@ https://github.com/user-attachments/assets/29dff54a-9b30-4305-9984-0c11dc57043a
   <br/>
   <p align="center">
     <a href="https://drive.google.com/file/d/1q88WKaczp6Y1HsnKPr7vkNQRBRIi7wnO/view?usp=sharing" target="_blank">
-      <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/resume-preview.png?v=6" width="70%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.15);" alt="Nishant Ranjan Resume Preview" />
+      <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/resume-preview.png?v=7" width="70%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.15);" alt="Nishant Ranjan Resume Preview" />
     </a>
   </p>
 </details>
@@ -475,7 +477,7 @@ https://github.com/user-attachments/assets/29dff54a-9b30-4305-9984-0c11dc57043a
 
 <!-- Animated Divider -->
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=6" width="100%" alt="Divider" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/divider.gif?v=7" width="100%" alt="Divider" />
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
@@ -483,5 +485,5 @@ https://github.com/user-attachments/assets/29dff54a-9b30-4305-9984-0c11dc57043a
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/typing-footer.svg?v=6" width="680" alt="Craft code that thinks, builds that scale, and apps that feel alive." />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/typing-footer.svg?v=7" width="680" alt="Craft code that thinks, builds that scale, and apps that feel alive." />
 </p>
