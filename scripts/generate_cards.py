@@ -12,7 +12,7 @@ FONT_CLEAN_HEADER = 'fonts/DINAlternate-Bold.ttf'
 FONT_HEADER = 'fonts/HigherJump.ttf'
 FONT_BODY_BOLD = 'fonts/Outfit-SemiBold.ttf'
 FONT_BODY = 'fonts/Outfit-Medium.ttf'
-FONT_CURSIVE = 'fonts/Runethia.otf'
+FONT_CURSIVE = 'fonts/Satisfy.ttf'
 
 def text_to_svg_path(text, x, y, size, font_path, anchor='start', fill='#ffffff', opacity=1.0, extra=''):
     """Converts a text string into an SVG <path> element with vector glyphs."""
@@ -358,14 +358,14 @@ def generate_header_svg(title, icon_type='code'):
     svg.append('</svg>')
     return '\n'.join(svg)
 
-def make_cycling_headline_svg(lines, w=720, h=55, font_size=28, dur_per_line=3.5):
+def make_cycling_headline_svg(lines, w=740, h=54, font_size=28, dur_per_line=3.5):
     n = len(lines)
     total_dur = n * dur_per_line
     fade_frac = 0.05
     
     svg_groups = []
     for idx, line in enumerate(lines):
-        path = text_to_svg_path(line, w/2, 38, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.7" stroke-linejoin="round"')
+        path = text_to_svg_path(line, w/2, 36, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.5" stroke-linejoin="round"')
         start_f = idx / n
         fade_in_f = start_f + fade_frac
         hold_f = (idx + 1) / n - fade_frac
@@ -412,7 +412,7 @@ def make_cycling_headline_svg(lines, w=720, h=55, font_size=28, dur_per_line=3.5
 </svg>'''
 
 def make_gradient_cursive_svg(text, w, h, font_size):
-    path = text_to_svg_path(text, w/2, h*0.72, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.7" stroke-linejoin="round"')
+    path = text_to_svg_path(text, w/2, h*0.68, font_size, FONT_CURSIVE, anchor='middle', fill='url(#rainbowGrad)', extra='stroke="url(#rainbowGrad)" stroke-width="0.5" stroke-linejoin="round"')
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -619,15 +619,16 @@ def generate_world_clocks_svg():
     return '\n'.join(svg)
 
 def generate_divider_svg():
-    w, h = 900, 6
+    w, h = 900, 8
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="glowDivider" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0" />
-      <stop offset="20%" stop-color="#00f2fe" stop-opacity="0.85" />
-      <stop offset="50%" stop-color="#818cf8" stop-opacity="1" />
-      <stop offset="80%" stop-color="#c084fc" stop-opacity="0.85" />
-      <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+      <stop offset="0%" stop-color="#4285F4" stop-opacity="0" />
+      <stop offset="10%" stop-color="#4285F4" stop-opacity="0.9" />
+      <stop offset="38%" stop-color="#EA4335" stop-opacity="0.9" />
+      <stop offset="65%" stop-color="#FBBC05" stop-opacity="0.9" />
+      <stop offset="90%" stop-color="#34A853" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#34A853" stop-opacity="0" />
     </linearGradient>
     <filter id="divGlow" x="-10%" y="-100%" width="120%" height="300%">
       <feGaussianBlur stdDeviation="1.2" result="glow" />
@@ -637,18 +638,18 @@ def generate_divider_svg():
       </feMerge>
     </filter>
   </defs>
-  <rect x="30" y="2" width="{w - 60}" height="2" rx="1" fill="url(#glowDivider)" filter="url(#divGlow)" />
+  <rect x="30" y="2" width="{w - 60}" height="4" rx="2" fill="url(#glowDivider)" filter="url(#divGlow)" />
 </svg>'''
 
 def generate_divider_gif(folders=['assets', 'dist']):
     from PIL import Image, ImageDraw
-    w, h = 900, 8
-    line_y = 4
+    w, h = 900, 14
+    line_y = 7
     cols = [
-        (0, 242, 254),
-        (56, 189, 248),
-        (129, 140, 248),
-        (192, 132, 252)
+        (66, 133, 244),   # Google Blue #4285F4
+        (234, 67, 53),    # Google Red #EA4335
+        (251, 188, 5),    # Google Yellow #FBBC05
+        (52, 168, 83)     # Google Green #34A853
     ]
     def get_color_at(t):
         t = max(0.0, min(1.0, t))
@@ -669,21 +670,28 @@ def generate_divider_gif(folders=['assets', 'dist']):
         im = Image.new('RGBA', (w, h), (0, 0, 0, 0))
         draw = ImageDraw.Draw(im)
         pulse_x = (frame_idx / num_frames) * w
-        pulse_radius = 120
-        for x in range(w):
-            base_c = get_color_at(x / w)
+        pulse_radius = 130
+        for x in range(30, w - 30):
+            edge_dist = min(x - 30, (w - 30) - x)
+            edge_factor = min(1.0, edge_dist / 40.0)
+            t = (x - 30) / (w - 60)
+            base_c = get_color_at(t)
             dist = abs(x - pulse_x)
             if dist < pulse_radius:
                 boost = (1.0 - (dist / pulse_radius)) ** 2
-                alpha = int(70 + boost * 185)
-                r = min(255, int(base_c[0] + boost * (255 - base_c[0]) * 0.8))
-                g = min(255, int(base_c[1] + boost * (255 - base_c[1]) * 0.8))
-                b = min(255, int(base_c[2] + boost * (255 - base_c[2]) * 0.8))
+                alpha = int((110 + boost * 145) * edge_factor)
+                r = min(255, int(base_c[0] + boost * (255 - base_c[0]) * 0.85))
+                g = min(255, int(base_c[1] + boost * (255 - base_c[1]) * 0.85))
+                b = min(255, int(base_c[2] + boost * (255 - base_c[2]) * 0.85))
             else:
-                alpha = 70
+                alpha = int(110 * edge_factor)
                 r, g, b = base_c
-            for dy in range(-1, 2):
+            # Solid 5px core for increased thickness
+            for dy in range(-2, 3):
                 draw.point((x, line_y + dy), fill=(r, g, b, alpha))
+            # Smooth anti-aliased outer edges
+            draw.point((x, line_y - 3), fill=(r, g, b, int(alpha * 0.35)))
+            draw.point((x, line_y + 3), fill=(r, g, b, int(alpha * 0.35)))
         frames.append(im)
     for folder in folders:
         os.makedirs(folder, exist_ok=True)
@@ -719,9 +727,9 @@ if __name__ == '__main__':
         'Open-Source Builder • Crafting Things That Matter',
         'Turning Complex Problems into Clean Code'
     ]
-    typing_headline = make_cycling_headline_svg(headline_lines, 720, 55, 28)
-    typing_spotify = make_gradient_cursive_svg("The song that's been playing on my mind recently.", 620, 44, 24)
-    typing_footer = make_gradient_cursive_svg("Craft code that thinks, builds that scale, and apps that feel alive.", 720, 48, 26)
+    typing_headline = make_cycling_headline_svg(headline_lines, 740, 54, 28)
+    typing_spotify = make_gradient_cursive_svg("The song that's been playing on my mind recently.", 640, 46, 24)
+    typing_footer = make_gradient_cursive_svg("Craft code that thinks, builds that scale, and apps that feel alive.", 780, 54, 27)
     
     # 3. Section Header SVGs
     headers = [
