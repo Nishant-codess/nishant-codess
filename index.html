@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nishant's Vinyl Record Player — On Repeat</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --card-bg: rgba(22, 27, 34, 0.85);
+      --accent-green: #38ef7d;
+      --accent-teal: #11998e;
+      --text-main: #f0f6fc;
+      --text-muted: #8b949e;
+      --border-color: rgba(56, 239, 125, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: radial-gradient(circle at 50% 20%, #152238 0%, #0d1117 80%);
+      color: var(--text-main);
+      font-family: 'Outfit', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      overflow-x: hidden;
+    }
+
+    /* Ambient background glow */
+    .glow-sphere {
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(17, 153, 142, 0.15) 0%, transparent 70%);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 820px;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 28px;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(56, 239, 125, 0.1);
+      backdrop-filter: blur(20px);
+      padding: 36px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Header & Badges */
+    .header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(56, 239, 125, 0.12);
+      border: 1px solid rgba(56, 239, 125, 0.35);
+      color: var(--accent-green);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-green) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      font-style: italic;
+    }
+
+    /* Turntable Section */
+    .turntable {
+      position: relative;
+      width: 320px;
+      height: 320px;
+      margin: 20px 0 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Turntable Platter */
+    .platter {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: #11161d;
+      border-radius: 50%;
+      border: 4px solid #21262d;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.8), inset 0 0 20px rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Vinyl Record */
+    .vinyl {
+      position: relative;
+      width: 270px;
+      height: 270px;
+      background: radial-gradient(circle, #0e0e11 0%, #17181c 60%, #0d0d10 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(0,0,0,0.9);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Vinyl Grooves */
+    .vinyl::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      background: repeating-radial-gradient(
+        circle,
+        transparent 0,
+        transparent 3px,
+        rgba(255, 255, 255, 0.035) 4px,
+        transparent 5px
+      );
+    }
+
+    /* Specular Light Sheen */
+    .vinyl::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: conic-gradient(
+        from 45deg,
+        transparent 0deg,
+        rgba(255, 255, 255, 0.08) 60deg,
+        transparent 90deg,
+        transparent 180deg,
+        rgba(255, 255, 255, 0.08) 240deg,
+        transparent 270deg
+      );
+      pointer-events: none;
+    }
+
+    .vinyl.spinning {
+      animation: spin 3s linear infinite;
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    /* Vinyl Center Label */
+    .vinyl-label {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, var(--accent-teal), var(--accent-green));
+      border-radius: 50%;
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #000;
+      font-weight: 800;
+      font-size: 0.65rem;
+      letter-spacing: 0.5px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(56, 239, 125, 0.4);
+    }
+
+    .spindle {
+      width: 14px;
+      height: 14px;
+      background: #0d1117;
+      border-radius: 50%;
+      border: 2px solid #8b949e;
+      margin-top: 2px;
+    }
+
+    /* Tonearm */
+    .tonearm {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      width: 50px;
+      height: 160px;
+      transform-origin: 35px 25px;
+      transform: rotate(-32deg);
+      transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .tonearm.playing {
+      transform: rotate(12deg);
+    }
+
+    .tonearm-base {
+      position: absolute;
+      top: 10px;
+      right: 5px;
+      width: 32px;
+      height: 32px;
+      background: #30363d;
+      border: 3px solid var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+
+    .tonearm-rod {
+      position: absolute;
+      top: 25px;
+      right: 20px;
+      width: 5px;
+      height: 120px;
+      background: linear-gradient(to right, #8b949e, #d0d7de);
+      border-radius: 3px;
+    }
+
+    .tonearm-head {
+      position: absolute;
+      bottom: 12px;
+      right: 13px;
+      width: 18px;
+      height: 26px;
+      background: #161b22;
+      border: 2px solid var(--accent-green);
+      border-radius: 4px;
+    }
+
+    .needle-light {
+      position: absolute;
+      bottom: -4px;
+      right: 19px;
+      width: 6px;
+      height: 6px;
+      background: var(--accent-green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--accent-green);
+    }
+
+    /* Visualizer */
+    .visualizer-container {
+      width: 100%;
+      max-width: 560px;
+      height: 48px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Player Controls */
+    .controls {
+      width: 100%;
+      max-width: 560px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Scrubber timeline */
+    .timeline-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      width: 100%;
+    }
+
+    .time {
+      font-size: 0.85rem;
+      font-family: 'Space Grotesk', monospace;
+      color: var(--text-muted);
+      min-width: 42px;
+    }
+
+    .progress-bar {
+      position: relative;
+      flex: 1;
+      height: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      cursor: pointer;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--accent-teal), var(--accent-green));
+      border-radius: 10px;
+      transition: width 0.1s linear;
+    }
+
+    /* Play/Pause & Volume Bar */
+    .buttons-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .track-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .track-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--text-main);
+    }
+
+    .track-artist {
+      font-size: 0.85rem;
+      color: var(--accent-green);
+    }
+
+    .main-controls {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .play-btn {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-teal), var(--accent-green));
+      border: none;
+      color: #0d1117;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 20px rgba(56, 239, 125, 0.4);
+    }
+
+    .play-btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 6px 28px rgba(56, 239, 125, 0.6);
+    }
+
+    .volume-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .vol-icon {
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    input[type=range] {
+      width: 80px;
+      accent-color: var(--accent-green);
+      cursor: pointer;
+    }
+
+    /* Footer link */
+    .back-btn {
+      margin-top: 32px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: 100px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: all 0.2s;
+    }
+
+    .back-btn:hover {
+      color: var(--accent-green);
+      border-color: var(--accent-green);
+      background: rgba(56, 239, 125, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 24px 18px;
+      }
+      .turntable {
+        width: 260px;
+        height: 260px;
+      }
+      .platter {
+        width: 250px;
+        height: 250px;
+      }
+      .vinyl {
+        width: 220px;
+        height: 220px;
+      }
+      .buttons-bar {
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glow-sphere"></div>
+
+  <div class="container">
+    
+    <div class="header">
+      <div class="badge">● NOW SPINNING ON VINYL</div>
+      <h1>Nishant's Turntable</h1>
+      <p class="subtitle">"The song that's been playing on my mind recently."</p>
+    </div>
+
+    <!-- Turntable Display -->
+    <div class="turntable">
+      <div class="platter">
+        <div class="vinyl" id="vinyl">
+          <div class="vinyl-label">
+            <span>NISHANT</span>
+            <span style="font-size: 0.55rem; color: #161b22;">ON REPEAT</span>
+            <div class="spindle"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tonearm -->
+      <div class="tonearm" id="tonearm">
+        <div class="tonearm-base"></div>
+        <div class="tonearm-rod"></div>
+        <div class="tonearm-head"></div>
+        <div class="needle-light"></div>
+      </div>
+    </div>
+
+    <!-- Frequency Wave Visualizer -->
+    <div class="visualizer-container">
+      <canvas id="visualizer"></canvas>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <!-- Progress Bar -->
+      <div class="timeline-container">
+        <span class="time" id="currentTime">0:00</span>
+        <div class="progress-bar" id="progressBar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <span class="time" id="duration">3:53</span>
+      </div>
+
+      <!-- Playback Buttons & Meta -->
+      <div class="buttons-bar">
+        <div class="track-meta">
+          <div class="track-name">music.mp3</div>
+          <div class="track-artist">Nishant's Favorite Vibe • 33 ⅓ RPM</div>
+        </div>
+
+        <div class="main-controls">
+          <button class="play-btn" id="playBtn" aria-label="Play">▶</button>
+        </div>
+
+        <div class="volume-container">
+          <span class="vol-icon" id="volIcon">🔊</span>
+          <input type="range" id="volumeRange" min="0" max="1" step="0.05" value="0.85">
+        </div>
+      </div>
+    </div>
+
+    <a href="https://github.com/Nishant-codess" class="back-btn">
+      ← Back to Nishant's GitHub Profile
+    </a>
+
+  </div>
+
+  <audio id="audio" src="assets/music.mp3" preload="metadata"></audio>
+
+  <script>
+    const audio = document.getElementById('audio');
+    const playBtn = document.getElementById('playBtn');
+    const vinyl = document.getElementById('vinyl');
+    const tonearm = document.getElementById('tonearm');
+    const progressBar = document.getElementById('progressBar');
+    const progressFill = document.getElementById('progressFill');
+    const currentTimeEl = document.getElementById('currentTime');
+    const durationEl = document.getElementById('duration');
+    const volumeRange = document.getElementById('volumeRange');
+    const volIcon = document.getElementById('volIcon');
+    const canvas = document.getElementById('visualizer');
+    const ctx = canvas.getContext('2d');
+
+    // Handle relative audio source fallback
+    audio.addEventListener('error', () => {
+      if (!audio.src.endsWith('music.mp3')) {
+        audio.src = 'music.mp3';
+      }
+    });
+
+    let audioContext, analyser, dataArray, source;
+    let isInitialized = false;
+
+    function initAudioContext() {
+      if (isInitialized) return;
+      try {
+        audioContext = new (window.AudioContext || window.webkitAudioContext)();
+        analyser = audioContext.createAnalyser();
+        analyser.fftSize = 64;
+        source = audioContext.createMediaElementSource(audio);
+        source.connect(analyser);
+        analyser.connect(audioContext.destination);
+        dataArray = new Uint8Array(analyser.frequencyBinCount);
+        isInitialized = true;
+        drawVisualizer();
+      } catch (e) {
+        console.warn('Web Audio API not supported or blocked:', e);
+      }
+    }
+
+    function togglePlay() {
+      initAudioContext();
+      if (audioContext && audioContext.state === 'suspended') {
+        audioContext.resume();
+      }
+
+      if (audio.paused) {
+        audio.play().then(() => {
+          playBtn.innerHTML = '❚❚';
+          vinyl.classList.add('spinning');
+          tonearm.classList.add('playing');
+        }).catch(err => console.error('Audio play error:', err));
+      } else {
+        audio.pause();
+        playBtn.innerHTML = '▶';
+        vinyl.classList.remove('spinning');
+        tonearm.classList.remove('playing');
+      }
+    }
+
+    playBtn.addEventListener('click', togglePlay);
+    vinyl.addEventListener('click', togglePlay);
+
+    // Format time mm:ss
+    function formatTime(sec) {
+      if (isNaN(sec)) return '0:00';
+      const m = Math.floor(sec / 60);
+      const s = Math.floor(sec % 60);
+      return `${m}:${s < 10 ? '0' : ''}${s}`;
+    }
+
+    // Metadata loaded
+    audio.addEventListener('loadedmetadata', () => {
+      durationEl.textContent = formatTime(audio.duration);
+    });
+
+    // Time update
+    audio.addEventListener('timeupdate', () => {
+      const progress = (audio.currentTime / audio.duration) * 100;
+      progressFill.style.width = `${progress}%`;
+      currentTimeEl.textContent = formatTime(audio.currentTime);
+    });
+
+    // Seek
+    progressBar.addEventListener('click', (e) => {
+      const rect = progressBar.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      audio.currentTime = (clickX / width) * audio.duration;
+    });
+
+    // Track ended
+    audio.addEventListener('ended', () => {
+      playBtn.innerHTML = '▶';
+      vinyl.classList.remove('spinning');
+      tonearm.classList.remove('playing');
+      progressFill.style.width = '0%';
+    });
+
+    // Volume
+    volumeRange.addEventListener('input', (e) => {
+      audio.volume = e.target.value;
+      volIcon.textContent = audio.volume == 0 ? '🔇' : (audio.volume < 0.5 ? '🔉' : '🔊');
+    });
+
+    volIcon.addEventListener('click', () => {
+      if (audio.volume > 0) {
+        audio.dataset.prevVol = audio.volume;
+        audio.volume = 0;
+        volumeRange.value = 0;
+        volIcon.textContent = '🔇';
+      } else {
+        audio.volume = audio.dataset.prevVol || 0.85;
+        volumeRange.value = audio.volume;
+        volIcon.textContent = '🔊';
+      }
+    });
+
+    // Canvas visualizer resize
+    function resizeCanvas() {
+      canvas.width = canvas.parentElement.clientWidth * window.devicePixelRatio;
+      canvas.height = canvas.parentElement.clientHeight * window.devicePixelRatio;
+      ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    // Waveform rendering
+    function drawVisualizer() {
+      requestAnimationFrame(drawVisualizer);
+      const w = canvas.parentElement.clientWidth;
+      const h = canvas.parentElement.clientHeight;
+
+      ctx.clearRect(0, 0, w, h);
+
+      if (!analyser || audio.paused) {
+        // Idle ambient subtle wave
+        ctx.fillStyle = 'rgba(56, 239, 125, 0.2)';
+        const bars = 32;
+        const barWidth = (w / bars) - 4;
+        const time = Date.now() * 0.003;
+        for (let i = 0; i < bars; i++) {
+          const barHeight = 4 + Math.sin(time + i * 0.3) * 6;
+          ctx.fillRect(i * (barWidth + 4), (h / 2) - (barHeight / 2), barWidth, barHeight);
+        }
+        return;
+      }
+
+      analyser.getByteFrequencyData(dataArray);
+      const bars = dataArray.length;
+      const barWidth = (w / bars) - 4;
+
+      for (let i = 0; i < bars; i++) {
+        const val = dataArray[i];
+        const barHeight = Math.max(4, (val / 255) * h * 0.85);
+        const x = i * (barWidth + 4);
+        const y = (h / 2) - (barHeight / 2);
+
+        const grad = ctx.createLinearGradient(0, y, 0, y + barHeight);
+        grad.addColorStop(0, '#38ef7d');
+        grad.addColorStop(1, '#11998e');
+
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+        ctx.roundRect(x, y, barWidth, barHeight, 3);
+        ctx.fill();
+      }
+    }
+
+    // Start idle visualizer
+    drawVisualizer();
+  </script>
+</body>
+</html>

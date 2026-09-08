@@ -212,24 +212,30 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     SPOTIFY NOW PLAYING + NATIVE AUDIO PLAYER
+     VINYL RECORD PLAYER — ON REPEAT IN MY MIND
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center">🎵 Vibes While I Code</h3>
+<h3 align="center">🎵 On Repeat in My Mind</h3>
 
 <p align="center">
-  <a href="https://spotify-github-profile.kittinanx.com/api/view?uid=31v62l7jdfalkmeyyyzkcsnu2rh4&redirect=true">
-    <img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31v62l7jdfalkmeyyyzkcsnu2rh4&cover_image=true&theme=spotify-embed&show_offline=false&background_color=121212&interchange=false&profanity=false&hide_remaster=false&bar_color=53b14f&bar_color_cover=false&mode=light" alt="Spotify Now Playing" />
+  <i>"The song that's been playing on my mind recently."</i>
+</p>
+
+<!-- Vinyl Player Turntable Display -->
+<p align="center">
+  <a href="https://nishant-codess.github.io/nishant-codess/">
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/vinyl-player.gif" width="560" alt="Vinyl Record Player — music.mp3" style="border-radius: 16px;" />
   </a>
 </p>
 
-<p align="center"><b>🎧 Hit play — coding track:</b></p>
-
 <p align="center">
-  <audio controls>
-    <source src="https://github.com/Nishant-codess/nishant-codess/raw/main/assets/music.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
+  <a href="https://nishant-codess.github.io/nishant-codess/">
+    <img src="https://img.shields.io/badge/▶_Launch_Vinyl_Turntable-Click_to_Play-38ef7d?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Play on Vinyl Player" />
+  </a>
+  &nbsp;
+  <a href="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/music.mp3">
+    <img src="https://img.shields.io/badge/🎧_Direct_Audio_Stream-music.mp3-11998e?style=for-the-badge&labelColor=0d1117&logoColor=white" alt="Direct Audio Stream" />
+  </a>
 </p>
 
 <!-- Animated Divider -->

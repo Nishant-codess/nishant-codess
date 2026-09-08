@@ -35,6 +35,15 @@ jobs:
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
 
+      # Deploy interactive vinyl web player to GitHub Pages
+      - name: Prepare Vinyl Player Web App
+        run: |
+          cp index.html dist/index.html
+          mkdir -p dist/assets
+          cp assets/music.mp3 dist/assets/music.mp3
+          cp assets/music.mp3 dist/music.mp3
+          cp assets/vinyl-player.gif dist/assets/vinyl-player.gif
+
       # Push the generated files to the output branch
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v4
