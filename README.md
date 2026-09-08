@@ -137,33 +137,61 @@
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/ShadowLedger">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg?v=3" alt="ShadowLedger" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg?v=4" alt="ShadowLedger" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/SPARK-Engine">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg?v=3" alt="SPARK-Engine" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg?v=4" alt="SPARK-Engine" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/askDB">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg?v=3" alt="askDB" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg?v=4" alt="askDB" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/InsightU_v1">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg?v=3" alt="InsightU_v1" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg?v=4" alt="InsightU_v1" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/easy-q">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg?v=3" alt="easy-q" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg?v=4" alt="easy-q" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/Gavel">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg?v=3" alt="Gavel" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg?v=4" alt="Gavel" />
   </a>
 </p>
+
+<details open>
+<summary><img src="https://api.iconify.design/lucide:cpu.svg?color=%2300f2fe" width="18" valign="middle" /> <b>&nbsp;System Architecture & Engineering Highlights</b></summary>
+<br/>
+
+> #### <img src="https://api.iconify.design/lucide:layers.svg?color=%2300f2fe" width="17" valign="middle" />&nbsp; [`ShadowLedger`](https://github.com/Nishant-codess/ShadowLedger) &nbsp;`Python` • `FastAPI` • `DuckDB` • `NetworkX`
+> **ShadowLedger** is an uncertainty-aware value-flow reconstruction and autonomous reconciliation engine designed for high-throughput enterprise finance operations. Built for the Razorpay AI Buildathon, it models transactional ledgers as directed acyclic graphs (DAGs) using NetworkX and executes sub-millisecond graph traversals with local DuckDB storage. By combining deterministic state machines with probabilistic anomaly detection, ShadowLedger traces complex, multi-hop payment discrepancies, reconciles asynchronous webhooks, and achieves 100% audit accuracy with zero paid external API dependencies.
+<br/>
+
+> #### <img src="https://api.iconify.design/lucide:mic.svg?color=%2338ef7d" width="17" valign="middle" />&nbsp; [`SPARK-Engine`](https://github.com/Nishant-codess/SPARK-Engine) &nbsp;`TypeScript` • `Next.js` • `DuckDB` • `Deepgram`
+> **SPARK-Engine** (Speech-Powered Analytics Relational Kit) is a voice-native business intelligence platform that bridges conversational speech and deep database analytics. Leveraging Deepgram's streaming WebSockets for low-latency speech recognition and Inworld AI for emotive voice synthesis, it translates spoken questions into vectorized analytical queries. An embedded DuckDB engine performs columnar aggregations locally in near real-time, while an animated 3D visual avatar and telemetry dashboard synchronize vocal responses with instantaneous visual charts.
+<br/>
+
+> #### <img src="https://api.iconify.design/lucide:database.svg?color=%2300f2fe" width="17" valign="middle" />&nbsp; [`askDB`](https://github.com/Nishant-codess/askDB) &nbsp;`Python` • `FastAPI` • `MySQL` • `Next.js`
+> **askDB** (The Neural Data Canopy) is a hybrid deterministic-probabilistic NL-to-SQL translation engine architected to eliminate schema hallucinations in data analytics. Unlike pure generative LLMs, askDB couples conversational language parsing with rigorous AST-based SQL schema validation, mathematical join path synthesis, and foreign-key graph resolution. This guarantees that every synthesized query executes safely against production relational databases like MySQL, providing non-technical teams with self-serve query intelligence without data corruption risks.
+<br/>
+
+> #### <img src="https://api.iconify.design/lucide:graduation-cap.svg?color=%23c084fc" width="17" valign="middle" />&nbsp; [`InsightU_v1`](https://github.com/Nishant-codess/InsightU_v1) &nbsp;`TypeScript` • `Next.js` • `Supabase` • `TailwindCSS`
+> **InsightU** is an enterprise-grade academic intelligence ecosystem engineered to unify campus workflows and accelerate collegiate success. It features multi-dimensional predictive health models that monitor student coursework trajectory, integrated Google Classroom-style educational hubs with granular role-based permissions, and real-time collaborative coding whiteboards backed by Supabase. Automated timetable heuristics and rate-limited API gateways ensure resilient performance across high-traffic academic terms.
+<br/>
+
+> #### <img src="https://api.iconify.design/lucide:clock.svg?color=%2338ef7d" width="17" valign="middle" />&nbsp; [`easy-q`](https://github.com/Nishant-codess/easy-q) &nbsp;`Java` • `Spring Boot 3` • `WebSockets` • `MySQL`
+> **easy-q** is a high-concurrency digital queuing orchestrator and appointment scheduling platform designed for mission-critical customer intake centers. Engineered on Spring Boot 3.x and Spring Security, it maintains persistent bidirectional WebSocket (STOMP) connections to stream live queue positions, estimated wait times, and status transitions with zero latency. It incorporates optimistic locking algorithms to prevent double-booking anomalies, dynamic counter load rebalancing, and an automated SMS/email notification pipeline.
+<br/>
+
+> #### <img src="https://api.iconify.design/lucide:sparkles.svg?color=%23c084fc" width="17" valign="middle" />&nbsp; [`Gavel`](https://github.com/Nishant-codess/Gavel) &nbsp;`TypeScript` • `MCP Server` • `NitroStack` • `Node.js`
+> **Gavel** is an autonomous AI Frontend Architect implemented as a Model Context Protocol (MCP) server powered by NitroStack. Designed around the philosophy that "the rules decide and the LLM only phrases," Gavel ingests real-world web repositories, parses AST syntax trees and Tailwind configurations, and evaluates frontend component patterns against deterministic rule matrices. It delivers explainable library recommendations with mathematical confidence scoring, alongside automated before-and-after Lighthouse performance benchmarks.
+</details>
 
 <!-- Animated Divider -->
 <p align="center">

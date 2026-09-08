@@ -52,6 +52,11 @@ def text_to_svg_path(text, x, y, size, font_path, anchor='start', fill='#ffffff'
     op_attr = f' opacity="{opacity}"' if opacity < 1.0 else ''
     return f'<path d="{" ".join(d)}" fill="{fill}"{op_attr} {extra}/>'
 
+def get_text_width(text, size, font_path):
+    fp = FontProperties(fname=font_path)
+    tp = TextPath((0, 0), text, size=size, prop=fp)
+    return tp.get_extents().width
+
 def create_card_defs():
     return '''
     <defs>
@@ -233,8 +238,8 @@ def generate_languages_card():
     svg.append('</svg>')
     return '\n'.join(svg)
 
-def generate_repo_card(name, desc, lang, lang_col, forks=0, stars=0):
-    w, h = 480, 125
+def generate_repo_card(name, desc_lines, category, tags, forks=0, stars=0):
+    w, h = 480, 148
     svg = []
     svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">')
     svg.append(create_card_defs())
@@ -242,42 +247,52 @@ def generate_repo_card(name, desc, lang, lang_col, forks=0, stars=0):
     
     # Book / Repo Icon
     svg.append('''
-      <g transform="translate(24, 20)">
+      <g transform="translate(24, 18)">
         <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" fill="none" stroke="#00f2fe" stroke-width="2" />
         <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" fill="none" stroke="#00f2fe" stroke-width="2" />
       </g>
     ''')
     
     # Title in Space Grotesk Bold
-    svg.append(text_to_svg_path(name, 56, 38, 17.5, FONT_TITLE, fill="url(#titleGrad)"))
+    svg.append(text_to_svg_path(name, 56, 36, 17.5, FONT_TITLE, fill="url(#titleGrad)"))
+    
+    # Category Tag on top-right
+    if category:
+        cat_w = get_text_width(category, 9.5, FONT_TITLE) + 20
+        cat_x = w - 24 - cat_w
+        svg.append(f'<rect x="{cat_x}" y="20" width="{cat_w}" height="20" rx="10" fill="rgba(0, 242, 254, 0.08)" stroke="rgba(0, 242, 254, 0.35)" stroke-width="1" />')
+        svg.append(text_to_svg_path(category, cat_x + cat_w / 2.0, 34, 9.5, FONT_TITLE, anchor="middle", fill="#00f2fe"))
     
     # Description lines in Outfit Medium
-    d = desc if desc else "High-performance software engine & architectural component."
-    if len(d) > 65:
-        d1 = d[:65]
-        d2 = d[65:128] + ('...' if len(d) > 128 else '')
-        svg.append(text_to_svg_path(d1, 24, 66, 13, FONT_BODY, fill="#94a3b8"))
-        svg.append(text_to_svg_path(d2, 24, 84, 13, FONT_BODY, fill="#94a3b8"))
-    else:
-        svg.append(text_to_svg_path(d, 24, 70, 13, FONT_BODY, fill="#94a3b8"))
+    y_text = 64
+    for line in desc_lines[:2]:
+        svg.append(text_to_svg_path(line, 24, y_text, 12.5, FONT_BODY, fill="#94a3b8"))
+        y_text += 18
         
-    # Language dot + tag
-    svg.append(f'<circle cx="28" cy="104" r="4.5" fill="{lang_col}" filter="url(#softGlow)" />')
-    svg.append(text_to_svg_path(lang, 38, 108, 12.5, FONT_BODY_BOLD, fill="#cbd5e1"))
+    # Language and Tech Stack Pills on bottom row
+    curr_x = 24
+    pill_y = 105
+    pill_h = 22
+    for t_name, col in tags:
+        tw = get_text_width(t_name, 11, FONT_BODY_BOLD)
+        pw = tw + 22
+        svg.append(f'<rect x="{curr_x}" y="{pill_y}" width="{pw:.1f}" height="{pill_h}" rx="6" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.12)" stroke-width="1" />')
+        svg.append(f'<circle cx="{curr_x + 9}" cy="{pill_y + 11}" r="3" fill="{col}" filter="url(#softGlow)" />')
+        svg.append(text_to_svg_path(t_name, curr_x + 16, pill_y + 15, 11, FONT_BODY_BOLD, fill="#e2e8f0"))
+        curr_x += pw + 8
     
-    # Forks count if any
-    stat_x = 135
+    # Forks count if any (Right aligned at bottom)
     if forks > 0:
+        stat_x = w - 55
         svg.append(f'''
-        <g transform="translate({stat_x}, 97)">
+        <g transform="translate({stat_x}, 107)">
           <circle cx="2" cy="2" r="1.8" fill="none" stroke="#94a3b8" stroke-width="1.2" />
           <circle cx="10" cy="2" r="1.8" fill="none" stroke="#94a3b8" stroke-width="1.2" />
           <circle cx="6" cy="10" r="1.8" fill="none" stroke="#94a3b8" stroke-width="1.2" />
           <path d="M2 4v2a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4M6 8v2" fill="none" stroke="#94a3b8" stroke-width="1.2" />
         </g>
         ''')
-        svg.append(text_to_svg_path(str(forks), stat_x + 16, 108, 12, FONT_BODY, fill="#94a3b8"))
-        stat_x += 40
+        svg.append(text_to_svg_path(str(forks), stat_x + 16, 118, 12, FONT_BODY, fill="#94a3b8"))
         
     svg.append('</svg>')
     return '\n'.join(svg)
@@ -300,19 +315,73 @@ if __name__ == '__main__':
             f.write(langs_svg)
             
     repos = [
-        ("ShadowLedger", "Uncertainty-aware value-flow reconstruction for finance operations", "Python", "#3776ab", 0, 0),
-        ("SPARK-Engine", "Speech Powered Analytics Relational Kit - Voice-Enabled Data Analytics Companion.", "TypeScript", "#3178c6", 2, 0),
-        ("askDB", "Natural language interface & query parser for relational databases", "Python", "#3776ab", 0, 0),
-        ("InsightU_v1", "Comprehensive academic intelligence and student performance analytics engine.", "TypeScript", "#3178c6", 1, 0),
-        ("easy-q", "High-throughput digital queue and appointment orchestrator.", "Java", "#b07219", 0, 0),
-        ("Gavel", "Decentralized legal tech verification and consensus protocol.", "TypeScript", "#3178c6", 0, 0),
+        (
+            "ShadowLedger",
+            [
+                "Uncertainty-aware value-flow reconstruction & audit engine",
+                "designed for high-assurance autonomous financial operations."
+            ],
+            "FINTECH",
+            [("Python", "#3776ab"), ("FastAPI", "#009688"), ("DuckDB", "#f1c40f")],
+            0, 0
+        ),
+        (
+            "SPARK-Engine",
+            [
+                "Speech-Powered Analytics Relational Kit — voice-driven querying",
+                "engine for relational databases with real-time audio telemetry."
+            ],
+            "SPEECH AI",
+            [("TypeScript", "#3178c6"), ("Next.js", "#00f2fe"), ("DuckDB", "#f1c40f")],
+            2, 0
+        ),
+        (
+            "askDB",
+            [
+                "Deterministic-probabilistic hybrid NL-to-SQL query parser",
+                "translating conversational prompts into validated SQL joins."
+            ],
+            "NL-TO-SQL",
+            [("Python", "#3776ab"), ("FastAPI", "#00f2fe"), ("MySQL", "#4479a1")],
+            0, 0
+        ),
+        (
+            "InsightU_v1",
+            [
+                "Comprehensive academic ecosystem & analytics platform with",
+                "predictive student health metrics and collaborative spaces."
+            ],
+            "EDTECH AI",
+            [("TypeScript", "#3178c6"), ("Next.js", "#00f2fe"), ("Supabase", "#3ecf8e")],
+            1, 0
+        ),
+        (
+            "easy-q",
+            [
+                "High-throughput digital queue orchestrator and appointment",
+                "scheduler powered by live WebSockets and Spring Security."
+            ],
+            "SYSTEMS",
+            [("Java", "#b07219"), ("Spring Boot", "#6db33f"), ("WebSockets", "#00f2fe")],
+            0, 0
+        ),
+        (
+            "Gavel",
+            [
+                "Model Context Protocol (MCP) AI frontend architect running",
+                "deterministic rule engines with transparent confidence scoring."
+            ],
+            "MCP ENGINE",
+            [("TypeScript", "#3178c6"), ("MCP Server", "#c084fc"), ("NitroStack", "#00f2fe")],
+            0, 0
+        ),
     ]
     
-    for idx, (name, desc, lang, col, forks, stars) in enumerate(repos):
-        svg_code = generate_repo_card(name, desc, lang, col, forks, stars)
+    for idx, (name, desc_lines, category, tags, forks, stars) in enumerate(repos):
+        svg_code = generate_repo_card(name, desc_lines, category, tags, forks, stars)
         fname = f'card-repo-{name.lower().replace("-", "").replace("_", "")}.svg'
         for folder in ['assets', 'dist']:
             with open(os.path.join(folder, fname), 'w') as f:
                 f.write(svg_code)
                 
-    print("Regenerated all cards with SpaceGrotesk Bold and Outfit typography!")
+    print("Regenerated all cards with rich tech pills, category badges, and expanded descriptions!")
