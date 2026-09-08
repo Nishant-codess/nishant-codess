@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 540 225" width="100%" height="auto">
 
     <defs>
-      <!-- Gradient Palettes: Cyber Aurora (Crisp Vibrant Cyan -> Emerald) -->
+      <!-- Multi-Color Gradient Palette: Cyber Aurora (Cyan -> Emerald -> Purple -> Coral) -->
       <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="100%" stop-color="#38ef7d" />
+        <stop offset="32%" stop-color="#38ef7d" />
+        <stop offset="68%" stop-color="#c084fc" />
+        <stop offset="100%" stop-color="#f43f5e" />
       </linearGradient>
       <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
         <stop offset="0%" stop-color="#00f2fe" />
@@ -21,13 +23,15 @@
       </linearGradient>
       <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="rgba(0, 242, 254, 0.45)" />
-        <stop offset="50%" stop-color="rgba(56, 239, 125, 0.3)" />
-        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
+        <stop offset="33%" stop-color="rgba(56, 239, 125, 0.35)" />
+        <stop offset="66%" stop-color="rgba(192, 132, 252, 0.35)" />
+        <stop offset="100%" stop-color="rgba(244, 63, 94, 0.45)" />
       </linearGradient>
       <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="60%" stop-color="#38ef7d" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="33%" stop-color="#38ef7d" />
+        <stop offset="66%" stop-color="#c084fc" />
+        <stop offset="100%" stop-color="#f43f5e" />
       </linearGradient>
       
       <!-- Subtle Glow Filter -->

@@ -9,26 +9,26 @@
 
 <p align="center">
   <a href="https://github.com/Nishant-codess">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/avatar.jpg" width="195" alt="Nishant Ranjan" style="border-radius: 20px; border: 2px solid rgba(56, 239, 125, 0.4);" />
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/avatar.jpg" width="195" alt="Nishant Ranjan" style="border-radius: 20px; border: 2px solid rgba(0, 242, 254, 0.4);" />
   </a>
 </p>
 
 <!-- Dynamic Typing SVG using bold, cursive 'Dancing Script' font -->
 <p align="center">
   <a href="https://github.com/Nishant-codess">
-    <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=28&duration=3000&pause=1200&color=38EF7D&center=true&vCenter=true&width=660&height=52&lines=Full-Stack+Architect+%E2%80%A2+Building+Scalable+Systems;AI%2FML+Explorer+%E2%80%A2+Teaching+Machines+to+Think;Open-Source+Builder+%E2%80%A2+Crafting+Things+That+Matter;Turning+Complex+Problems+into+Clean+Code" alt="Typing Headline" />
+    <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=28&duration=3000&pause=1200&color=00F2FE&center=true&vCenter=true&width=660&height=52&lines=Full-Stack+Architect+%E2%80%A2+Building+Scalable+Systems;AI%2FML+Explorer+%E2%80%A2+Teaching+Machines+to+Think;Open-Source+Builder+%E2%80%A2+Crafting+Things+That+Matter;Turning+Complex+Problems+into+Clean+Code" alt="Typing Headline" />
   </a>
 </p>
 
-<!-- Quick Stats Badges -->
+<!-- Quick Stats Badges: Multi-Color Gradient Harmony -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Nishant-codess&label=Profile%20Views&color=11998e&style=for-the-badge" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Nishant-codess&label=Profile%20Views&color=00f2fe&style=for-the-badge" alt="Profile Views" />
   &nbsp;
   <img src="https://img.shields.io/github/followers/Nishant-codess?label=Followers&style=for-the-badge&color=38ef7d&labelColor=0d1117" alt="Followers" />
   &nbsp;
-  <img src="https://img.shields.io/github/stars/Nishant-codess?label=Stars&style=for-the-badge&color=11998e&labelColor=0d1117&affiliations=OWNER" alt="Stars" />
+  <img src="https://img.shields.io/github/stars/Nishant-codess?label=Stars&style=for-the-badge&color=f59e0b&labelColor=0d1117&affiliations=OWNER" alt="Stars" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Timezone-IST_(UTC+5:30)-38ef7d?style=for-the-badge&labelColor=0d1117" alt="Timezone" />
+  <img src="https://img.shields.io/badge/Timezone-IST_(UTC+5:30)-c084fc?style=for-the-badge&labelColor=0d1117" alt="Timezone" />
 </p>
 
 <!-- Animated Divider -->
@@ -37,28 +37,34 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     ABOUT ME: CLEAN EXECUTIVE SUMMARY
+     ABOUT ME: CLEAN EXECUTIVE PROFILE
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:user.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;ABOUT ME</b></h3>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-about.svg?v=5" alt="About Me & Executive Profile" />
+</p>
 
 <table>
   <tr>
     <td width="50%" valign="top">
-      <h4><img src="https://api.iconify.design/lucide:sparkles.svg?color=%2338ef7d" width="18" valign="middle" /> <b>&nbsp;What I Do</b></h4>
+      <p style="margin: 4px 0 8px 0;">
+        <img src="https://api.iconify.design/lucide:sparkles.svg?color=%2300f2fe" width="18" valign="middle" /> <b>&nbsp;What I Do</b>
+      </p>
       <ul>
         <li><b>Engineering:</b> Crafting high-throughput distributed systems, scalable microservices, and modern web apps.</li>
-        <li><b>AI & ML:</b> Building intelligent pipelines, model integrations, and computer vision systems.</li>
-        <li><b>Open Source:</b> Actively creating developer utilities, query engines, and architectural templates.</li>
+        <li><b>AI & ML:</b> Building intelligent pipelines, model integrations, and NLP-to-SQL query engines.</li>
+        <li><b>Open Source:</b> Actively creating developer utilities, database tools, and architectural templates.</li>
       </ul>
     </td>
     <td width="50%" valign="top">
-      <h4><img src="https://api.iconify.design/lucide:zap.svg?color=%2338ef7d" width="18" valign="middle" /> <b>&nbsp;Quick Facts</b></h4>
+      <p style="margin: 4px 0 8px 0;">
+        <img src="https://api.iconify.design/lucide:zap.svg?color=%23c084fc" width="18" valign="middle" /> <b>&nbsp;Quick Facts</b>
+      </p>
       <ul>
-        <li><img src="https://api.iconify.design/lucide:graduation-cap.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Education:</b> SRM Institute of Science and Technology</li>
-        <li><img src="https://api.iconify.design/lucide:layers.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Core Stack:</b> Java &bull; Python &bull; TypeScript &bull; C++ &bull; Go</li>
-        <li><img src="https://api.iconify.design/lucide:message-square.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Ask Me About:</b> Distributed Systems, Concurrency &amp; Cloud Scale</li>
-        <li><img src="https://api.iconify.design/lucide:compass.svg?color=%2338ef7d" width="16" valign="middle" /> <b>&nbsp;Philosophy:</b> <i>"The best code is the one that makes someone's life easier."</i></li>
+        <li><b>Education:</b> SRM Institute of Science and Technology (CGPA: 9.69)</li>
+        <li><b>Core Stack:</b> Java &bull; TypeScript &bull; Python &bull; SQL &bull; C/C++</li>
+        <li><b>Ask Me About:</b> Distributed Systems, Concurrency &amp; Database Architecture</li>
+        <li><b>Philosophy:</b> <i>"The best code is the one that makes someone's life easier."</i></li>
       </ul>
     </td>
   </tr>
@@ -70,58 +76,43 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     TECH STACK & ARSENAL
+     CORE TECHNICAL ARSENAL
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:cpu.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;ARSENAL OF MASS CREATION</b></h3>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-arsenal.svg?v=5" alt="Core Technical Arsenal" />
+</p>
 
-<p align="center"><b>Languages</b></p>
+<p align="center"><b>Core Languages</b></p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=java,python,cpp,kotlin,typescript,javascript,go&theme=dark" alt="Languages" />
+    <img src="https://skillicons.dev/icons?i=java,typescript,python,javascript,cpp,c,html,css&theme=dark" alt="Languages" />
   </a>
 </p>
 
-<p align="center"><b>Frameworks & Libraries</b></p>
+<p align="center"><b>Frameworks &amp; Runtime Environments</b></p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=spring,flask,react,nextjs,nestjs,tailwind&theme=dark" alt="Frameworks" />
+    <img src="https://skillicons.dev/icons?i=spring,react,nextjs,nodejs,express,tailwind,electron&theme=dark" alt="Frameworks" />
   </a>
 </p>
 
-<p align="center"><b>Cloud, DevOps & Databases</b></p>
+<p align="center"><b>Databases, Cloud &amp; Developer Tools</b></p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=docker,postgres,mongodb,firebase,linux,git,github,vercel&theme=dark" alt="Tools" />
+    <img src="https://skillicons.dev/icons?i=postgres,mysql,redis,supabase,sqlite,prisma,linux,git,github,postman,vercel,figma&theme=dark" alt="Databases and Tools" />
   </a>
 </p>
 
-<p align="center"><b>AI / ML & Data Science</b></p>
+<p align="center"><b>AI, Query Engines &amp; Analytics</b></p>
 <p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=pytorch,tensorflow,opencv,anaconda&theme=dark" alt="AI/ML" />
-  </a>
-</p>
-
-<!-- Animated Divider -->
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
-</p>
-
-<!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     GITHUB COMMAND CENTER: STATS & STREAK
-     ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
-
-<h3 align="center"><img src="https://api.iconify.design/lucide:terminal.svg?color=%2300f2fe" width="22" valign="middle" /> <b>&nbsp;GITHUB COMMAND CENTER</b></h3>
-
-<p align="center">
-  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-stats.svg?v=3" alt="GitHub Stats" />
+  <img src="https://img.shields.io/badge/In--Process_OLAP-DuckDB-FFF000?style=for-the-badge&logo=duckdb&logoColor=black" alt="DuckDB" />
   &nbsp;
-  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-streak.svg?v=3" alt="GitHub Streak" />
-</p>
-
-<p align="center">
-  <img width="56%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-languages.svg?v=3" alt="Top Languages" />
+  <img src="https://img.shields.io/badge/NL--to--SQL_Engine-FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Speech_AI-Deepgram-13EF95?style=for-the-badge&logo=deepgram&logoColor=black" alt="Deepgram" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Voice_Synthesis-Inworld_AI-7C3AED?style=for-the-badge" alt="Inworld AI" />
 </p>
 
 <!-- Animated Divider -->
@@ -130,67 +121,163 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     FEATURED CREATIONS: TOP REPOSITORIES
+     DEVELOPER COMMAND CENTER
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:folder-git-2.svg?color=%2300f2fe" width="22" valign="middle" /> <b>&nbsp;FEATURED CREATIONS</b></h3>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-command-center.svg?v=5" alt="Developer Command Center" />
+</p>
+
+<p align="center">
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-stats.svg?v=5" alt="GitHub Stats" />
+  &nbsp;
+  <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-streak.svg?v=5" alt="GitHub Streak" />
+</p>
+
+<p align="center">
+  <img width="56%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-languages.svg?v=5" alt="Top Languages" />
+</p>
+
+<!-- Animated Divider -->
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
+
+<!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+     FEATURED ARCHITECTURAL CREATIONS
+     ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-creations.svg?v=5" alt="Featured Architectural Creations" />
+</p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/ShadowLedger">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg?v=4" alt="ShadowLedger" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-shadowledger.svg?v=5" alt="ShadowLedger" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/SPARK-Engine">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg?v=4" alt="SPARK-Engine" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-sparkengine.svg?v=5" alt="SPARK-Engine" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/askDB">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg?v=4" alt="askDB" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-askdb.svg?v=5" alt="askDB" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/InsightU_v1">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg?v=4" alt="InsightU_v1" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-insightuv1.svg?v=5" alt="InsightU_v1" />
   </a>
 </p>
 
 <p align="center">
   <a href="https://github.com/Nishant-codess/easy-q">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg?v=4" alt="easy-q" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-easyq.svg?v=5" alt="easy-q" />
   </a>
   &nbsp;
   <a href="https://github.com/Nishant-codess/Gavel">
-    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg?v=4" alt="Gavel" />
+    <img width="49%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-repo-gavel.svg?v=5" alt="Gavel" />
   </a>
 </p>
 
+<!-- System Architecture & Deep-Dives: Crisp High-Contrast Cards -->
 <details open>
-<summary><img src="https://api.iconify.design/lucide:cpu.svg?color=%2300f2fe" width="18" valign="middle" /> <b>&nbsp;System Architecture & Engineering Highlights</b></summary>
+<summary><img src="https://api.iconify.design/lucide:cpu.svg?color=%2300f2fe" width="18" valign="middle" /> <b>&nbsp;System Architecture &amp; Engineering Deep-Dives</b></summary>
 <br/>
 
-> #### <img src="https://api.iconify.design/lucide:layers.svg?color=%2300f2fe" width="17" valign="middle" />&nbsp; [`ShadowLedger`](https://github.com/Nishant-codess/ShadowLedger) &nbsp;`Python` • `FastAPI` • `DuckDB` • `NetworkX`
-> **ShadowLedger** is an uncertainty-aware value-flow reconstruction and autonomous reconciliation engine designed for high-throughput enterprise finance operations. Built for the Razorpay AI Buildathon, it models transactional ledgers as directed acyclic graphs (DAGs) using NetworkX and executes sub-millisecond graph traversals with local DuckDB storage. By combining deterministic state machines with probabilistic anomaly detection, ShadowLedger traces complex, multi-hop payment discrepancies, reconciles asynchronous webhooks, and achieves 100% audit accuracy with zero paid external API dependencies.
-<br/>
-
-> #### <img src="https://api.iconify.design/lucide:mic.svg?color=%2338ef7d" width="17" valign="middle" />&nbsp; [`SPARK-Engine`](https://github.com/Nishant-codess/SPARK-Engine) &nbsp;`TypeScript` • `Next.js` • `DuckDB` • `Deepgram`
-> **SPARK-Engine** (Speech-Powered Analytics Relational Kit) is a voice-native business intelligence platform that bridges conversational speech and deep database analytics. Leveraging Deepgram's streaming WebSockets for low-latency speech recognition and Inworld AI for emotive voice synthesis, it translates spoken questions into vectorized analytical queries. An embedded DuckDB engine performs columnar aggregations locally in near real-time, while an animated 3D visual avatar and telemetry dashboard synchronize vocal responses with instantaneous visual charts.
-<br/>
-
-> #### <img src="https://api.iconify.design/lucide:database.svg?color=%2300f2fe" width="17" valign="middle" />&nbsp; [`askDB`](https://github.com/Nishant-codess/askDB) &nbsp;`Python` • `FastAPI` • `MySQL` • `Next.js`
-> **askDB** (The Neural Data Canopy) is a hybrid deterministic-probabilistic NL-to-SQL translation engine architected to eliminate schema hallucinations in data analytics. Unlike pure generative LLMs, askDB couples conversational language parsing with rigorous AST-based SQL schema validation, mathematical join path synthesis, and foreign-key graph resolution. This guarantees that every synthesized query executes safely against production relational databases like MySQL, providing non-technical teams with self-serve query intelligence without data corruption risks.
-<br/>
-
-> #### <img src="https://api.iconify.design/lucide:graduation-cap.svg?color=%23c084fc" width="17" valign="middle" />&nbsp; [`InsightU_v1`](https://github.com/Nishant-codess/InsightU_v1) &nbsp;`TypeScript` • `Next.js` • `Supabase` • `TailwindCSS`
-> **InsightU** is an enterprise-grade academic intelligence ecosystem engineered to unify campus workflows and accelerate collegiate success. It features multi-dimensional predictive health models that monitor student coursework trajectory, integrated Google Classroom-style educational hubs with granular role-based permissions, and real-time collaborative coding whiteboards backed by Supabase. Automated timetable heuristics and rate-limited API gateways ensure resilient performance across high-traffic academic terms.
-<br/>
-
-> #### <img src="https://api.iconify.design/lucide:clock.svg?color=%2338ef7d" width="17" valign="middle" />&nbsp; [`easy-q`](https://github.com/Nishant-codess/easy-q) &nbsp;`Java` • `Spring Boot 3` • `WebSockets` • `MySQL`
-> **easy-q** is a high-concurrency digital queuing orchestrator and appointment scheduling platform designed for mission-critical customer intake centers. Engineered on Spring Boot 3.x and Spring Security, it maintains persistent bidirectional WebSocket (STOMP) connections to stream live queue positions, estimated wait times, and status transitions with zero latency. It incorporates optimistic locking algorithms to prevent double-booking anomalies, dynamic counter load rebalancing, and an automated SMS/email notification pipeline.
-<br/>
-
-> #### <img src="https://api.iconify.design/lucide:sparkles.svg?color=%23c084fc" width="17" valign="middle" />&nbsp; [`Gavel`](https://github.com/Nishant-codess/Gavel) &nbsp;`TypeScript` • `MCP Server` • `NitroStack` • `Node.js`
-> **Gavel** is an autonomous AI Frontend Architect implemented as a Model Context Protocol (MCP) server powered by NitroStack. Designed around the philosophy that "the rules decide and the LLM only phrases," Gavel ingests real-world web repositories, parses AST syntax trees and Tailwind configurations, and evaluates frontend component patterns against deterministic rule matrices. It delivers explainable library recommendations with mathematical confidence scoring, alongside automated before-and-after Lighthouse performance benchmarks.
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <p>
+        <img src="https://api.iconify.design/lucide:layers.svg?color=%2300f2fe" width="18" valign="middle" />
+        <a href="https://github.com/Nishant-codess/ShadowLedger"><b>&nbsp;ShadowLedger</b></a>
+        <br/>
+        <img src="https://img.shields.io/badge/Python-3776ab?style=flat-square" />
+        <img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square" />
+        <img src="https://img.shields.io/badge/DuckDB-f1c40f?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/NetworkX-0284c7?style=flat-square" />
+      </p>
+      <p>
+        <b>ShadowLedger</b> is an uncertainty-aware value-flow reconstruction and autonomous reconciliation engine designed for high-throughput enterprise finance operations. Built for the Razorpay AI Buildathon, it models transactional ledgers as directed acyclic graphs (DAGs) using NetworkX and executes sub-millisecond graph traversals with local DuckDB storage. By combining deterministic state machines with probabilistic anomaly detection, ShadowLedger traces complex, multi-hop payment discrepancies, reconciles asynchronous webhooks, and achieves 100% audit accuracy with zero paid external API dependencies.
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <p>
+        <img src="https://api.iconify.design/lucide:mic.svg?color=%2338ef7d" width="18" valign="middle" />
+        <a href="https://github.com/Nishant-codess/SPARK-Engine"><b>&nbsp;SPARK-Engine</b></a>
+        <br/>
+        <img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square" />
+        <img src="https://img.shields.io/badge/Next.js-00f2fe?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/DuckDB-f1c40f?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/Deepgram-13ef95?style=flat-square&labelColor=0d1117" />
+      </p>
+      <p>
+        <b>SPARK-Engine</b> (Speech-Powered Analytics Relational Kit) is a voice-native business intelligence platform that bridges conversational speech and deep database analytics. Leveraging Deepgram's streaming WebSockets for low-latency speech recognition and Inworld AI for emotive voice synthesis, it translates spoken questions into vectorized analytical queries. An embedded DuckDB engine performs columnar aggregations locally in near real-time, while an animated visual telemetry dashboard synchronizes vocal responses with instantaneous visual charts.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <p>
+        <img src="https://api.iconify.design/lucide:database.svg?color=%2300f2fe" width="18" valign="middle" />
+        <a href="https://github.com/Nishant-codess/askDB"><b>&nbsp;askDB</b></a>
+        <br/>
+        <img src="https://img.shields.io/badge/Python-3776ab?style=flat-square" />
+        <img src="https://img.shields.io/badge/FastAPI-00f2fe?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/MySQL-4479a1?style=flat-square" />
+        <img src="https://img.shields.io/badge/Next.js-ffffff?style=flat-square&labelColor=0d1117" />
+      </p>
+      <p>
+        <b>askDB</b> (The Neural Data Canopy) is a hybrid deterministic-probabilistic NL-to-SQL translation engine architected to eliminate schema hallucinations in data analytics. Unlike pure generative LLMs, askDB couples conversational language parsing with rigorous AST-based SQL schema validation, mathematical join path synthesis, and foreign-key graph resolution. This guarantees that every synthesized query executes safely against production relational databases like MySQL, providing self-serve query intelligence without data corruption risks.
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <p>
+        <img src="https://api.iconify.design/lucide:graduation-cap.svg?color=%23c084fc" width="18" valign="middle" />
+        <a href="https://github.com/Nishant-codess/InsightU_v1"><b>&nbsp;InsightU_v1</b></a>
+        <br/>
+        <img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square" />
+        <img src="https://img.shields.io/badge/Next.js-00f2fe?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/Supabase-3ecf8e?style=flat-square" />
+        <img src="https://img.shields.io/badge/Tailwind-38bdf8?style=flat-square" />
+      </p>
+      <p>
+        <b>InsightU</b> is an enterprise-grade academic intelligence ecosystem engineered to unify campus workflows and accelerate collegiate success. It features multi-dimensional predictive health models that monitor student coursework trajectory, integrated Google Classroom-style educational hubs with granular role-based permissions, and real-time collaborative coding whiteboards backed by Supabase. Automated timetable heuristics and rate-limited API gateways ensure resilient performance across high-traffic academic terms.
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <p>
+        <img src="https://api.iconify.design/lucide:clock.svg?color=%2338ef7d" width="18" valign="middle" />
+        <a href="https://github.com/Nishant-codess/easy-q"><b>&nbsp;easy-q</b></a>
+        <br/>
+        <img src="https://img.shields.io/badge/Java-b07219?style=flat-square" />
+        <img src="https://img.shields.io/badge/Spring_Boot-6db33f?style=flat-square" />
+        <img src="https://img.shields.io/badge/WebSockets-00f2fe?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/MySQL-4479a1?style=flat-square" />
+      </p>
+      <p>
+        <b>easy-q</b> is a high-concurrency digital queuing orchestrator and appointment scheduling platform designed for mission-critical customer intake centers. Engineered on Spring Boot 3.x and Spring Security, it maintains persistent bidirectional WebSocket (STOMP) connections to stream live queue positions, estimated wait times, and status transitions with zero latency. It incorporates optimistic locking algorithms to prevent double-booking anomalies, dynamic counter load rebalancing, and an automated SMS/email notification pipeline.
+      </p>
+    </td>
+    <td width="50%" valign="top">
+      <p>
+        <img src="https://api.iconify.design/lucide:sparkles.svg?color=%23c084fc" width="18" valign="middle" />
+        <a href="https://github.com/Nishant-codess/Gavel"><b>&nbsp;Gavel</b></a>
+        <br/>
+        <img src="https://img.shields.io/badge/TypeScript-3178c6?style=flat-square" />
+        <img src="https://img.shields.io/badge/MCP_Server-c084fc?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/NitroStack-00f2fe?style=flat-square&labelColor=0d1117" />
+        <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square" />
+      </p>
+      <p>
+        <b>Gavel</b> is an autonomous AI Frontend Architect implemented as a Model Context Protocol (MCP) server powered by NitroStack. Designed around the philosophy that "the rules decide and the LLM only phrases," Gavel ingests real-world web repositories, parses AST syntax trees and Tailwind configurations, and evaluates frontend component patterns against deterministic rule matrices. It delivers explainable library recommendations with mathematical confidence scoring, alongside automated before-and-after Lighthouse performance benchmarks.
+      </p>
+    </td>
+  </tr>
+</table>
 </details>
 
 <!-- Animated Divider -->
@@ -199,14 +286,62 @@
 </p>
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     HALL OF TROPHIES
+     HALL OF HONORS & REALISTIC GOLDEN TROPHIES
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:award.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;HALL OF TROPHIES</b></h3>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-trophies.svg?v=5" alt="Hall of Honors & Trophies" />
+</p>
+
+<!-- Realistic 3D Golden Trophies Showcase -->
+<p align="center">
+  <img width="100%" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-golden-trophies.svg?v=5" alt="Golden Trophies & National Honors" />
+</p>
+
+<!-- Dynamic GitHub Activity Trophy Telemetry -->
+<p align="center">
+  <img src="https://trophy.ryglcloud.net/?username=Nishant-codess&theme=gold&no-frame=true&no-bg=true&column=-1&margin-w=12&margin-h=12" alt="GitHub Live Activity Trophies" />
+</p>
+
+<!-- Animated Divider -->
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif" width="100%" />
+</p>
+
+<!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
+     HONORS & PROFESSIONAL CERTIFICATIONS
+     ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://trophy.ryglcloud.net/?username=Nishant-codess&theme=radical&no-frame=true&no-bg=true&column=-1&margin-w=12&margin-h=12" alt="GitHub Trophies" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-certifications.svg?v=5" alt="Honors & Professional Certifications" />
 </p>
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <p style="margin: 4px 0 8px 0;">
+        <img src="https://api.iconify.design/lucide:award.svg?color=%23f59e0b" width="18" valign="middle" /> <b>&nbsp;NPTEL &bull; Ministry of Education, Govt. of India</b>
+      </p>
+      <ul>
+        <li><b>Programming in Java:</b> Elite Certification (Top 2% Nationally in India)</li>
+        <li><b>Database Management Systems (DBMS):</b> Elite Certification</li>
+        <li><b>Design &amp; Analysis of Algorithms:</b> Elite Certification</li>
+        <li><b>Object-Oriented Programming (OOP):</b> Elite Certification</li>
+      </ul>
+    </td>
+    <td width="50%" valign="top">
+      <p style="margin: 4px 0 8px 0;">
+        <img src="https://api.iconify.design/lucide:cloud.svg?color=%23c084fc" width="18" valign="middle" /> <b>&nbsp;Amazon Web Services &amp; Hackathons</b>
+      </p>
+      <ul>
+        <li><b>AWS:SBG Core Team Badge:</b> Software Development Domain Manager</li>
+        <li><b>AWS Machine Learning Foundations:</b> Official AWS Credential</li>
+        <li><b>AWS API Gateway for Serverless Apps:</b> Official AWS Credential</li>
+        <li><b>1st Place:</b> TechKnow 2025 National Project Expo &bull; <b>3rd:</b> DAYZERO 36-Hr Hackathon</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
 <!-- Animated Divider -->
 <p align="center">
@@ -217,13 +352,13 @@
      CONTRIBUTION GRAPH • NISHANT
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:activity.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;CONTRIBUTION GRAPH &bull; NISHANT</b></h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:activity.svg?color=%2300f2fe" width="22" valign="middle" /> <b>&nbsp;CONTRIBUTION GRAPH &bull; NISHANT</b></h3>
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=4" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake.svg?v=4" />
-    <img alt="Nishant Contribution Snake Animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=4" width="100%" />
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=5" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake.svg?v=5" />
+    <img alt="Nishant Contribution Snake Animation" src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/github-snake-dark.svg?v=5" width="100%" />
   </picture>
 </p>
 
@@ -236,27 +371,40 @@
      SPOTIFY MUSIC PLAYER — ON REPEAT IN MY MIND
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:disc.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;ON REPEAT IN MY MIND</b></h3>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-spotify.svg?v=5" alt="On Repeat In My Mind" />
+</p>
 
 <!-- Bold Cursive Subtitle using Dancing Script -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=22&duration=5000&pause=20000&color=38EF7D&center=true&vCenter=true&width=640&height=36&lines=The+song+that's+been+playing+on+my+mind+recently." alt="The song that's been playing on my mind recently" />
+  <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=22&duration=5000&pause=20000&color=00F2FE&center=true&vCenter=true&width=640&height=36&lines=The+song+that's+been+playing+on+my+mind+recently." alt="The song that's been playing on my mind recently" />
 </p>
 
-https://github.com/user-attachments/assets/6ab47dd9-c2d2-4c0c-9711-884cba8f87ea
+<!-- Centered Compact Spotify Player (540x640: Full Disc Visible, No Lateral Overflow) -->
+<div align="center">
+<table>
+<tr>
+<td align="center">
+
+https://github.com/user-attachments/assets/29dff54a-9b30-4305-9984-0c11dc57043a
+
+</td>
+</tr>
+</table>
+</div>
 
 <p align="center">
   <a href="https://nishant-codess.github.io/nishant-codess/" target="_blank">
-    <img src="https://img.shields.io/badge/Interactive_Turntable-Spin_Vinyl_Web_App-38ef7d?style=for-the-badge&logoColor=white" alt="Open Interactive Turntable" />
+    <img src="https://img.shields.io/badge/Interactive_Turntable-Click_Here_To_See_Magic-00f2fe?style=for-the-badge&logoColor=white" alt="Click Here To See Magic" />
   </a>
   &nbsp;
-  <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3" target="_blank">
-    <img src="https://img.shields.io/badge/Direct_Audio-Stream_Full_MP3-00f2fe?style=for-the-badge&logoColor=white" alt="Direct MP3 Audio" />
+  <a href="https://cdn.jsdelivr.net/gh/Nishant-codess/nishant-codess@main/assets/music.mp3" download target="_blank">
+    <img src="https://img.shields.io/badge/Download_Audio-Grab_The_Track-c084fc?style=for-the-badge&logoColor=white" alt="Download The Audio" />
   </a>
 </p>
 
 <p align="center">
-  <i>Click play on the video above to listen directly in profile &bull; Or click the green badge to launch the interactive 3D vinyl turntable</i>
+  <i>✨ Hit play on the vinyl to feel the rhythm live &bull; Click "See Magic" for the interactive 3D turntable or grab the audio track! ✨</i>
 </p>
 
 <!-- Animated Divider -->
@@ -268,11 +416,11 @@ https://github.com/user-attachments/assets/6ab47dd9-c2d2-4c0c-9711-884cba8f87ea
      CONNECT & REACH OUT
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
-<h3 align="center"><img src="https://api.iconify.design/lucide:send.svg?color=%2338ef7d" width="22" valign="middle" /> <b>&nbsp;CONNECT &amp; COLLABORATE</b></h3>
+<h3 align="center"><img src="https://api.iconify.design/lucide:send.svg?color=%2300f2fe" width="22" valign="middle" /> <b>&nbsp;CONNECT &amp; COLLABORATE</b></h3>
 
 <p align="center">
-  <a href="https://drive.google.com/file/d/1q88WKaczp6Y1HsnKPr7vkNQRBRIi7wnO/view?usp=sharing">
-    <img src="https://img.shields.io/badge/Resume-View_PDF-38ef7d?style=for-the-badge&labelColor=0d1117" alt="Resume" />
+  <a href="https://drive.google.com/file/d/1q88WKaczp6Y1HsnKPr7vkNQRBRIi7wnO/view?usp=sharing" target="_blank">
+    <img src="https://img.shields.io/badge/Resume-View_&_Download_PDF-00f2fe?style=for-the-badge&logo=googledrive&logoColor=white" alt="View Resume PDF" />
   </a>
   &nbsp;
   <a href="https://www.linkedin.com/in/nishant-ranjan-dev/">
@@ -292,6 +440,17 @@ https://github.com/user-attachments/assets/6ab47dd9-c2d2-4c0c-9711-884cba8f87ea
   </a>
 </p>
 
+<!-- Interactive Inline Resume Preview Toggle -->
+<details>
+  <summary align="center"><img src="https://api.iconify.design/lucide:file-text.svg?color=%2300f2fe" width="16" valign="middle" /> <b>&nbsp;Click Here to Preview Resume Snapshot Directly</b></summary>
+  <br/>
+  <p align="center">
+    <a href="https://drive.google.com/file/d/1q88WKaczp6Y1HsnKPr7vkNQRBRIi7wnO/view?usp=sharing" target="_blank">
+      <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/resume-preview.png?v=5" width="70%" style="border-radius: 12px; border: 1px solid rgba(255,255,255,0.15);" alt="Nishant Ranjan Resume Preview" />
+    </a>
+  </p>
+</details>
+
 <p align="center">
   <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nishant.ranjan.air1@gmail.com&su=Hey%20Nishant!%20Found%20you%20on%20GitHub&body=Hi%20Nishant,%0A%0AI%20came%20across%20your%20GitHub%20profile%20and%20wanted%20to%20reach%20out!%0A%0A" target="_blank">
     <img src="https://img.shields.io/badge/Direct_Message-Compose_in_Gmail-38ef7d?style=for-the-badge&labelColor=0d1117&logo=gmail&logoColor=white" alt="Compose in Gmail" />
@@ -308,5 +467,5 @@ https://github.com/user-attachments/assets/6ab47dd9-c2d2-4c0c-9711-884cba8f87ea
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=24&duration=5000&pause=20000&color=38EF7D&center=true&vCenter=true&width=650&height=40&lines=Craft+code+that+thinks,+builds+that+scale,+and+apps+that+feel+alive." alt="Craft code that thinks, builds that scale, and apps that feel alive." />
+  <img src="https://readme-typing-svg.demolab.com?font=Dancing+Script&weight=700&size=24&duration=5000&pause=20000&color=00F2FE&center=true&vCenter=true&width=650&height=40&lines=Craft+code+that+thinks,+builds+that+scale,+and+apps+that+feel+alive." alt="Craft code that thinks, builds that scale, and apps that feel alive." />
 </p>
