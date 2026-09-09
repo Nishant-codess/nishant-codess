@@ -4,19 +4,12 @@
 
 
 <!-- ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀
-     TOP PROFILE HERO BANNER & LIVE DUAL WORLD CLOCKS (INDIA & LONDON)
+     TOP PROFILE HERO BANNER
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
   <a href="https://github.com/Nishant-codess">
     <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/hero-banner.svg?v=14" width="100%" alt="Nishant Ranjan - System Architect" />
-  </a>
-</p>
-
-<!-- Live World Clocks (India IST & London BST) with Continuous Sweeping Seconds & Live Web HUD -->
-<p align="center">
-  <a href="https://nishant-codess.github.io/nishant-codess/#live-clock" target="_blank">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/world-clocks.svg?v=16" width="100%" alt="Live World Clocks: New Delhi (IST) &amp; London (BST) — Click to Open Live Ticking HUD" />
   </a>
 </p>
 
