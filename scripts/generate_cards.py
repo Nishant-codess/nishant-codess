@@ -526,23 +526,11 @@ def generate_hero_banner_svg():
     return '\n'.join(svg)
 
 def generate_world_clocks_svg():
-    w, h = 900, 102
-    now_utc = datetime.now(timezone.utc)
-    ist = now_utc + timedelta(hours=5, minutes=30)
-    london = now_utc + timedelta(hours=1)
-    
-    ist_sec_ang = ist.second * 6
-    ist_min_ang = ist.minute * 6 + ist.second * 0.1
-    ist_hr_ang = (ist.hour % 12) * 30 + ist.minute * 0.5
-    
-    lon_sec_ang = london.second * 6
-    lon_min_ang = london.minute * 6 + london.second * 0.1
-    lon_hr_ang = (london.hour % 12) * 30 + london.minute * 0.5
-    
+    w, h = 900, 106
     card_w = (w - 20) / 2
     c2_x = card_w + 20
     
-    def render_clock_face(cx, cy, r, hr_ang, min_ang, sec_ang, theme_col, sec_col):
+    def render_clock_face(cx, cy, r, theme_col, sec_col):
         ticks = []
         for i in range(12):
             ang = math.radians(i * 30)
@@ -550,27 +538,27 @@ def generate_world_clocks_svg():
             y1 = cy - (r - 4) * math.cos(ang)
             x2 = cx + (r - 1.5) * math.sin(ang)
             y2 = cy - (r - 1.5) * math.cos(ang)
-            width = 1.6 if i % 3 == 0 else 0.8
-            ticks.append(f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="{theme_col}" stroke-width="{width}" stroke-linecap="round" opacity="0.6" />')
+            width = 1.8 if i % 3 == 0 else 0.8
+            ticks.append(f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="{theme_col}" stroke-width="{width}" stroke-linecap="round" opacity="0.7" />')
             
         return f'''
-        <circle cx="{cx}" cy="{cy}" r="{r}" fill="#080c14" stroke="{theme_col}" stroke-width="1.8" opacity="0.9" />
+        <!-- Glowing Dial Backing & Outer Ring -->
+        <circle cx="{cx}" cy="{cy}" r="{r + 3}" fill="none" stroke="{theme_col}" stroke-width="0.8" opacity="0.25" stroke-dasharray="2 3" />
+        <circle cx="{cx}" cy="{cy}" r="{r}" fill="#080c14" stroke="{theme_col}" stroke-width="1.8" opacity="0.95" />
         {''.join(ticks)}
-        <!-- Hour Hand -->
-        <g transform="rotate({hr_ang:.1f} {cx} {cy})">
-          <line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - r*0.5:.1f}" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" />
-          <animateTransform attributeName="transform" type="rotate" from="{hr_ang:.1f} {cx} {cy}" to="{hr_ang + 360:.1f} {cx} {cy}" dur="43200s" repeatCount="indefinite" />
+        <!-- Hour Hand (Balanced aesthetic angle) -->
+        <g transform="rotate(75 {cx} {cy})">
+          <line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - r*0.5:.1f}" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" />
         </g>
         <!-- Minute Hand -->
-        <g transform="rotate({min_ang:.1f} {cx} {cy})">
+        <g transform="rotate(220 {cx} {cy})">
           <line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - r*0.75:.1f}" stroke="{theme_col}" stroke-width="1.8" stroke-linecap="round" />
-          <animateTransform attributeName="transform" type="rotate" from="{min_ang:.1f} {cx} {cy}" to="{min_ang + 360:.1f} {cx} {cy}" dur="3600s" repeatCount="indefinite" />
         </g>
         <!-- Second Hand (Continuous sweeping live animation) -->
-        <g transform="rotate({sec_ang:.1f} {cx} {cy})">
-          <line x1="{cx}" y1="{cy + 5}" x2="{cx}" y2="{cy - r*0.82:.1f}" stroke="{sec_col}" stroke-width="1.2" stroke-linecap="round" />
-          <circle cx="{cx}" cy="{cy}" r="2.2" fill="{sec_col}" />
-          <animateTransform attributeName="transform" type="rotate" from="{sec_ang:.1f} {cx} {cy}" to="{sec_ang + 360:.1f} {cx} {cy}" dur="60s" repeatCount="indefinite" />
+        <g>
+          <line x1="{cx}" y1="{cy + 6}" x2="{cx}" y2="{cy - r*0.84:.1f}" stroke="{sec_col}" stroke-width="1.3" stroke-linecap="round" />
+          <circle cx="{cx}" cy="{cy}" r="2.5" fill="{sec_col}" />
+          <animateTransform attributeName="transform" type="rotate" from="0 {cx} {cy}" to="360 {cx} {cy}" dur="60s" repeatCount="indefinite" />
         </g>
         '''
         
@@ -586,34 +574,34 @@ def generate_world_clocks_svg():
         <stop offset="0%" stop-color="#141024" />
         <stop offset="100%" stop-color="#0c0818" />
       </linearGradient>
+      <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#00f2fe" />
+        <stop offset="100%" stop-color="#38bdf8" />
+      </linearGradient>
+      <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#c084fc" />
+        <stop offset="100%" stop-color="#818cf8" />
+      </linearGradient>
     </defs>
     ''')
     
     # --- Card 1: India (IST) ---
     svg.append(f'<rect x="0" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#istBg)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.2" />')
-    svg.append(render_clock_face(48, 51, 30, ist_hr_ang, ist_min_ang, ist_sec_ang, "#00f2fe", "#f43f5e"))
+    svg.append(render_clock_face(52, 53, 34, "#00f2fe", "#f43f5e"))
     
-    svg.append(text_to_svg_path("NEW DELHI, INDIA", 92, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
-    ist_time_str = ist.strftime('%I:%M %p')
-    svg.append(text_to_svg_path(ist_time_str, 92, 52, 21, FONT_TITLE, fill="#ffffff"))
-    badge_x = 92 + get_text_width(ist_time_str, 21, FONT_TITLE) + 12
-    svg.append(f'<rect x="{badge_x}" y="34" width="38" height="20" rx="4" fill="rgba(0, 242, 254, 0.12)" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1" />')
-    svg.append(text_to_svg_path("IST", badge_x + 9, 48, 10, FONT_TITLE, fill="#00f2fe"))
-    svg.append(text_to_svg_path("UTC +5:30  •  Primary Base  •  Active Core", 92, 70, 10.5, FONT_BODY, fill="#00f2fe"))
-    svg.append(text_to_svg_path("⚡ Click to open second-by-second live HUD ↗", 92, 88, 9.5, FONT_TITLE, fill="#64748b"))
+    svg.append(text_to_svg_path("NEW DELHI, INDIA", 102, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
+    svg.append(text_to_svg_path("IST • UTC +5:30", 102, 53, 22, FONT_TITLE, fill="url(#cyanGrad)"))
+    svg.append(text_to_svg_path("Primary Operational Base  •  Asia / Kolkata", 102, 73, 11, FONT_BODY, fill="#38bdf8"))
+    svg.append(text_to_svg_path("⚡ Click to open second-by-second live HUD ↗", 102, 92, 10, FONT_TITLE, fill="#64748b"))
     
     # --- Card 2: London (BST/GMT) ---
     svg.append(f'<rect x="{c2_x}" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#lonBg)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1.2" />')
-    svg.append(render_clock_face(c2_x + 48, 51, 30, lon_hr_ang, lon_min_ang, lon_sec_ang, "#c084fc", "#00f2fe"))
+    svg.append(render_clock_face(c2_x + 52, 53, 34, "#c084fc", "#00f2fe"))
     
-    svg.append(text_to_svg_path("LONDON, UNITED KINGDOM", c2_x + 92, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
-    lon_time_str = london.strftime('%I:%M %p')
-    svg.append(text_to_svg_path(lon_time_str, c2_x + 92, 52, 21, FONT_TITLE, fill="#ffffff"))
-    badge2_x = c2_x + 92 + get_text_width(lon_time_str, 21, FONT_TITLE) + 12
-    svg.append(f'<rect x="{badge2_x}" y="34" width="38" height="20" rx="4" fill="rgba(192, 132, 252, 0.12)" stroke="rgba(192, 132, 252, 0.3)" stroke-width="1" />')
-    svg.append(text_to_svg_path("BST", badge2_x + 8, 48, 10, FONT_TITLE, fill="#c084fc"))
-    svg.append(text_to_svg_path("UTC +1:00  •  Global Base  •  Collaboration", c2_x + 92, 70, 10.5, FONT_BODY, fill="#c084fc"))
-    svg.append(text_to_svg_path("⚡ Click to open second-by-second live HUD ↗", c2_x + 92, 88, 9.5, FONT_TITLE, fill="#64748b"))
+    svg.append(text_to_svg_path("LONDON, UNITED KINGDOM", c2_x + 102, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
+    svg.append(text_to_svg_path("BST • UTC +1:00", c2_x + 102, 53, 22, FONT_TITLE, fill="url(#purpleGrad)"))
+    svg.append(text_to_svg_path("Global Collaboration Base  •  Europe / London", c2_x + 102, 73, 11, FONT_BODY, fill="#c084fc"))
+    svg.append(text_to_svg_path("⚡ Click to open second-by-second live HUD ↗", c2_x + 102, 92, 10, FONT_TITLE, fill="#64748b"))
     
     svg.append('</svg>')
     return '\n'.join(svg)

@@ -16,7 +16,7 @@
 <!-- Live World Clocks (India IST & London BST) with Continuous Sweeping Seconds & Live Web HUD -->
 <p align="center">
   <a href="https://nishant-codess.github.io/nishant-codess/#live-clock" target="_blank">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/world-clocks.svg?v=12" width="100%" alt="Live World Clocks: New Delhi (IST) &amp; London (BST) — Click to Open Live Ticking HUD" />
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/world-clocks.svg?v=13" width="100%" alt="Live World Clocks: New Delhi (IST) &amp; London (BST) — Click to Open Live Ticking HUD" />
   </a>
 </p>
 
