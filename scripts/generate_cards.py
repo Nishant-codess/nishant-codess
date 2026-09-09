@@ -641,39 +641,59 @@ def generate_hero_banner_svg():
     return '\n'.join(svg)
 
 def generate_world_clocks_svg():
-    w, h = 900, 106
+    w, h = 900, 160
     card_w = (w - 20) / 2
     c2_x = card_w + 20
     
-    def render_clock_face(cx, cy, r, theme_col, sec_col):
+    try:
+        from zoneinfo import ZoneInfo
+        now_utc = datetime.now(ZoneInfo('UTC'))
+        ist = now_utc.astimezone(ZoneInfo('Asia/Kolkata'))
+        london = now_utc.astimezone(ZoneInfo('Europe/London'))
+    except Exception:
+        now_utc = datetime.now(timezone.utc)
+        ist = now_utc + timedelta(hours=5, minutes=30)
+        london = now_utc + timedelta(hours=1)
+        
+    ist_hr_ang = ((ist.hour % 12) + ist.minute / 60.0 + ist.second / 3600.0) * 30.0
+    ist_min_ang = (ist.minute + ist.second / 60.0) * 6.0
+    ist_sec_ang = ist.second * 6.0
+    
+    lon_hr_ang = ((london.hour % 12) + london.minute / 60.0 + london.second / 3600.0) * 30.0
+    lon_min_ang = (london.minute + london.second / 60.0) * 6.0
+    lon_sec_ang = london.second * 6.0
+    
+    def render_clock_face(cx, cy, r, hr_ang, min_ang, sec_ang, theme_col, sec_col):
         ticks = []
         for i in range(12):
             ang = math.radians(i * 30)
-            x1 = cx + (r - 4) * math.sin(ang)
-            y1 = cy - (r - 4) * math.cos(ang)
-            x2 = cx + (r - 1.5) * math.sin(ang)
-            y2 = cy - (r - 1.5) * math.cos(ang)
-            width = 1.8 if i % 3 == 0 else 0.8
-            ticks.append(f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="{theme_col}" stroke-width="{width}" stroke-linecap="round" opacity="0.7" />')
+            x1 = cx + (r - 5) * math.sin(ang)
+            y1 = cy - (r - 5) * math.cos(ang)
+            x2 = cx + (r - 2) * math.sin(ang)
+            y2 = cy - (r - 2) * math.cos(ang)
+            width = 2.0 if i % 3 == 0 else 0.9
+            ticks.append(f'<line x1="{x1:.2f}" y1="{y1:.2f}" x2="{x2:.2f}" y2="{y2:.2f}" stroke="{theme_col}" stroke-width="{width}" stroke-linecap="round" opacity="0.75" />')
             
         return f'''
         <!-- Glowing Dial Backing & Outer Ring -->
         <circle cx="{cx}" cy="{cy}" r="{r + 3}" fill="none" stroke="{theme_col}" stroke-width="0.8" opacity="0.25" stroke-dasharray="2 3" />
-        <circle cx="{cx}" cy="{cy}" r="{r}" fill="#080c14" stroke="{theme_col}" stroke-width="1.8" opacity="0.95" />
+        <circle cx="{cx}" cy="{cy}" r="{r}" fill="#080c14" stroke="{theme_col}" stroke-width="2" opacity="0.95" />
         {''.join(ticks)}
-        <!-- Hour Hand (Balanced aesthetic angle) -->
-        <g transform="rotate(75 {cx} {cy})">
+        <!-- Hour Hand (Synchronized timezone angle + live 12h continuous animation) -->
+        <g transform="rotate({hr_ang:.1f} {cx} {cy})">
           <line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - r*0.5:.1f}" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" />
+          <animateTransform attributeName="transform" type="rotate" from="{hr_ang:.1f} {cx} {cy}" to="{hr_ang + 360:.1f} {cx} {cy}" dur="43200s" repeatCount="indefinite" />
         </g>
-        <!-- Minute Hand -->
-        <g transform="rotate(220 {cx} {cy})">
+        <!-- Minute Hand (Synchronized timezone angle + live 1h continuous animation) -->
+        <g transform="rotate({min_ang:.1f} {cx} {cy})">
           <line x1="{cx}" y1="{cy}" x2="{cx}" y2="{cy - r*0.75:.1f}" stroke="{theme_col}" stroke-width="1.8" stroke-linecap="round" />
+          <animateTransform attributeName="transform" type="rotate" from="{min_ang:.1f} {cx} {cy}" to="{min_ang + 360:.1f} {cx} {cy}" dur="3600s" repeatCount="indefinite" />
         </g>
         <!-- Second Hand (Continuous sweeping live animation) -->
-        <g>
+        <g transform="rotate({sec_ang:.1f} {cx} {cy})">
           <line x1="{cx}" y1="{cy + 6}" x2="{cx}" y2="{cy - r*0.84:.1f}" stroke="{sec_col}" stroke-width="1.3" stroke-linecap="round" />
           <circle cx="{cx}" cy="{cy}" r="2.5" fill="{sec_col}" />
-          <animateTransform attributeName="transform" type="rotate" from="0 {cx} {cy}" to="360 {cx} {cy}" dur="60s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="rotate" from="{sec_ang:.1f} {cx} {cy}" to="{sec_ang + 360:.1f} {cx} {cy}" dur="60s" repeatCount="indefinite" />
         </g>
         '''
         
@@ -700,23 +720,22 @@ def generate_world_clocks_svg():
     </defs>
     ''')
     
-    # --- Card 1: India (IST) ---
-    svg.append(f'<rect x="0" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#istBg)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.2" />')
-    svg.append(render_clock_face(52, 53, 34, "#00f2fe", "#f43f5e"))
+    c1_cx = card_w / 2
+    c2_cx = c2_x + card_w / 2
     
-    svg.append(text_to_svg_path("NEW DELHI, INDIA", 102, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
-    svg.append(text_to_svg_path("IST • UTC +5:30", 102, 53, 22, FONT_TITLE, fill="url(#cyanGrad)"))
-    svg.append(text_to_svg_path("Primary Operational Base  •  Asia / Kolkata", 102, 73, 11, FONT_BODY, fill="#38bdf8"))
-    svg.append(text_to_svg_path("⚡ Click to open second-by-second live HUD ↗", 102, 92, 10, FONT_TITLE, fill="#64748b"))
+    # --- Card 1: India (IST) ---
+    svg.append(f'<rect x="0" y="0" width="{card_w}" height="{h}" rx="14" fill="url(#istBg)" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1.2" />')
+    svg.append(render_clock_face(c1_cx, 48, 32, ist_hr_ang, ist_min_ang, ist_sec_ang, "#00f2fe", "#f43f5e"))
+    ist_time = ist.strftime("%I:%M:%S %p")
+    svg.append(text_to_svg_path(ist_time, c1_cx, 110, 21, FONT_TITLE, anchor="middle", fill="url(#cyanGrad)"))
+    svg.append(text_to_svg_path("NEW DELHI, INDIA", c1_cx, 134, 11, FONT_CLEAN_HEADER, anchor="middle", fill="#94a3b8"))
     
     # --- Card 2: London (BST/GMT) ---
-    svg.append(f'<rect x="{c2_x}" y="0" width="{card_w}" height="{h}" rx="12" fill="url(#lonBg)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1.2" />')
-    svg.append(render_clock_face(c2_x + 52, 53, 34, "#c084fc", "#00f2fe"))
-    
-    svg.append(text_to_svg_path("LONDON, UNITED KINGDOM", c2_x + 102, 26, 11, FONT_CLEAN_HEADER, fill="#94a3b8"))
-    svg.append(text_to_svg_path("BST • UTC +1:00", c2_x + 102, 53, 22, FONT_TITLE, fill="url(#purpleGrad)"))
-    svg.append(text_to_svg_path("Global Collaboration Base  •  Europe / London", c2_x + 102, 73, 11, FONT_BODY, fill="#c084fc"))
-    svg.append(text_to_svg_path("⚡ Click to open second-by-second live HUD ↗", c2_x + 102, 92, 10, FONT_TITLE, fill="#64748b"))
+    svg.append(f'<rect x="{c2_x}" y="0" width="{card_w}" height="{h}" rx="14" fill="url(#lonBg)" stroke="rgba(192, 132, 252, 0.25)" stroke-width="1.2" />')
+    svg.append(render_clock_face(c2_cx, 48, 32, lon_hr_ang, lon_min_ang, lon_sec_ang, "#c084fc", "#00f2fe"))
+    lon_time = london.strftime("%I:%M:%S %p")
+    svg.append(text_to_svg_path(lon_time, c2_cx, 110, 21, FONT_TITLE, anchor="middle", fill="url(#purpleGrad)"))
+    svg.append(text_to_svg_path("LONDON, UNITED KINGDOM", c2_cx, 134, 11, FONT_CLEAN_HEADER, anchor="middle", fill="#94a3b8"))
     
     svg.append('</svg>')
     return '\n'.join(svg)
