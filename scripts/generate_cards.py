@@ -350,6 +350,8 @@ def generate_header_svg(title, icon_type='code'):
         icon_svg = '<path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'send':
         icon_svg = '<path d="m22 2-7 20-4-9-9-4Z" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><path d="M22 2 11 13" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+    elif icon_type == 'compass':
+        icon_svg = '<circle cx="12" cy="12" r="10" stroke="#00f2fe" stroke-width="2" fill="none" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88" stroke="#c084fc" stroke-width="1.8" stroke-linejoin="round" fill="none" />'
     else:
         icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
 
@@ -740,6 +742,164 @@ def generate_world_clocks_svg():
     svg.append('</svg>')
     return '\n'.join(svg)
 
+def generate_quotes_card_svg():
+    w, h = 900, 205
+    from PIL import Image, ImageDraw
+    import base64, io
+
+    def get_circular_avatar_b64(path, size=104):
+        if not os.path.exists(path):
+            return ""
+        img = Image.open(path).convert('RGBA').resize((size, size), Image.Resampling.LANCZOS)
+        mask = Image.new('L', (size, size), 0)
+        draw = ImageDraw.Draw(mask)
+        draw.ellipse((0, 0, size, size), fill=255)
+        img.putalpha(mask)
+        buf = io.BytesIO()
+        img.save(buf, format='PNG')
+        return base64.b64encode(buf.getvalue()).decode()
+
+    quotes = [
+        {
+            'author': 'ALAN WATTS',
+            'role': 'Philosopher of Mind • Eastern Wisdom',
+            'badge': 'ILLUSION OF SEPARATION',
+            'badge_col': '#00f2fe',
+            'quote_l1': '"You are an aperture through which the universe',
+            'quote_l2': 'is looking at and exploring itself.',
+            'quote_l3': 'Trying to define yourself is like trying to bite your own teeth."',
+            'img': get_circular_avatar_b64('assets/authors/watts.jpg', 104),
+            'accent': '#00f2fe'
+        },
+        {
+            'author': 'CARL GUSTAV JUNG',
+            'role': 'Pioneer of Depth Psychology • Shadow Work',
+            'badge': 'CONSCIOUSNESS &amp; SHADOW',
+            'badge_col': '#c084fc',
+            'quote_l1': '"Who looks outside, dreams; who looks inside, awakes.',
+            'quote_l2': 'Until you make the unconscious conscious,',
+            'quote_l3': 'it will direct your life and you will call it fate."',
+            'img': get_circular_avatar_b64('assets/authors/jung.jpg', 104),
+            'accent': '#c084fc'
+        },
+        {
+            'author': 'FRIEDRICH NIETZSCHE',
+            'role': 'Philosopher of Will • Radical Self-Overcoming',
+            'badge': 'RADICAL OVERCOMING',
+            'badge_col': '#f59e0b',
+            'quote_l1': '"And those who were seen dancing were thought to be insane',
+            'quote_l2': 'by those who could not hear the music.',
+            'quote_l3': 'No one can construct the bridge upon which you must cross."',
+            'img': get_circular_avatar_b64('assets/authors/nietzsche.jpg', 104),
+            'accent': '#f59e0b'
+        },
+        {
+            'author': 'JIDDU KRISHNAMURTI',
+            'role': 'Philosopher of Pure Awareness • The Observer',
+            'badge': 'PURE AWARENESS',
+            'badge_col': '#38ef7d',
+            'quote_l1': '"The ability to observe without evaluating',
+            'quote_l2': 'is the highest form of intelligence.',
+            'quote_l3': 'You must understand yourself, for out of you comes the world."',
+            'img': get_circular_avatar_b64('assets/authors/krishnamurti.jpg', 104),
+            'accent': '#38ef7d'
+        }
+    ]
+
+    svg = []
+    svg.append(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">')
+    svg.append('''
+    <defs>
+      <linearGradient id="quoteCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#0c1220" />
+        <stop offset="50%" stop-color="#080c16" />
+        <stop offset="100%" stop-color="#050810" />
+      </linearGradient>
+      <linearGradient id="quoteCardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.4" />
+        <stop offset="50%" stop-color="#818cf8" stop-opacity="0.2" />
+        <stop offset="100%" stop-color="#c084fc" stop-opacity="0.4" />
+      </linearGradient>
+      <radialGradient id="quoteCardGlow" cx="10%" cy="50%" r="60%">
+        <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.09" />
+        <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+      </radialGradient>
+    </defs>
+    ''')
+
+    svg.append(f'<rect width="{w}" height="{h}" rx="16" fill="url(#quoteCardBg)" stroke="url(#quoteCardBorder)" stroke-width="1.5" />')
+    svg.append(f'<rect width="{w}" height="{h}" rx="16" fill="url(#quoteCardGlow)" />')
+
+    # Watermark quote
+    svg.append('''
+    <g transform="translate(180, 85)" opacity="0.045" fill="#ffffff">
+      <path d="M0,0 C15,-30 40,-45 70,-45 L75,-30 C55,-30 45,-20 40,0 L70,0 L70,55 L0,55 Z M90,0 C105,-30 130,-45 160,-45 L165,-30 C145,-30 135,-20 130,0 L160,0 L160,55 L90,55 Z" />
+    </g>
+    ''')
+
+    # Top header status bar
+    svg.append('''
+    <g transform="translate(28, 22)">
+      <circle cx="4" cy="4" r="3.5" fill="#38ef7d">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="16" y="8" fill="#94a3b8" font-size="10" font-family="monospace" font-weight="bold" letter-spacing="1.5">EXPLORING THE SELF • PHILOSOPHY &amp; RADICAL CONSCIOUSNESS</text>
+    </g>
+    ''')
+
+    N = len(quotes)
+    dur = 28
+
+    for idx, q in enumerate(quotes):
+        t0 = idx / N
+        t1 = t0 + 0.02
+        t2 = (idx + 1) / N - 0.02
+        t3 = (idx + 1) / N
+        
+        if idx == 0:
+            kt = f'0;{t2:.3f};{t3:.3f};0.98;1'
+            vals = '1;1;0;0;1'
+        else:
+            kt = f'0;{t0:.3f};{t1:.3f};{t2:.3f};{t3:.3f};1'
+            vals = '0;0;1;1;0;0'
+            
+        slide_svg = []
+        slide_svg.append(f'<g id="slide-{idx}">')
+        slide_svg.append(f'<animate attributeName="opacity" values="{vals}" keyTimes="{kt}" dur="{dur}s" repeatCount="indefinite" />')
+        
+        # Left: Author Avatar with ambient ring
+        av_cx, av_cy = 96, 116
+        av_r = 52
+        slide_svg.append(f'<circle cx="{av_cx}" cy="{av_cy}" r="{av_r + 5}" fill="none" stroke="{q["accent"]}" stroke-width="1.5" opacity="0.4" stroke-dasharray="3 3" />')
+        slide_svg.append(f'<circle cx="{av_cx}" cy="{av_cy}" r="{av_r + 1}" fill="none" stroke="{q["accent"]}" stroke-width="2.5" opacity="0.9" />')
+        if q['img']:
+            slide_svg.append(f'<image href="data:image/png;base64,{q["img"]}" x="{av_cx - 52}" y="{av_cy - 52}" width="104" height="104" />')
+        
+        # Category Tag
+        badge_clean = q['badge'].replace('&amp;', '&')
+        slide_svg.append(f'''
+        <g transform="translate(182, 44)">
+          <rect width="{len(badge_clean) * 7.2 + 24}" height="20" rx="5" fill="rgba(255,255,255,0.04)" stroke="{q["badge_col"]}" stroke-width="1" opacity="0.9" />
+          <circle cx="10" cy="10" r="2.5" fill="{q["badge_col"]}" />
+          <text x="20" y="13.5" fill="{q["badge_col"]}" font-size="9" font-family="monospace" font-weight="bold" letter-spacing="1">{q["badge"]}</text>
+        </g>
+        ''')
+        
+        # Quote Lines in beautiful font
+        slide_svg.append(text_to_svg_path(q['quote_l1'], 182, 88, 14.5, FONT_BODY_BOLD, fill='#f1f5f9'))
+        slide_svg.append(text_to_svg_path(q['quote_l2'], 182, 109, 14.5, FONT_BODY_BOLD, fill='#f1f5f9'))
+        slide_svg.append(text_to_svg_path(q['quote_l3'], 182, 130, 14.5, FONT_BODY_BOLD, fill=q['accent']))
+        
+        # Author Name & Identity
+        slide_svg.append(text_to_svg_path(q['author'], 182, 163, 15, FONT_CLEAN_HEADER, fill='#ffffff'))
+        slide_svg.append(text_to_svg_path(f'— {q["role"]}', 182, 182, 11.5, FONT_BODY, fill='#94a3b8'))
+        
+        slide_svg.append('</g>')
+        svg.append('\n'.join(slide_svg))
+
+    svg.append('</svg>')
+    return '\n'.join(svg)
+
 def generate_divider_svg():
     w, h = 900, 8
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
@@ -834,6 +994,7 @@ if __name__ == '__main__':
     # 0. Hero Banner, World Clocks, and Glowing Dividers
     banner_svg = generate_hero_banner_svg()
     clocks_svg = generate_world_clocks_svg()
+    quotes_svg = generate_quotes_card_svg()
     divider_svg = generate_divider_svg()
     generate_divider_gif(['assets', 'dist'])
     
@@ -856,6 +1017,7 @@ if __name__ == '__main__':
     # 3. Section Header SVGs
     headers = [
         ('header-about.svg', 'ABOUT ME', 'user'),
+        ('header-philosophy.svg', 'EXPLORING THE SELF', 'compass'),
         ('header-arsenal.svg', 'CORE TECHNICAL ARSENAL', 'stack'),
         ('header-command-center.svg', 'DEVELOPER COMMAND CENTER', 'terminal'),
         ('header-creations.svg', 'FEATURED ARCHITECTURAL CREATIONS', 'folder'),
@@ -871,6 +1033,8 @@ if __name__ == '__main__':
             f.write(banner_svg)
         with open(os.path.join(folder, 'world-clocks.svg'), 'w') as f:
             f.write(clocks_svg)
+        with open(os.path.join(folder, 'card-quotes.svg'), 'w') as f:
+            f.write(quotes_svg)
         with open(os.path.join(folder, 'divider.svg'), 'w') as f:
             f.write(divider_svg)
         with open(os.path.join(folder, 'card-stats.svg'), 'w') as f:
