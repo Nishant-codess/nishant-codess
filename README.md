@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://github.com/Nishant-codess">
-    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/hero-banner.svg?v=12" width="100%" alt="Nishant Ranjan - System Architect" />
+    <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/hero-banner.svg?v=14" width="100%" alt="Nishant Ranjan - System Architect" />
   </a>
 </p>
 

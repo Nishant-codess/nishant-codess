@@ -508,17 +508,132 @@ def generate_hero_banner_svg():
         svg.append(text_to_svg_path(pname, px + 14, 162, 9.5, FONT_TITLE, fill="#e2e8f0"))
         px += pw + 8
         
-    # Decorative architecture node graph on right
-    svg.append(f'''
-    <g transform="translate({w - 200}, 62)">
-      <rect x="0" y="0" width="80" height="26" rx="6" fill="rgba(0,242,254,0.08)" stroke="#00f2fe" stroke-width="1.2" />
-      <text x="40" y="17" fill="#00f2fe" font-size="9.5" font-family="monospace" text-anchor="middle" font-weight="bold">TELEMETRY</text>
-      <line x1="80" y1="13" x2="108" y2="13" stroke="#818cf8" stroke-width="1.2" stroke-dasharray="2 2" />
-      <rect x="108" y="0" width="68" height="26" rx="6" fill="rgba(129,140,248,0.08)" stroke="#818cf8" stroke-width="1.2" />
-      <text x="142" y="17" fill="#818cf8" font-size="9.5" font-family="monospace" text-anchor="middle" font-weight="bold">DAG ENGINE</text>
-      <path d="M 142 26 L 142 46 L 90 46" stroke="#c084fc" stroke-width="1.2" fill="none" stroke-dasharray="2 2" />
-      <rect x="16" y="34" width="74" height="26" rx="6" fill="rgba(192,132,252,0.08)" stroke="#c084fc" stroke-width="1.2" />
-      <text x="53" y="51" fill="#c084fc" font-size="9.5" font-family="monospace" text-anchor="middle" font-weight="bold">DUCKDB OLAP</text>
+    # Dense Architecture Topology + Cute Glasses Cat Programmer Meme Easter Egg
+    svg.append('''
+    <g id="architecture-dense-graph">
+      <!-- Network Conduits -->
+      <g stroke-dasharray="2 2" stroke-width="1.1" opacity="0.65">
+        <line x1="668" y1="59" x2="800" y2="59" stroke="#00f2fe" />
+        <line x1="636" y1="76" x2="636" y2="96" stroke="#00f2fe" />
+        <line x1="842" y1="77" x2="842" y2="96" stroke="#818cf8" />
+        <line x1="671" y1="108" x2="702" y2="108" stroke="#f43f5e" />
+        <line x1="762" y1="108" x2="805" y2="108" stroke="#38bdf8" />
+        <line x1="636" y1="120" x2="636" y2="137" stroke="#c084fc" />
+        <line x1="676" y1="156" x2="795" y2="156" stroke="#c084fc" />
+        <line x1="842" y1="120" x2="842" y2="142" stroke="#38ef7d" />
+      </g>
+
+      <!-- Animated Glowing Data Packets -->
+      <circle r="2.2" fill="#00f2fe">
+        <animateMotion path="M 668,59 L 800,59" dur="2.8s" repeatCount="indefinite" />
+      </circle>
+      <circle r="2.2" fill="#c084fc">
+        <animateMotion path="M 676,156 L 795,156" dur="3.2s" repeatCount="indefinite" />
+      </circle>
+      <circle r="2" fill="#38ef7d">
+        <animateMotion path="M 842,77 L 842,142" dur="2.4s" repeatCount="indefinite" />
+      </circle>
+
+      <!-- Cloud Shape Node (Top Left) -->
+      <g transform="translate(598, 42)">
+        <path d="M 18,22 
+                 A 10,10 0 0,1 24,11 
+                 A 14,14 0 0,1 48,11 
+                 A 12,12 0 0,1 62,18 
+                 A 10,10 0 0,1 68,26 
+                 A 8,8 0 0,1 65,34 
+                 L 15,34 
+                 A 8,8 0 0,1 18,22 Z" 
+              fill="rgba(0, 242, 254, 0.08)" stroke="#00f2fe" stroke-width="1.2" />
+        <text x="40" y="27" fill="#00f2fe" font-size="8.5" font-family="monospace" font-weight="bold" text-anchor="middle">☁️ AWS CLOUD</text>
+      </g>
+
+      <!-- Hexagon API Gateway Node (Top Right) -->
+      <g transform="translate(800, 43)">
+        <polygon points="12,0 68,0 80,17 68,34 12,34 0,17" 
+                 fill="rgba(129, 140, 248, 0.08)" stroke="#818cf8" stroke-width="1.2" />
+        <text x="40" y="21" fill="#818cf8" font-size="8.5" font-family="monospace" font-weight="bold" text-anchor="middle">API GATEWAY</text>
+      </g>
+
+      <!-- DAG Engine Node (Middle Left) -->
+      <g transform="translate(595, 96)">
+        <rect x="0" y="0" width="76" height="24" rx="6" fill="rgba(244, 63, 94, 0.08)" stroke="#f43f5e" stroke-width="1.1" />
+        <text x="38" y="15.5" fill="#f43f5e" font-size="8" font-family="monospace" font-weight="bold" text-anchor="middle">⚙️ DAG ENGINE</text>
+      </g>
+
+      <!-- Kafka Stream Node (Middle Right) -->
+      <g transform="translate(805, 96)">
+        <rect x="0" y="0" width="75" height="24" rx="12" fill="rgba(56, 189, 248, 0.08)" stroke="#38bdf8" stroke-width="1.1" />
+        <text x="37" y="15.5" fill="#38bdf8" font-size="8" font-family="monospace" font-weight="bold" text-anchor="middle">⚡ KAFKA PUB/SUB</text>
+      </g>
+
+      <!-- Database Cylinder Shape (Bottom Left) -->
+      <g transform="translate(594, 137)">
+        <ellipse cx="42" cy="7" rx="40" ry="7" fill="rgba(192, 132, 252, 0.12)" stroke="#c084fc" stroke-width="1.1" />
+        <path d="M 2,7 L 2,27 A 40,7 0 0,0 82,27 L 82,7" fill="rgba(192, 132, 252, 0.08)" stroke="#c084fc" stroke-width="1.1" />
+        <path d="M 2,17 A 40,7 0 0,0 82,17" stroke="#c084fc" stroke-width="0.8" stroke-dasharray="2 2" fill="none" />
+        <text x="42" y="26" fill="#c084fc" font-size="8.5" font-family="monospace" font-weight="bold" text-anchor="middle">🗄️ DUCKDB OLAP</text>
+      </g>
+
+      <!-- Speech AI Node (Bottom Right) -->
+      <g transform="translate(795, 142)">
+        <rect x="0" y="0" width="85" height="28" rx="8" fill="rgba(56, 239, 125, 0.08)" stroke="#38ef7d" stroke-width="1.2" />
+        <circle cx="12" cy="14" r="3" fill="#38ef7d">
+          <animate attributeName="opacity" values="0.4;1;0.4" dur="1.5s" repeatCount="indefinite" />
+        </circle>
+        <text x="48" y="18" fill="#38ef7d" font-size="8.5" font-family="monospace" font-weight="bold" text-anchor="middle">🧠 SPEECH AI</text>
+      </g>
+
+      <!-- Cat Programmer Easter Egg (Center Hub) -->
+      <g transform="translate(702, 85)">
+        <!-- Cat Ears -->
+        <polygon points="12,14 18,3 24,14" fill="#ea580c" stroke="#fed7aa" stroke-width="0.8" />
+        <polygon points="15,13 18,6 21,13" fill="#fca5a5" />
+        <polygon points="36,14 42,3 48,14" fill="#ea580c" stroke="#fed7aa" stroke-width="0.8" />
+        <polygon points="39,13 42,6 45,13" fill="#fca5a5" />
+        
+        <!-- Cat Head -->
+        <ellipse cx="30" cy="24" rx="20" ry="16" fill="#f97316" stroke="#fed7aa" stroke-width="0.9" />
+        <ellipse cx="30" cy="27" rx="13" ry="10" fill="#ffedd5" />
+        
+        <!-- Glasses (Black round nerd frames matching profile avatar) -->
+        <circle cx="21" cy="23" r="7" fill="rgba(0,0,0,0.4)" stroke="#0f172a" stroke-width="1.8" />
+        <circle cx="39" cy="23" r="7" fill="rgba(0,0,0,0.4)" stroke="#0f172a" stroke-width="1.8" />
+        <line x1="28" y1="23" x2="32" y2="23" stroke="#0f172a" stroke-width="2" />
+        
+        <!-- Cat Eyes (Emerald green with shine) -->
+        <circle cx="21" cy="23" r="3.8" fill="#10b981" />
+        <circle cx="20" cy="22" r="1.3" fill="#ffffff" />
+        <circle cx="39" cy="23" r="3.8" fill="#10b981" />
+        <circle cx="38" cy="22" r="1.3" fill="#ffffff" />
+        
+        <!-- Nose & Whiskers -->
+        <polygon points="28,28 32,28 30,30" fill="#f43f5e" />
+        <line x1="8" y1="25" x2="2" y2="23" stroke="#ffedd5" stroke-width="0.8" opacity="0.85" />
+        <line x1="8" y1="28" x2="2" y2="29" stroke="#ffedd5" stroke-width="0.8" opacity="0.85" />
+        <line x1="52" y1="25" x2="58" y2="23" stroke="#ffedd5" stroke-width="0.8" opacity="0.85" />
+        <line x1="52" y1="28" x2="58" y2="29" stroke="#ffedd5" stroke-width="0.8" opacity="0.85" />
+        
+        <!-- Cat Body & Blue Tie -->
+        <ellipse cx="30" cy="45" rx="15" ry="13" fill="#ea580c" />
+        <polygon points="28,37 32,37 34,48 30,53 26,48" fill="#00f2fe" stroke="#38bdf8" stroke-width="0.8" />
+        <polygon points="27,36 33,36 31,39 29,39" fill="#38bdf8" />
+        
+        <!-- Mini Laptop with Glowing Code Screen -->
+        <g transform="translate(13, 40)">
+          <rect x="0" y="14" width="34" height="4" rx="2" fill="#1e293b" stroke="#475569" stroke-width="0.8" />
+          <rect x="3" y="1" width="28" height="14" rx="2" fill="#020617" stroke="#00f2fe" stroke-width="0.9" />
+          <line x1="6" y1="5" x2="16" y2="5" stroke="#38ef7d" stroke-width="1.1" />
+          <line x1="6" y1="8" x2="24" y2="8" stroke="#38ef7d" stroke-width="1.1" />
+          <line x1="6" y1="11" x2="14" y2="11" stroke="#00f2fe" stroke-width="1.1" />
+        </g>
+        
+        <!-- Speech / Status Bubble -->
+        <g transform="translate(10, -15)">
+          <rect x="0" y="0" width="88" height="16" rx="8" fill="rgba(15,23,42,0.94)" stroke="#c084fc" stroke-width="1" />
+          <text x="44" y="11.5" fill="#c084fc" font-size="7.5" font-family="monospace" font-weight="bold" text-anchor="middle">🐱 sudo meow --prod</text>
+        </g>
+      </g>
     </g>
     ''')
     
