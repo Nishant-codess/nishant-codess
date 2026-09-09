@@ -13,6 +13,7 @@ FONT_HEADER = 'fonts/HigherJump.ttf'
 FONT_BODY_BOLD = 'fonts/Outfit-SemiBold.ttf'
 FONT_BODY = 'fonts/Outfit-Medium.ttf'
 FONT_CURSIVE = 'fonts/Satisfy.ttf'
+FONT_BANNER_NAME = 'fonts/YangBagus.ttf'
 
 def text_to_svg_path(text, x, y, size, font_path, anchor='start', fill='#ffffff', opacity=1.0, extra=''):
     """Converts a text string into an SVG <path> element with vector glyphs."""
@@ -488,7 +489,7 @@ def generate_hero_banner_svg():
     ''')
     
     # Main Title
-    svg.append(text_to_svg_path("NISHANT RANJAN", 26, 76, 36, FONT_CLEAN_HEADER, fill="url(#bannerGrad)", extra='stroke="url(#bannerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
+    svg.append(text_to_svg_path("NISHANT RANJAN", 26, 76, 37, FONT_BANNER_NAME, fill="url(#bannerGrad)", extra='stroke="url(#bannerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
     # Subtitle
     svg.append(text_to_svg_path("High-Throughput Distributed Engines • Concurrency • Real-Time Speech AI", 26, 106, 13.5, FONT_TITLE, fill="#e2e8f0"))
     # Description
