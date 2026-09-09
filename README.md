@@ -92,11 +92,7 @@
      ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/header-philosophy.svg?v=1" alt="Exploring The Self" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-quotes.svg?v=1" width="100%" alt="Exploring The Self — Alan Watts, Carl Jung, Friedrich Nietzsche &amp; J. Krishnamurti" />
+  <img src="https://raw.githubusercontent.com/Nishant-codess/nishant-codess/main/assets/card-quotes.svg?v=2" width="100%" alt="Inner Reflections &amp; Philosophy — Bhagavan Sri Krishna, Sant Kabir Das, Carl Jung &amp; Jiddu Krishnamurti" />
 </p>
 
 <!-- Animated Divider -->
