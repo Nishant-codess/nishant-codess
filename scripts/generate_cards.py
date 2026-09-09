@@ -744,6 +744,7 @@ def generate_world_clocks_svg():
 
 def generate_quotes_card_svg():
     w, h = 900, 195
+    center_x = 515
     from PIL import Image, ImageDraw
     import base64, io
 
@@ -762,43 +763,51 @@ def generate_quotes_card_svg():
     quotes = [
         {
             'author': 'BHAGAVAN SRI KRISHNA',
-            'role': 'The Bhagavad Gita • Dhyana Yoga (6.5–6)',
-            'quote_l1': '“मन ही मनुष्य का सबसे बड़ा मित्र है, और मन ही सबसे बड़ा शत्रु।”',
+            'role': 'The Bhagavad Gita • Inner Elevation &amp; Self-Mastery (6.5)',
+            'quote_l1': '“अपने द्वारा अपना उद्धार करो, स्वयं को कभी गिरने न दो।',
             'quote_l1_is_hindi': True,
-            'quote_l2': 'Elevate yourself through the power of your mind, and never degrade yourself.',
-            'quote_l3': 'For the mind can be the greatest friend of the self, or its most relentless adversary.',
+            'quote_l2': 'मनुष्य स्वयं ही अपना सबसे बड़ा मित्र है, और स्वयं ही अपना शत्रु।',
+            'quote_l2_is_hindi': True,
+            'quote_l3': 'Elevate your spirit through inner light; you are your own greatest healer and ally.”',
             'img': get_circular_avatar_b64('assets/authors/krishna.jpg', 104),
-            'accent': '#38bdf8'
+            'accent': '#38bdf8',
+            'quote_color': '#7dd3fc'
         },
         {
             'author': 'SANT KABIR DAS',
-            'role': 'Indian Mystic &amp; Poet • Inward Awakening &amp; Self-Reflection',
-            'quote_l1': '“बुरा जो देखन मैं चला, बुरा न मिलिया कोय। जो दिल खोजा आपना, मुझसे बुरा न कोय॥”',
+            'role': 'Indian Mystic &amp; Poet • Patience, Inner Maturity &amp; Sacred Growth',
+            'quote_l1': '“धीरे-धीरे रे मना, धीरे सब कुछ होय।',
             'quote_l1_is_hindi': True,
-            'quote_l2': 'I searched the whole world seeking faults in others, but found none to blame.',
-            'quote_l3': 'When I looked deep into my own heart, I realized the only one who truly needed work was me.',
+            'quote_l2': 'माली सींचे सौ घड़ा, ऋतु आए फल होय॥',
+            'quote_l2_is_hindi': True,
+            'quote_l3': 'Have patience with your soul; true healing and growth ripen only in their own season.”',
             'img': get_circular_avatar_b64('assets/authors/kabir.jpg', 104),
-            'accent': '#fbbf24'
+            'accent': '#fbbf24',
+            'quote_color': '#fde047'
         },
         {
             'author': 'CARL GUSTAV JUNG',
-            'role': 'Pioneer of Depth Psychology • Emotional Availability &amp; The Relational Self',
-            'quote_l1': '“Loneliness does not come from having no people around you, but from being unable”',
+            'role': 'Pioneer of Depth Psychology • Healing the Shadow &amp; Awakening Wholeness',
+            'quote_l1': '“I am not what happened to me, I am what I choose to become.',
             'quote_l1_is_hindi': False,
-            'quote_l2': 'to communicate the things that matter deeply to yourself. The meeting of two',
-            'quote_l3': 'personalities is like the contact of two chemical substances: both are transformed.',
+            'quote_l2': 'The privilege of a lifetime is to heal your wounds and step into wholeness,',
+            'quote_l2_is_hindi': False,
+            'quote_l3': 'growing courageously into the most authentic and mature version of yourself.”',
             'img': get_circular_avatar_b64('assets/authors/jung.jpg', 104),
-            'accent': '#c084fc'
+            'accent': '#c084fc',
+            'quote_color': '#e9d5ff'
         },
         {
             'author': 'JIDDU KRISHNAMURTI',
-            'role': 'Living Freedom • The Mirror of Relationship &amp; Vulnerability',
-            'quote_l1': '“Relationship is a mirror in which you discover yourself as you actually are.',
+            'role': 'Living Freedom • The Art of Self-Observation &amp; Inner Compassion',
+            'quote_l1': '“To understand yourself requires patience, humility, and endless compassion.',
             'quote_l1_is_hindi': False,
-            'quote_l2': 'To be emotionally available means to look without defense at your fear and vulnerability,',
-            'quote_l3': 'meeting another not out of attachment, but from complete understanding and presence.”',
+            'quote_l2': 'You cannot heal what you constantly judge; true maturity begins the moment',
+            'quote_l2_is_hindi': False,
+            'quote_l3': 'you learn to observe who you are with gentle honesty, and grow with an open heart.”',
             'img': get_circular_avatar_b64('assets/authors/krishnamurti.jpg', 104),
-            'accent': '#34d399'
+            'accent': '#34d399',
+            'quote_color': '#6ee7b7'
         }
     ]
 
@@ -824,30 +833,24 @@ def generate_quotes_card_svg():
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;display=swap');
         .quote-hindi {{
           font-family: 'Kohinoor Devanagari', 'Nirmala UI', 'Noto Sans Devanagari', -apple-system, sans-serif;
-          font-size: 16.5px;
+          font-size: 17px;
           font-weight: 600;
         }}
-        .quote-en-lead {{
+        .quote-en {{
           font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          font-size: 14.5px;
+          font-size: 15.2px;
           font-weight: 500;
-          letter-spacing: 0.2px;
-        }}
-        .quote-en-sub {{
-          font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          font-size: 14px;
-          font-weight: 400;
-          letter-spacing: 0.15px;
+          letter-spacing: 0.25px;
         }}
         .author-title {{
           font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          font-size: 13.5px;
+          font-size: 14px;
           font-weight: 700;
           letter-spacing: 1.2px;
         }}
         .author-role {{
           font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-          font-size: 11.5px;
+          font-size: 12px;
           font-weight: 400;
           letter-spacing: 0.3px;
         }}
@@ -857,13 +860,6 @@ def generate_quotes_card_svg():
 
     svg.append(f'<rect width="{w}" height="{h}" rx="16" fill="url(#quoteCardBg)" stroke="url(#quoteCardBorder)" stroke-width="1.5" />')
     svg.append(f'<rect width="{w}" height="{h}" rx="16" fill="url(#quoteCardGlow)" />')
-
-    # Watermark background quotation mark
-    svg.append('''
-    <g transform="translate(170, 85)" opacity="0.04" fill="#ffffff">
-      <path d="M0,0 C15,-30 40,-45 70,-45 L75,-30 C55,-30 45,-20 40,0 L70,0 L70,55 L0,55 Z M90,0 C105,-30 130,-45 160,-45 L165,-30 C145,-30 135,-20 130,0 L160,0 L160,55 L90,55 Z" />
-    </g>
-    ''')
 
     # 4 slides, 10 seconds each, total 40 seconds cycle
     dur = 40
@@ -894,22 +890,22 @@ def generate_quotes_card_svg():
         if q['img']:
             slide_svg.append(f'<image href="data:image/png;base64,{q["img"]}" x="{av_cx - 50}" y="{av_cy - 50}" width="100" height="100" />')
 
-        # Full width text content
-        tx = 168
-        # Quote line 1
-        if q['quote_l1_is_hindi']:
-            slide_svg.append(f'<text x="{tx}" y="52" fill="{q["accent"]}" class="quote-hindi">{q["quote_l1"]}</text>')
-        else:
-            slide_svg.append(f'<text x="{tx}" y="52" fill="{q["accent"]}" class="quote-en-lead">{q["quote_l1"]}</text>')
+        col = q['quote_color']
+        cls_l1 = 'quote-hindi' if q['quote_l1_is_hindi'] else 'quote-en'
+        cls_l2 = 'quote-hindi' if q['quote_l2_is_hindi'] else 'quote-en'
+        cls_l3 = 'quote-en'
 
-        # Quote lines 2 & 3
-        slide_svg.append(f'<text x="{tx}" y="79" fill="#f8fafc" class="quote-en-lead">{q["quote_l2"]}</text>')
-        slide_svg.append(f'<text x="{tx}" y="104" fill="#cbd5e1" class="quote-en-sub">{q["quote_l3"]}</text>')
+        # Quote lines centered at center_x
+        slide_svg.append(f'<text x="{center_x}" y="50" text-anchor="middle" fill="{col}" class="{cls_l1}">{q["quote_l1"]}</text>')
+        slide_svg.append(f'<text x="{center_x}" y="76" text-anchor="middle" fill="{col}" class="{cls_l2}">{q["quote_l2"]}</text>')
+        slide_svg.append(f'<text x="{center_x}" y="102" text-anchor="middle" fill="{col}" class="{cls_l3}">{q["quote_l3"]}</text>')
 
-        # Author details at the bottom
-        slide_svg.append(f'<line x1="{tx}" y1="126" x2="860" y2="126" stroke="rgba(255,255,255,0.06)" stroke-width="1" />')
-        slide_svg.append(f'<text x="{tx}" y="152" fill="#ffffff" class="author-title">{q["author"]}</text>')
-        slide_svg.append(f'<text x="{tx}" y="172" fill="#94a3b8" class="author-role">— {q["role"]}</text>')
+        # Hairline divider centered at center_x
+        slide_svg.append(f'<line x1="{center_x - 170}" y1="123" x2="{center_x + 170}" y2="123" stroke="rgba(255,255,255,0.08)" stroke-width="1" />')
+
+        # Author details centered
+        slide_svg.append(f'<text x="{center_x}" y="149" text-anchor="middle" fill="#ffffff" class="author-title">{q["author"]}</text>')
+        slide_svg.append(f'<text x="{center_x}" y="169" text-anchor="middle" fill="#94a3b8" class="author-role">— {q["role"]}</text>')
 
         slide_svg.append('</g>')
         svg.append('\n'.join(slide_svg))
