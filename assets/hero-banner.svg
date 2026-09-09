@@ -2,15 +2,14 @@
 
     <defs>
       <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="35%" stop-color="#38bdf8" />
-        <stop offset="70%" stop-color="#818cf8" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="50%" stop-color="#fb7185" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
       <linearGradient id="bannerBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
-        <stop offset="50%" stop-color="rgba(129, 140, 248, 0.2)" />
-        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
+        <stop offset="0%" stop-color="rgba(251, 191, 36, 0.4)" />
+        <stop offset="50%" stop-color="rgba(251, 113, 133, 0.2)" />
+        <stop offset="100%" stop-color="rgba(34, 211, 238, 0.4)" />
       </linearGradient>
       <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#0a0e1a" />
@@ -18,16 +17,16 @@
         <stop offset="100%" stop-color="#120e22" />
       </linearGradient>
       <radialGradient id="cyanOrb" cx="10%" cy="20%" r="50%">
-        <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.15" />
-        <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
       </radialGradient>
       <radialGradient id="purpleOrb" cx="90%" cy="80%" r="50%">
-        <stop offset="0%" stop-color="#c084fc" stop-opacity="0.14" />
-        <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
       </radialGradient>
       <linearGradient id="gridGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-        <stop offset="0%" stop-color="#818cf8" stop-opacity="0.12" />
-        <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+        <stop offset="0%" stop-color="#fb7185" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#fb7185" stop-opacity="0" />
       </linearGradient>
     </defs>
     

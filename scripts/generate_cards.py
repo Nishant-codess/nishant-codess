@@ -65,26 +65,24 @@ def get_text_width(text, size, font_path):
 def create_card_defs():
     return '''
     <defs>
-      <!-- Cohesive Cyber Starlight Palette: Electric Cyan -> Sky Blue -> Lavender -> Neon Violet -->
+      <!-- Tailwind Palette: Amber-400 (#fbbf24) -> Rose-400 (#fb7185) -> Cyan-400 (#22d3ee) -->
       <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="35%" stop-color="#38bdf8" />
-        <stop offset="70%" stop-color="#818cf8" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="50%" stop-color="#fb7185" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
       <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="35%" stop-color="#38bdf8" />
-        <stop offset="70%" stop-color="#818cf8" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="50%" stop-color="#fb7185" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
       <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="100%" stop-color="#4facfe" />
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
       <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#818cf8" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="0%" stop-color="#fb7185" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
       <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#0f172a" />
@@ -92,14 +90,14 @@ def create_card_defs():
         <stop offset="100%" stop-color="#070a10" />
       </linearGradient>
       <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
-        <stop offset="50%" stop-color="rgba(129, 140, 248, 0.25)" />
-        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
+        <stop offset="0%" stop-color="rgba(251, 191, 36, 0.35)" />
+        <stop offset="50%" stop-color="rgba(251, 113, 133, 0.2)" />
+        <stop offset="100%" stop-color="rgba(34, 211, 238, 0.35)" />
       </linearGradient>
       <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="50%" stop-color="#818cf8" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="50%" stop-color="#fb7185" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
       
       <!-- Subtle Glow Filter -->
@@ -317,10 +315,9 @@ def generate_header_svg(title, icon_type='code'):
     svg.append('''
     <defs>
       <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="35%" stop-color="#38bdf8" />
-        <stop offset="70%" stop-color="#818cf8" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="50%" stop-color="#fb7185" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
     </defs>
     ''')
@@ -330,30 +327,30 @@ def generate_header_svg(title, icon_type='code'):
     total_w = tw + 34
     start_x = (w - total_w) / 2
     
-    # Vector Icons
+    # Vector Icons (harmonious with header gradient)
     icon_svg = ''
     if icon_type == 'user':
-        icon_svg = '<circle cx="12" cy="7" r="4" stroke="#00f2fe" stroke-width="2" fill="none" /><path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" fill="none" />'
+        icon_svg = '<circle cx="12" cy="7" r="4" stroke="url(#headerGrad)" stroke-width="2" fill="none" /><path d="M5.5 21a6.5 6.5 0 0 1 13 0" stroke="url(#headerGrad)" stroke-width="2" stroke-linecap="round" fill="none" />'
     elif icon_type == 'terminal':
-        icon_svg = '<path d="M4 17l6-6-6-6M12 19h8" stroke="#00f2fe" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="M4 17l6-6-6-6M12 19h8" stroke="url(#headerGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'folder':
-        icon_svg = '<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" stroke="#818cf8" stroke-width="2" fill="none" />'
+        icon_svg = '<path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" stroke="url(#headerGrad)" stroke-width="2" fill="none" />'
     elif icon_type == 'trophy':
-        icon_svg = '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H7M14 14.66V17c0 .55.45 1 1 1h2M18 2H6v7a6 6 0 0 0 12 0V2Z" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6M18 9h1.5a2.5 2.5 0 0 0 0-5H18M4 22h16M10 14.66V17c0 .55-.45 1-1 1H7M14 14.66V17c0 .55.45 1 1 1h2M18 2H6v7a6 6 0 0 0 12 0V2Z" stroke="url(#headerGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'award':
-        icon_svg = '<circle cx="12" cy="8" r="6" stroke="#c084fc" stroke-width="2" fill="none" /><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.724.524l-4.268-2.243-4.27 2.243a.5.5 0 0 1-.723-.524l1.515-8.526" stroke="#c084fc" stroke-width="2" fill="none" />'
+        icon_svg = '<circle cx="12" cy="8" r="6" stroke="url(#headerGrad)" stroke-width="2" fill="none" /><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.724.524l-4.268-2.243-4.27 2.243a.5.5 0 0 1-.723-.524l1.515-8.526" stroke="url(#headerGrad)" stroke-width="2" fill="none" />'
     elif icon_type == 'cpu':
-        icon_svg = '<rect x="4" y="4" width="16" height="16" rx="2" stroke="#38bdf8" stroke-width="2" fill="none" /><rect x="9" y="9" width="6" height="6" stroke="#38bdf8" stroke-width="2" fill="none" /><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" stroke="#38bdf8" stroke-width="2" fill="none" />'
+        icon_svg = '<rect x="4" y="4" width="16" height="16" rx="2" stroke="url(#headerGrad)" stroke-width="2" fill="none" /><rect x="9" y="9" width="6" height="6" stroke="url(#headerGrad)" stroke-width="2" fill="none" /><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3" stroke="url(#headerGrad)" stroke-width="2" fill="none" />'
     elif icon_type == 'stack':
-        icon_svg = '<path d="m12 2 10 5-10 5L2 7l10-5ZM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="m12 2 10 5-10 5L2 7l10-5ZM2 17l10 5 10-5M2 12l10 5 10-5" stroke="url(#headerGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'music':
-        icon_svg = '<path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm12 0a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" stroke="url(#headerGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'send':
-        icon_svg = '<path d="m22 2-7 20-4-9-9-4Z" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><path d="M22 2 11 13" stroke="#00f2fe" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<path d="m22 2-7 20-4-9-9-4Z" stroke="url(#headerGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" /><path d="M22 2 11 13" stroke="url(#headerGrad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />'
     elif icon_type == 'compass':
-        icon_svg = '<circle cx="12" cy="12" r="10" stroke="#00f2fe" stroke-width="2" fill="none" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88" stroke="#c084fc" stroke-width="1.8" stroke-linejoin="round" fill="none" />'
+        icon_svg = '<circle cx="12" cy="12" r="10" stroke="url(#headerGrad)" stroke-width="2" fill="none" /><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88" stroke="url(#headerGrad)" stroke-width="1.8" stroke-linejoin="round" fill="none" />'
     else:
-        icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="#00f2fe" stroke-width="2" fill="none" />'
+        icon_svg = '<path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3L12 3Z" stroke="url(#headerGrad)" stroke-width="2" fill="none" />'
 
     svg.append(f'<g transform="translate({start_x}, 12) scale(1.1)">{icon_svg}</g>')
     svg.append(text_to_svg_path(title, start_x + 36, 35, font_size, FONT_HEADER, fill="url(#headerGrad)", extra='stroke="url(#headerGrad)" stroke-width="0.5" stroke-linejoin="round"'))
@@ -404,10 +401,9 @@ def make_cycling_headline_svg(lines, w=740, h=54, font_size=28, dur_per_line=3.5
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="35%" stop-color="#38bdf8" />
-      <stop offset="70%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#c084fc" />
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#22d3ee" />
     </linearGradient>
   </defs>
   {''.join(svg_groups)}
@@ -418,10 +414,9 @@ def make_gradient_cursive_svg(text, w, h, font_size):
     return f'''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" width="100%" height="auto">
   <defs>
     <linearGradient id="rainbowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#00f2fe" />
-      <stop offset="35%" stop-color="#38bdf8" />
-      <stop offset="70%" stop-color="#818cf8" />
-      <stop offset="100%" stop-color="#c084fc" />
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="50%" stop-color="#fb7185" />
+      <stop offset="100%" stop-color="#22d3ee" />
     </linearGradient>
   </defs>
   {path}
@@ -434,15 +429,14 @@ def generate_hero_banner_svg():
     svg.append('''
     <defs>
       <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-        <stop offset="0%" stop-color="#00f2fe" />
-        <stop offset="35%" stop-color="#38bdf8" />
-        <stop offset="70%" stop-color="#818cf8" />
-        <stop offset="100%" stop-color="#c084fc" />
+        <stop offset="0%" stop-color="#fbbf24" />
+        <stop offset="50%" stop-color="#fb7185" />
+        <stop offset="100%" stop-color="#22d3ee" />
       </linearGradient>
       <linearGradient id="bannerBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stop-color="rgba(0, 242, 254, 0.4)" />
-        <stop offset="50%" stop-color="rgba(129, 140, 248, 0.2)" />
-        <stop offset="100%" stop-color="rgba(192, 132, 252, 0.4)" />
+        <stop offset="0%" stop-color="rgba(251, 191, 36, 0.4)" />
+        <stop offset="50%" stop-color="rgba(251, 113, 133, 0.2)" />
+        <stop offset="100%" stop-color="rgba(34, 211, 238, 0.4)" />
       </linearGradient>
       <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
         <stop offset="0%" stop-color="#0a0e1a" />
@@ -450,16 +444,16 @@ def generate_hero_banner_svg():
         <stop offset="100%" stop-color="#120e22" />
       </linearGradient>
       <radialGradient id="cyanOrb" cx="10%" cy="20%" r="50%">
-        <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.15" />
-        <stop offset="100%" stop-color="#00f2fe" stop-opacity="0" />
+        <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#fbbf24" stop-opacity="0" />
       </radialGradient>
       <radialGradient id="purpleOrb" cx="90%" cy="80%" r="50%">
-        <stop offset="0%" stop-color="#c084fc" stop-opacity="0.14" />
-        <stop offset="100%" stop-color="#c084fc" stop-opacity="0" />
+        <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
       </radialGradient>
       <linearGradient id="gridGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-        <stop offset="0%" stop-color="#818cf8" stop-opacity="0.12" />
-        <stop offset="100%" stop-color="#818cf8" stop-opacity="0" />
+        <stop offset="0%" stop-color="#fb7185" stop-opacity="0.12" />
+        <stop offset="100%" stop-color="#fb7185" stop-opacity="0" />
       </linearGradient>
     </defs>
     ''')

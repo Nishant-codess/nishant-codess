@@ -30,15 +30,15 @@
   </a>
 </p>
 
-<!-- Quick Stats Badges: Cyber Starlight Gradient Harmony -->
+<!-- Quick Stats Badges: Amber-Rose-Cyan Gradient Harmony -->
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=Nishant-codess&label=Profile%20Views&color=00f2fe&style=for-the-badge" alt="Profile Views" />
+  <img src="https://komarev.com/ghpvc/?username=Nishant-codess&label=Profile%20Views&color=fbbf24&style=for-the-badge" alt="Profile Views" />
   &nbsp;
-  <img src="https://img.shields.io/github/followers/Nishant-codess?label=Followers&style=for-the-badge&color=38bdf8&labelColor=0d1117" alt="Followers" />
+  <img src="https://img.shields.io/github/followers/Nishant-codess?label=Followers&style=for-the-badge&color=fb7185&labelColor=0d1117" alt="Followers" />
   &nbsp;
-  <img src="https://img.shields.io/github/stars/Nishant-codess?label=Stars&style=for-the-badge&color=818cf8&labelColor=0d1117&affiliations=OWNER" alt="Stars" />
+  <img src="https://img.shields.io/github/stars/Nishant-codess?label=Stars&style=for-the-badge&color=22d3ee&labelColor=0d1117&affiliations=OWNER" alt="Stars" />
   &nbsp;
-  <img src="https://img.shields.io/badge/Timezones-IST%20%7C%20BST-c084fc?style=for-the-badge&labelColor=0d1117" alt="Timezones" />
+  <img src="https://img.shields.io/badge/Timezones-IST%20%7C%20BST-06b6d4?style=for-the-badge&labelColor=0d1117" alt="Timezones" />
 </p>
 
 <!-- Animated Divider: Cyber Starlight Luminous Pulse -->
