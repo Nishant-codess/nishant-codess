@@ -1,0 +1,481 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 726 132" width="100%" height="auto">
+<style>
+
+        .bg { fill: #ffffff; rx: 12px; }
+        .cell { rx: 2px; ry: 2px; }
+        .snake-head { fill: #0096c7; filter: drop-shadow(0 0 8px #0077b6); rx: 3px; ry: 3px; }
+        .snake-eye { fill: #ffffff; }
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; filter: drop-shadow(0 0 1px #38ef7d); }
+            50% { opacity: 0.88; filter: drop-shadow(0 0 4px #11998e); }
+        }
+        .active-dot { animation: pulse-dot 3.5s ease-in-out infinite; }
+    
+.seg-0 { fill: #00b4d8; filter: drop-shadow(0 0 4px #00b4d8); rx: 2.5px; ry: 2.5px; }
+.seg-1 { fill: #059669; filter: drop-shadow(0 0 4px #059669); rx: 2.5px; ry: 2.5px; }
+.seg-2 { fill: #10b981; filter: drop-shadow(0 0 4px #10b981); rx: 2.5px; ry: 2.5px; }
+.seg-3 { fill: #16a34a; filter: drop-shadow(0 0 4px #16a34a); rx: 2.5px; ry: 2.5px; }
+.seg-4 { fill: #4f46e5; filter: drop-shadow(0 0 4px #4f46e5); rx: 2.5px; ry: 2.5px; }
+.seg-5 { fill: #7c3aed; filter: drop-shadow(0 0 4px #7c3aed); rx: 2.5px; ry: 2.5px; }
+.seg-6 { fill: #9333ea; filter: drop-shadow(0 0 4px #9333ea); rx: 2.5px; ry: 2.5px; }
+.seg-7 { fill: #c026d3; filter: drop-shadow(0 0 4px #c026d3); rx: 2.5px; ry: 2.5px; }
+.seg-8 { fill: #e11d48; filter: drop-shadow(0 0 4px #e11d48); rx: 2.5px; ry: 2.5px; }
+</style>
+<rect width="726" height="132" class="bg" />
+<rect x="20" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="20" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="20" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="20" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="20" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="20" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="20" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="33" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="33" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="33" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="33" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="33" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="33" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="33" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="46" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="46" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="46" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="46" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="46" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="46" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="46" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="59" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="59" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="59" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="59" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="59" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="59" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="59" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="72" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="72" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="72" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="72" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="72" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="72" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="72" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="85" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="85" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="85" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="85" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="85" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="85" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="85" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="98" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="98" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="98" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="98" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="98" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="98" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="98" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="111" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="111" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="111" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="111" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="111" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="111" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="111" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="124" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="124" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="124" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="124" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="124" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="124" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="124" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="137" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="137" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="137" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="137" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="137" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="137" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="137" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="150" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="150" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="150" y="44" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="150" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="150" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="150" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="150" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="163" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="163" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="163" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="163" y="57" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="163" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="163" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="163" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="176" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="176" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="176" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="176" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="176" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="176" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="176" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="189" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="189" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="189" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="189" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="189" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="189" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="189" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="202" y="18" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="202" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="202" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="202" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="202" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="202" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="202" y="96" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="215" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="215" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="215" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="215" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="215" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="215" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="215" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="228" y="18" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="228" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="228" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="228" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="228" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="228" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="228" y="96" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="241" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="241" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="241" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="241" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="241" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="241" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="241" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="254" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="254" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="254" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="254" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="254" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="254" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="254" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="267" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="267" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="267" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="267" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="267" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="267" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="267" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="280" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="280" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="280" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="280" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="280" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="280" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="280" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="293" y="18" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="293" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="293" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="293" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="293" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="293" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="293" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="306" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="306" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="306" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="306" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="306" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="306" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="306" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="319" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="319" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="319" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="319" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="319" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="319" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="319" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="332" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="332" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="332" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="332" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="332" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="332" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="332" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="345" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="345" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="345" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="345" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="345" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="345" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="345" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="358" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="358" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="358" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="358" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="358" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="358" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="358" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="371" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="371" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="371" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="371" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="371" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="371" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="371" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="384" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="384" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="384" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="384" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="384" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="384" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="384" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="397" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="397" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="397" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="397" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="397" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="397" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="397" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="410" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="410" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="410" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="410" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="410" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="410" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="410" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="423" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="423" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="423" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="423" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="423" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="423" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="423" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="436" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="436" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="436" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="436" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="436" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="436" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="436" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="449" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="449" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="449" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="449" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="449" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="449" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="449" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="462" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="462" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="462" y="44" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="462" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="462" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="462" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="462" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="475" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="475" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="475" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="475" y="57" width="10" height="10" fill="#30a14e" class="cell active-dot" />
+<rect x="475" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="475" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="475" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="488" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="488" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="488" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="488" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="488" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="488" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="488" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="501" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="501" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="501" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="501" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="501" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="501" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="501" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="514" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="514" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="514" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="514" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="514" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="514" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="514" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="527" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="527" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="527" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="527" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="527" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="527" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="527" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="540" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="540" y="31" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="540" y="44" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="540" y="57" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="540" y="70" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="540" y="83" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="540" y="96" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="553" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="553" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="553" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="553" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="553" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="553" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="553" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="566" y="18" width="10" height="10" fill="#216e39" class="cell active-dot" />
+<rect x="566" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="566" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="566" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="566" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="566" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="566" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="579" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="579" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="579" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="579" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="579" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="579" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="579" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="592" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="592" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="592" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="592" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="592" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="592" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="592" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="605" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="605" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="605" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="605" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="605" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="605" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="605" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="618" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="618" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="618" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="618" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="618" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="618" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="618" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="631" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="631" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="631" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="631" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="631" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="631" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="631" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="644" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="644" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="644" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="644" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="644" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="644" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="644" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="657" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="657" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="657" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="657" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="657" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="657" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="657" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="670" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="670" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="670" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="670" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="670" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="670" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="670" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="683" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="683" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="683" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="683" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="683" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="683" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="683" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="696" y="18" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="696" y="31" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="696" y="44" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="696" y="57" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="696" y="70" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="696" y="83" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="696" y="96" width="10" height="10" fill="#ebedf0" class="cell" />
+<rect x="20" y="118" width="686" height="5" rx="2.5" fill="#e1e4e8" />
+<rect x="431" y="118" width="150" height="5" fill="#40c463" />
+<rect x="582" y="118" width="68" height="5" fill="#30a14e" />
+<rect x="651" y="118" width="54" height="5" rx="2.5" fill="#216e39" />
+<path id="snakePath" d="M 25.0 101.0 L 142.0 101.0 L 142.0 23.0 L 155.0 49.0 L 168.0 75.0 L 181.0 101.0 L 181.0 23.0 L 207.0 23.0 L 220.0 23.0 L 220.0 101.0 L 233.0 101.0 L 233.0 23.0 L 272.0 23.0 L 298.0 23.0 L 259.0 36.0 L 259.0 49.0 L 285.0 49.0 L 298.0 62.0 L 298.0 88.0 L 285.0 101.0 L 272.0 101.0 L 324.0 101.0 L 324.0 23.0 L 324.0 62.0 L 363.0 62.0 L 363.0 23.0 L 363.0 101.0 L 389.0 101.0 L 389.0 36.0 L 402.0 23.0 L 415.0 23.0 L 428.0 36.0 L 428.0 101.0 L 454.0 101.0 L 454.0 23.0 L 467.0 49.0 L 480.0 75.0 L 493.0 101.0 L 493.0 23.0 L 519.0 23.0 L 571.0 23.0 L 545.0 23.0 L 545.0 101.0 L 701.0 101.0 L 701.0 23.0 L 25.0 23.0 Z" fill="none" stroke="none" />
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-8">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.322s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-7">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.397s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-6">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.472s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-5">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.548s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-4">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.623s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-3">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.698s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-2">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.774s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-1">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.849s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+        <g>
+            <rect x="-4.5" y="-4.5" width="9" height="9" class="seg-0">
+                <animateMotion dur="16s" repeatCount="indefinite" begin="-15.925s" calcMode="paced">
+                    <mpath href="#snakePath" />
+                </animateMotion>
+            </rect>
+        </g>
+
+    <g>
+        <rect x="-5.5" y="-5.5" width="11" height="11" class="snake-head">
+            <animateMotion dur="16s" repeatCount="indefinite" begin="-16.000s" calcMode="paced">
+                <mpath href="#snakePath" />
+            </animateMotion>
+        </rect>
+    </g>
+</svg>
